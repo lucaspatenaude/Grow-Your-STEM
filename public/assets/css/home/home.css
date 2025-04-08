@@ -1,0 +1,31 @@
+.card-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.event-card {
+	flex-direction: column;
+	padding: 20px 10px;
+	margin: 20px;
+	border: 1px solid #979696;
+	border-radius: 8px;
+	position: relative; /* Ensure cards have a position context */
+	z-index: 1; /* Lower z-index than team-wheel */
+}
+
+#team-card {
+	flex-direction: row;
+	margin: 0 20px;
+	width: 60px; /* Adjust the size as needed */
+	height: 60px; /* Adjust the size as needed */
+	border-radius: 50%;
+}
+
+.team-wheel {
+	position: relative; /* Ensure team-wheel has a position context */
+	z-index: 2; /* Higher z-index than cards */
+	border: 1px solid #979696;
+	border-radius: 8px;
+}
