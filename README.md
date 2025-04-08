@@ -14,7 +14,6 @@ Web application that is deployed through Docker @ port `3003`
 >
 > 1. [Docker](https://docs.docker.com/get-docker/)
 > 2. [Docker-Compose](https://docs.docker.com/compose/install/)
-> 3. [Node.js](https://nodejs.org/en/download)
 
 ## 📦 Running the Container
 
