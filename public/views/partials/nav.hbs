@@ -1,8 +1,28 @@
 <!-- HTML structure -->
-<nav class="navigation-bar-body">
-	<h1><a href="/">Grow Your STEM</a></h1>
-	<ul class="nav-list">
-		<li><a href="/blog">Blog</a></li>
-		<li><a href="/lessons">Lessons</a></li>
-		<li><a href="/games">Games</a></li>
+<nav class="navbar navbar-expand-md navbar-dark" id="navigation-bar-container">
+  <div class="container-fluid d-flex justify-content align-items-center">
+    <div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 20px;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="logo" id="logo" href="/home">Grow Your STEM</a>
+      <div id="line"></div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navbar-list">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/lessons">Lessons</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/games">Games</a>
+        </li>
+      </ul>
+    </div>
+	</div>
 </nav>

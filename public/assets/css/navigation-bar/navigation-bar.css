@@ -1,26 +1,15 @@
-.navigation-bar-body {
+/* Postion and stylize the nav bar for when it is fixed to the top and scrolls*/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust as needed */
+}
+
+#navigation-bar-container {
+    background-color: hsl(251, 55%, 12%);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+    margin: 20px 10px;
     display: flex;
-    justify-content: flex-start; /* Aligns items to the left */
-    align-items: center;
-    padding: 0 20px;
-    height: 5vh;
-    background-color: #333;
-    color: #fff; /* Makes all text white */
-    text-decoration: none;
 }
 
-.nav-list {
-    display: flex; /* Makes the list items appear side by side */
-    list-style: none; /* Removes bullet points */
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-}
-
-.nav-list li {
-    margin: 0 10px; /* Adds spacing between list items */
-}
-
-.nav-list a {
-    color: #fff; /* Ensures links are white */
-    text-decoration: none; /* Removes underline from links */
-}
