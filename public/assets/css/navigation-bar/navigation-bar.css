@@ -1,9 +1,26 @@
 .navigation-bar-body {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px;
-	height: 5vh;
-	background-color: #333;
-	color: #fff;
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center;
+    padding: 0 20px;
+    height: 5vh;
+    background-color: #333;
+    color: #fff; /* Makes all text white */
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex; /* Makes the list items appear side by side */
+    list-style: none; /* Removes bullet points */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+.nav-list li {
+    margin: 0 10px; /* Adds spacing between list items */
+}
+
+.nav-list a {
+    color: #fff; /* Ensures links are white */
+    text-decoration: none; /* Removes underline from links */
 }

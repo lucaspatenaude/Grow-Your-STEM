@@ -17,6 +17,12 @@ router.get("/blog", (req, res) => {
     res.render("pages/blog");
 });
 
+// ************** Lessons Page Routes ************** 
+
+router.get("/lessons", (req, res) => {
+    res.render("pages/lessons");
+});
+
 // ************** Games Page Routes **************
 
 router.get("/games", (req, res) => {
