@@ -1,5 +1,6 @@
 [
     "head/add-all-css.js",
     "head/add-all-middleware.js",
-    "navigation-bar/get-apple-data.js"
+    "navigation-bar/get-apple-data.js",
+    "navigation-bar/get-palantir-data.js"
 ]

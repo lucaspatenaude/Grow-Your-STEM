@@ -2,5 +2,5 @@
 "main.css", 
 "pages/home.css", 
 "structure/navigation-bar.css", "structure/footer.css", 
-"components/card.css"
+"components/card.css", "components/stock-card.css"
 ]

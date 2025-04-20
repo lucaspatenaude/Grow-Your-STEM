@@ -10,7 +10,6 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const session = require("express-session"); // To set the session object. To store or access session data, use the `req.session`, which is (generally) serialized as JSON by the store.
 const bcrypt = require("bcryptjs"); //  To hash passwords
-const axios = require("axios"); // To make HTTP requests from our server. We'll learn more about it in Part C.
 const moment = require("moment"); // To extract current time data
 
 // Export the app object to index.js
@@ -34,9 +33,11 @@ app.use(express.static(path.join(__dirname, "/../public/assets")));
 app.use('/middleware', express.static(path.join(__dirname, '/middleware')));
 
 const fetchAppleData = require("./middleware/navigation-bar/get-apple-data");
+const fetchPalantirData = require("./middleware/navigation-bar/get-palantir-data");
 
 // Use the middleware for routes that need appleData
 app.use(fetchAppleData)
+app.use(fetchPalantirData)
 
 // *****************************************************
 // <!-- Section 3 : App Settings -->

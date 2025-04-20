@@ -30,7 +30,24 @@
           <a class="nav-link" href="/games">{{appleData.meta.symbol}}</a>
         </li>
       </ul>
-    </div>
 
+      <!-- Right Side of the Navigation Bar -->
+      <div class="navbar-nav ml-auto">
+
+        <!-- Apple Stock Card -->
+        <div class="stock-card" id="apple-stock-card">
+          <div class="stock-card-header-container">
+            <h1 class="stock-card-ticker">{{appleData.meta.symbol}}</h1>
+          </div>
+
+          <div class="stock-card-body">
+            <p>Change: {{appleData.meta.changePercent}}</p>
+          </div>
+          
+        </div>
+
+      </div>
+    </div>    
 	</div>
+
 </nav>
