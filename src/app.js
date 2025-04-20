@@ -33,6 +33,11 @@ app.use(express.static(path.join(__dirname, "/../public/assets")));
 // Serve static files from the 'middleware' directory
 app.use('/middleware', express.static(path.join(__dirname, '/middleware')));
 
+const fetchAppleData = require("./middleware/navigation-bar/get-apple-data");
+
+// Use the middleware for routes that need appleData
+app.use(fetchAppleData)
+
 // *****************************************************
 // <!-- Section 3 : App Settings -->
 // *****************************************************

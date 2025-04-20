@@ -1,4 +1,5 @@
 [
     "head/add-all-css.js",
-    "head/add-all-middleware.js"
+    "head/add-all-middleware.js",
+    "navigation-bar/get-apple-data.js"
 ]
