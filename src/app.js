@@ -17,7 +17,7 @@ const moment = require("moment"); // To extract current time data
 module.exports = app;
 
 // *****************************************************
-// <!-- Section 2 : Connect to DB -->
+// <!-- Section 2 : Serve Folders as Static Directories -->
 // *****************************************************
 
 // create `ExpressHandlebars` instance and configure the layouts and partials dir.
@@ -26,6 +26,12 @@ const hbs = handlebars.create({
 	layoutsDir: __dirname + "/../public/views/layouts",
 	partialsDir: __dirname + "/../public/views/partials",
 });
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, "/../public/assets")));
+
+// Serve static files from the 'middleware' directory
+app.use('/middleware', express.static(path.join(__dirname, '/middleware')));
 
 // *****************************************************
 // <!-- Section 3 : App Settings -->
@@ -55,8 +61,7 @@ app.use(
 	})
 );
 
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, "/../public/assets")));
+
 
 // *****************************************************
 // <!-- Section 4 : Middleware -->

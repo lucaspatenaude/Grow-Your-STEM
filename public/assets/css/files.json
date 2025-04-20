@@ -1,1 +1,6 @@
-["pages/home.css", "structure/navigation-bar.css", "main.css", "structure/footer.css", "components/card.css"]
+[
+"main.css", 
+"pages/home.css", 
+"structure/navigation-bar.css", "structure/footer.css", 
+"components/card.css"
+]

@@ -17,7 +17,10 @@ async function addAllCSS() {
             document.head.appendChild(link);
         });
 
-        console.log('All CSS files have been added to the head.');
+        if (!window.cssAdded) {
+            console.log("All CSS files have been added to the head.");
+            window.cssAdded = true;
+        }
     } catch (error) {
         console.error('Error adding CSS files:', error);
     }
