@@ -57,7 +57,6 @@ app.use(
 
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, "/../public/assets")));
-app.use(express.static(path.join(__dirname, "/")));
 
 // *****************************************************
 // <!-- Section 4 : Middleware -->

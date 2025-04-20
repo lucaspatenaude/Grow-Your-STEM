@@ -1,7 +1,7 @@
 async function addAllCSS() {
     try {
         // Fetch the list of CSS files from the server
-        const response = await fetch('/assets/css/files.json'); // Replace with your endpoint that lists CSS files
+        const response = await fetch('/css/files.json'); // Replace with your endpoint that lists CSS files
         if (!response.ok) {
             throw new Error(`Failed to fetch CSS files: ${response.statusText}`);
         }
