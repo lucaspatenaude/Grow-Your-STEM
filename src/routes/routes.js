@@ -35,8 +35,18 @@ router.get("/article", (req, res) => {
     res.render("pages/articles/example-article");
 });
 
+// ******** Nathaniel's Articles ********
+
 router.get("/articles/nathaniel/how-do-tariffs-work", (req, res) => {
     res.render("pages/articles/Nathaniel/How-Do-Tariffs-Work");
+});
+
+// ******** Clay's Articles ********
+
+// ******** Lucas' Articles ********
+
+router.get("/articles/lucas/credit-and-financing-options", (req, res) => {
+    res.render("pages/articles/Lucas/Credit-and-Financing-Options");
 });
 
 module.exports = router;
