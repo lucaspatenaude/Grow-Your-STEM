@@ -1,9 +1,36 @@
+
+
+/********************** Introduction Container **********************/
+
+.introduction-container {
+	display: flex;
+	flex-direction: column;
+}
+
+#custom-growing-your-stem-header-container {
+	display: flex;
+}
+
+#growing-your-stem-home-custom {
+	font-family: "Redline";
+	font-size: 43px;
+	margin-left: 10px;
+}
+
+/********************** Card Container **********************/
 .card-container {
 	display: flex;
 	margin-top: 30px;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: flex-start;
 	height: 75vh;
+}
+
+.card-content-container {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
 }
 
 .card {

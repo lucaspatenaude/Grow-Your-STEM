@@ -4,7 +4,6 @@
   align-items: center;
   padding: 20px;
   flex-direction: column; /* Stack content vertically */
-  background-color: rgb(249, 249, 249);
 }
 
 .article-container {

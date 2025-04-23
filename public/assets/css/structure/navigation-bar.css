@@ -24,7 +24,7 @@
     display: flex; /* Enable Flexbox */
     align-items: center; /* Vertically center the logo */
     margin-right: 30px; /* Remove extra margin */
-    padding-bottom: 8px;
+    padding-bottom: 10px;
     cursor: pointer;
 }
 
@@ -40,8 +40,9 @@
 
 .wordmark {
     font-family: 'Redline'; /* Use the custom font */
+    font-size: 20px;
     color: white;
-    max-height: 20px;
+    max-height: 25px;
     min-width: fit-content;
     align-items: center; /* Vertically center the logo */
     padding-top: 3px;
