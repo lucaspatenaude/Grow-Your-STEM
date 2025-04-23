@@ -29,4 +29,10 @@ router.get("/games", (req, res) => {
     res.render("pages/games");
 });
 
+// ************** Article Page Routes **************
+
+router.get("/article", (req, res) => {
+    res.render("pages/articles/example-article");
+});
+
 module.exports = router;
