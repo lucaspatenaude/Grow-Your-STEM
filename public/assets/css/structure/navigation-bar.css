@@ -46,5 +46,7 @@
 /* Add logo font face */
 @font-face {
     font-family: 'Redline';
-    src: url('../../fonts/redline.ttf') format('truetype');
+    src: url('../../fonts/redline.woff2') format('woff2'),
+         url('../../fonts/redline.woff') format('woff');
+    font-display: swap;
 }
