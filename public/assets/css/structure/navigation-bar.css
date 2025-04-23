@@ -24,16 +24,27 @@
     display: flex; /* Enable Flexbox */
     align-items: center; /* Vertically center the logo */
     margin-right: 30px; /* Remove extra margin */
+    padding-bottom: 5px;
 }
 
-.logo {
-    margin-right: 10px;
+.logo {   
+    margin-right: 3px;
     max-height: 25px;
 } 
 
 .wordmark {
+    font-family: 'Redline'; /* Use the custom font */
+    color: white;
+    text-decoration: none;
     max-height: 20px;
     min-width: fit-content;
     align-items: center; /* Vertically center the logo */
+    padding-top: 3px;
     margin-right: 10px;
+}
+
+/* Add logo font face */
+@font-face {
+    font-family: 'Redline';
+    src: url('../../fonts/redline.ttf') format('truetype');
 }
