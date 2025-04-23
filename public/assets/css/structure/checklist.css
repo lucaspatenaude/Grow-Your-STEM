@@ -1,0 +1,21 @@
+.checklist-container {
+  position: fixed; /* Fix the checklist to the viewport */
+  top: 65px; /* Position it 20px from the top */
+  right: 20px; /* Position it 20px from the right */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.checklist-content input[type="checkbox"] {
+  appearance: auto; /* Ensure the default checkbox styling is applied */
+  margin-right: 8px; /* Add spacing between the checkbox and the label text */
+  accent-color: purple; /* Set the checkbox color to purple */
+}
+
+.checklist-content input[type="checkbox"]:checked {
+  accent-color: purple; /* Keep the checkbox purple when checked */
+}
+

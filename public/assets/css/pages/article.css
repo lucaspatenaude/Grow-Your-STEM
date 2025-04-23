@@ -16,3 +16,22 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
 }
+
+/*------------------- Article Read Button --------------------*/
+
+.article-button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+}
+
+
+.article-read-button {
+  display: inline-block;
+  margin: 10px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
