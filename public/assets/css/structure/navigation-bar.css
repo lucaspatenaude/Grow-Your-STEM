@@ -15,9 +15,29 @@
     justify-content: space-between; /* Distribute space between items */
     border-radius: 8px;
 }
+
+/* Ensure the container with the toggler and branding is displayed in a row */
+.container-fluid > div {
+    display: flex;
+    align-items: center; /* Vertically center items */
+}
+
+.branding {
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically center the logo */
+    margin-right: 20px; /* Remove extra margin */
+}
+
 .logo {
+    margin-right: 10px;
+    max-height: 20px;
+    white-space: nowrap;
+} 
+
+.wordmark {
     max-height: 20px;
     min-width: fit-content;
-    margin-right: 10px;
     align-items: center; /* Vertically center the logo */
+    margin-right: 10px;
+    white-space: nowrap;
 }
