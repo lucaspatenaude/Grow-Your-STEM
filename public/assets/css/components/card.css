@@ -1,8 +1,8 @@
 .card {
 	padding: 20px 10px;
 	margin: 20px;
-	height: 100%;
-	min-width: 400px;
+	height: fit-content;
+	width: 300px;
 	margin: 10px;
 	border: 1px solid #979696;
 	position: relative; /* Ensure cards have a position context */

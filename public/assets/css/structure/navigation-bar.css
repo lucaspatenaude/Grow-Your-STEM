@@ -9,7 +9,7 @@
 #navigation-bar-container {
     background-color: hsl(251, 55%, 12%);
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
-    margin: 20px 10px;
+    margin: 10px 10px;
     display: flex; /* Enable Flexbox */
     align-items: center; /* Vertically center all items */
     justify-content: space-between; /* Distribute space between items */

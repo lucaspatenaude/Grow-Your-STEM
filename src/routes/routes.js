@@ -35,4 +35,8 @@ router.get("/article", (req, res) => {
     res.render("pages/articles/example-article");
 });
 
+router.get("/articles/nathaniel/how-do-tariffs-work", (req, res) => {
+    res.render("pages/articles/Nathaniel/How-Do-Tariffs-Work");
+});
+
 module.exports = router;

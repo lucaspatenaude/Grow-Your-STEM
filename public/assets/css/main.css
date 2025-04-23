@@ -2,6 +2,6 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	flex-direction: row;
-	height: 85vh;
+
 	position: relative; /* Ensure page-container has a position context */
 }
