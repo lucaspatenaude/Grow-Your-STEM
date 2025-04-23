@@ -8,3 +8,13 @@
 	position: relative; /* Ensure cards have a position context */
 	z-index: 1; /* Lower z-index than team-wheel */
 }
+
+.card h1 {
+	font-size: 20px;
+	margin: 0;
+}
+
+.card h2 {
+	font-size: 16px;
+	margin: 5px 0;
+}
