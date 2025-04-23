@@ -20,6 +20,9 @@
     align-items: center; /* Vertically center items */
 }
 
+/********************** Left Side **********************/
+
+/*********** Branding Section ***********/
 .branding {
     display: flex; /* Enable Flexbox */
     align-items: center; /* Vertically center the logo */
@@ -60,4 +63,18 @@
     src: url('../../fonts/redline.woff2') format('woff2'),
          url('../../fonts/redline.woff') format('woff');
     font-display: swap;
+}
+
+/*********** Sub-Menu Section ***********/
+
+li {
+    cursor: pointer;
+}
+
+/********************** Right Side **********************/
+
+#take-quiz-button {
+    font-size: 13px;
+    background-color: rgb(219, 144, 5);
+    border: 2px solid rgb(154, 101, 2);
 }
