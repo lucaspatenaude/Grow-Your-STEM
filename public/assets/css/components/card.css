@@ -1,20 +1,49 @@
 .card {
-	padding: 20px 10px;
-	margin: 20px;
-	height: fit-content;
-	width: 300px;
-	margin: 10px;
+    height: 500px;
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #979696;
+    position: relative; /* Ensure cards have a position context */
+    z-index: 1; /* Lower z-index than team-wheel */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.card-body {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push the button to the bottom */
+    flex-grow: 1; /* Allow the body to grow and fill available space */
+}
+
+.card-article-title,
+.card-article-summary {
+    margin-bottom: 5px; /* Add spacing between elements */
+}
+
+.card-article-author {
+	margin-bottom: 15px; /* Add spacing between elements */
+}
+
+#click-to-read {
+    margin-top: auto; /* Push the button to the bottom of the card body */
+    align-self: flex-start; /* Align the button to the left */
+		background-color: hsl(251, 55%, 12%);
+		color: white;
+		border: 1px solid #979696;
+}
+
+#click-to-read:hover {
+	background-color: hsl(249, 39%, 29%);
 	border: 1px solid #979696;
-	position: relative; /* Ensure cards have a position context */
-	z-index: 1; /* Lower z-index than team-wheel */
+	box-shadow: 0 0 5px #979696;
+	cursor: pointer;
 }
 
 .card h1 {
-	font-size: 20px;
-	margin: 0;
+    font-size: 20px;
 }
 
 .card h2 {
-	font-size: 16px;
-	margin: 5px 0;
+    font-size: 16px;
 }

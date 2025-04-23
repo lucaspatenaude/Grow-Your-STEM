@@ -1,29 +1,85 @@
 footer {
-  position: relative; /* Ensure the footer is positioned relative to the document flow */
-  flex-shrink: 0; /* Prevent the footer from shrinking */
-  width: 100%; /* Ensure it spans the full width */
-  background-color: hsl(251, 55%, 12%);
-  color: white;
-  padding: 25px 20px;
-  text-align: center;
-  border-top: 1px solid #e9ecef;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+    width: 100%; /* Ensure it spans the full width */
+    background-color: hsl(251, 55%, 12%);
+    color: white;
+    padding: 0 120px;
+    padding-top: 40px;
+    text-align: left;
+    border-top: 1px solid #e9ecef;
+    min-height: max-content;
+    position: relative; /* Ensure it stays at the bottom */
 }
+
+footer h2 {
+    text-decoration: solid;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/********************** Upper Footer **********************/
 
 .upper-footer-container {
     height: fit-content;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align items to the top (left in this case) */
+    justify-content: flex-start; /* Align items to the left horizontally */
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/*********** Information Section ***********/
+
 .footer-information-container {
-    width: 50%;
+    width: 30%;
+    margin-right: 20px;
 }
 
+/*********** Contact Us Section ***********/
+
 .footer-contact-us-container {
-    width: 50%;
+    width: 70%;
+}
+
+/***** Form Layout *****/
+.footer-contact-us-container form {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column; /* Stack form fields vertically */
+    gap: 10px; /* Add spacing between fields */
+}
+
+/*** Input Fields ***/
+.footer-contact-us-container form input,
+.footer-contact-us-container form textarea {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    width: 80%; /* Ensure fields span the full width of the container */
+    height: 35px;
+}
+
+/*** Send Button ***/
+.footer-contact-us-container button {
+    background-color: hsl(129, 90%, 28%);
+    color: white;
+    width: fit-content;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/********************** Lower Footer **********************/
+.lower-footer-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center;
+    margin-top: 40px;
 }
