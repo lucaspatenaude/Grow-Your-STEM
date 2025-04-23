@@ -1,7 +1,7 @@
 [
-"reset.css",
-"main.css", 
-"pages/home.css", 
+
+"main.css", "reset.css", 
+"pages/home.css", "pages/article.css",
 "structure/navigation-bar.css", "structure/footer.css", 
 "components/card.css"
 ]
