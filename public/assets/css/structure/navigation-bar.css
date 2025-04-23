@@ -78,3 +78,14 @@ li {
     background-color: rgb(219, 144, 5);
     border: 2px solid rgb(154, 101, 2);
 }
+
+#user-profile-button {
+    width: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: width 0.3s ease; /* Adding transition for smooth effect */
+}
+
+#user-profile-button:hover {
+    width: 30px;
+}
