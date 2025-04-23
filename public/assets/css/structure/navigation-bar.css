@@ -24,7 +24,13 @@
     display: flex; /* Enable Flexbox */
     align-items: center; /* Vertically center the logo */
     margin-right: 30px; /* Remove extra margin */
-    padding-bottom: 5px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.branding:hover {
+    transform: scale(1.1); /* Scale up the branding slightly */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
 }
 
 .logo {   
@@ -35,12 +41,16 @@
 .wordmark {
     font-family: 'Redline'; /* Use the custom font */
     color: white;
-    text-decoration: none;
     max-height: 20px;
     min-width: fit-content;
     align-items: center; /* Vertically center the logo */
     padding-top: 3px;
     margin-right: 10px;
+}
+
+.wordmark:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: white;
 }
 
 /* Add logo font face */

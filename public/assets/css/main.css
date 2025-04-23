@@ -1,9 +1,14 @@
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
 html, body {
     height: 100%; /* Ensure the page fills the viewport height */
     margin: 0; /* Remove default margin */
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     min-height: 100%; /* Prevent shrinking below the viewport height */
+    background-color: rgb(249, 249, 249);
 }
 
 .page-container {
@@ -15,4 +20,5 @@ html, body {
     min-height: 600px; /* Respect the minimum height of the content */
     padding-bottom: 100px; /* Add space for the footer */
     box-sizing: border-box; /* Include padding in height calculations */
+    background-color: rgb(249, 249, 249);
 }
