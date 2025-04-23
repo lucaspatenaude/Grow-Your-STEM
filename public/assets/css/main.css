@@ -1,7 +1,14 @@
-.page-container {
-	flex-wrap: wrap;
-	justify-content: center;
-	flex-direction: row;
+html, body {
+    height: 100%; /* Ensure the page fills the viewport height */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
 
-	position: relative; /* Ensure page-container has a position context */
+.page-container {
+    flex: 1; /* Allow the main content to grow and fill available space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content at the top */
+    position: relative; /* Ensure it has a position context */
 }

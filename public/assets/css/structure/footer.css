@@ -1,33 +1,29 @@
 footer {
-	display: flex;
-	flex-direction: column;
-	min-height: fit-content;
-	background-color: hsl(251, 55%, 12%);
-	color: white;
-	padding: 25px 20px;
-	text-align: center;
-	width: 100%;
-	position: fixed;
-	z-index: 1000;
-	border-top: 1px solid #e9ecef;
+  position: relative; /* Ensure the footer is positioned relative to the document flow */
+  flex-shrink: 0; /* Prevent the footer from shrinking */
+  width: 100%; /* Ensure it spans the full width */
+  background-color: hsl(251, 55%, 12%);
+  color: white;
+  padding: 25px 20px;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
 }
 
 .upper-footer-container {
-	height: fit-content;
-	display: flex;
-	align-items: center;
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 20px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-information-container {
-	width: 50%;
+    width: 50%;
 }
 
 .footer-contact-us-container {
-	width: 50%;
-	display: flex;
-	justify-content: flex-end;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }

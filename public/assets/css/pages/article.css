@@ -1,8 +1,9 @@
 .article-page-container {
   display: flex; /* Enable flexbox */
   justify-content: center; /* Horizontally center */
+  align-items: center;
   padding: 20px;
-  height: 100vh; /* Ensure the container takes the full viewport height */
+  flex-direction: column; /* Stack content vertically */
 }
 
 .article-container {
