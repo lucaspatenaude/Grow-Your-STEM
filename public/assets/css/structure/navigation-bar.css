@@ -14,7 +14,6 @@
     align-items: center; /* Vertically center all items */
     justify-content: space-between; /* Distribute space between items */
     border-radius: 8px;
-    max-height: 50px;
 }
 .logo {
     max-height: 20px;
@@ -22,8 +21,3 @@
     margin-right: 10px;
     align-items: center; /* Vertically center the logo */
 }
-
-.collapse.navbar-collapse {
-    align-items: center; /* Vertically center the list items */
-}
-
