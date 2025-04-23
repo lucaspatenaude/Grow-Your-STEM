@@ -1,7 +1,7 @@
 .checklist-container {
   position: fixed; /* Fix the checklist to the viewport */
   top: 95px; /* Position it 20px from the top */
-  right: 20px; /* Position it 20px from the right */
+  right: 50px; /* Position it 20px from the right */
   background-color: white;
   max-width: 300px;
   padding: 20px;
