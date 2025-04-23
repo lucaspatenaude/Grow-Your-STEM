@@ -3,6 +3,7 @@
   top: 95px; /* Position it 20px from the top */
   right: 20px; /* Position it 20px from the right */
   background-color: white;
+  max-width: 300px;
   padding: 20px;
   border: 1px solid #dcdada;
   border-radius: 4px;
