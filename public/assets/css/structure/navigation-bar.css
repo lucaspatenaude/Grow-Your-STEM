@@ -25,13 +25,12 @@
 .branding {
     display: flex; /* Enable Flexbox */
     align-items: center; /* Vertically center the logo */
-    margin-right: 20px; /* Remove extra margin */
+    margin-right: 30px; /* Remove extra margin */
 }
 
 .logo {
     margin-right: 10px;
-    max-height: 20px;
-    white-space: nowrap;
+    max-height: 25px;
 } 
 
 .wordmark {
@@ -39,5 +38,4 @@
     min-width: fit-content;
     align-items: center; /* Vertically center the logo */
     margin-right: 10px;
-    white-space: nowrap;
 }
