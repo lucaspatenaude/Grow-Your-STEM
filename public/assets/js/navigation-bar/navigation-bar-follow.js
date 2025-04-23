@@ -20,7 +20,7 @@ function makeNavbarSticky() {
             // Remove the 'fixed-top' class to make the navbar non-sticky
             navbar.classList.remove("fixed-top");
             // Reset the padding of the body
-            document.body.style.paddingTop = 0;
+            document.body.style.paddingTop = 20 + "px";
         }
     }
 
