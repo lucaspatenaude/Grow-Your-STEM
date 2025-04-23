@@ -43,3 +43,24 @@
   background-color: rgb(2, 74, 2);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
 }
+
+/* Works Cited Section */
+.works-cited {
+  word-wrap: break-word; /* Break long words to prevent overflow */
+  overflow-wrap: break-word; /* Ensure text wraps within the container */
+  max-width: 100%; /* Ensure the content stays within the container width */
+  overflow: hidden; /* Prevent content from spilling out */
+}
+
+.works-cited ol {
+  padding-left: 30px; /* Add padding to align the numbers */
+  margin: 0; /* Remove default margin */
+  list-style-type: decimal; /* Use numbers for the list */
+}
+
+.works-cited li {
+  margin-bottom: 10px; /* Add spacing between list items */
+  line-height: 1.5; /* Improve readability */
+  word-wrap: break-word; /* Prevent long URLs from overflowing */
+  overflow-wrap: break-word; /* Ensure text wraps properly */
+}
