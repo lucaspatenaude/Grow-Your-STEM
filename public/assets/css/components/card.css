@@ -17,6 +17,10 @@
     flex-grow: 1; /* Allow the body to grow and fill available space */
 }
 
+.card img {
+    height: 150px;
+}
+
 .card-article-title,
 .card-article-summary {
     margin-bottom: 5px; /* Add spacing between elements */
