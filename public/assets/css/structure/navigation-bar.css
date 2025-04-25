@@ -29,7 +29,8 @@
     margin-right: 30px; /* Remove extra margin */
     padding-bottom: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+    width: 200px;
+    transition: transform 0.1s ease-in-out; /* Smooth transition effect */
 }
 
 .branding:hover {
@@ -38,17 +39,17 @@
 
 .logo {   
     margin-right: 3px;
-    max-height: 25px;
+    max-height: 32px;
 } 
 
 .wordmark {
     font-family: 'Redline'; /* Use the custom font */
     font-size: 20px;
     color: white;
-    max-height: 25px;
-    min-width: fit-content;
+    max-height: 32px;
+    min-width: 200px;
     align-items: center; /* Vertically center the logo */
-    padding-top: 3px;
+    padding-top: 0px;
     margin-right: 10px;
 }
 
