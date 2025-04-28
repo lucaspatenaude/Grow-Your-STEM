@@ -1,10 +1,11 @@
-
-
 /********************** Introduction Container **********************/
 
 .introduction-container {
 	display: flex;
 	flex-direction: column;
+	background-color: var(--lightw);
+	border-radius: 20px;
+	padding:15px;
 }
 
 #custom-growing-your-stem-header-container {
@@ -19,6 +20,10 @@
 }
 
 /********************** Card Container **********************/
+.card-container-header {
+	font-family: "MontBold";
+}
+
 .card-container {
 	display: flex;
 	margin-top: 30px;

@@ -46,7 +46,7 @@ html, body {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     min-height: 100%; /* Prevent shrinking below the viewport height */
-
+    background-color: var(--lightc);
 }
 
 .page-container {
@@ -63,4 +63,5 @@ html, body {
     box-sizing: border-box; /* Include padding in height calculations */
     font-family: "Roboto_Slab";
     color: var(--darkc);
+    background-color: var(--lightc);
 }
