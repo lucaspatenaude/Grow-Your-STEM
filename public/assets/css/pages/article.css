@@ -13,8 +13,16 @@
   padding: 60px;
   width: 8.5in;
   height: fit-content;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--lightw);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.article-title-container {
+  font-family: "MontBold";
+}
+
+.article-inner-header {
+  font-family: "MontBold";
 }
 
 /*------------------- Article Read Button --------------------*/
@@ -30,17 +38,20 @@
 .article-read-button {
   display: inline-block;
   margin: 40px;
-  border: 3px solid rgb(11, 72, 11);
-  background-color: rgb(2, 98, 2);
-  color: white;
+  border: 3px solid var(--darkc);
+  background-color: var(--darkc);
+  color: var(--lightc);
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+  font-weight: 800;
+  transition-duration: 0.1s;
 }
 
 .article-read-button:hover {
-  background-color: rgb(2, 74, 2);
+  background-color: var(--lightc);
+  color: var(--darkc);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -52,10 +63,14 @@
   overflow: hidden; /* Prevent content from spilling out */
 }
 
-.works-cited ol {
+#works-cited-header, #extra-sources-header {
+  font-family: "MontBold";
+}
+
+.works-cited ul {
   padding-left: 30px; /* Add padding to align the numbers */
   margin: 0; /* Remove default margin */
-  list-style-type: decimal; /* Use numbers for the list */
+  list-style-type:circle; /* Use numbers for the list */
 }
 
 .works-cited li {
