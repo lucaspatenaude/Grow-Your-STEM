@@ -1,6 +1,6 @@
 [
 
-"main.css", "reset.css", 
+"reset.css", "main.css", 
 "pages/home.css", "pages/article.css",
 "structure/navigation-bar.css", "structure/footer.css", "structure/checklist.css", 
 "components/card.css"

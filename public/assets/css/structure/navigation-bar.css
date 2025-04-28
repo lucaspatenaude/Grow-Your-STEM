@@ -7,7 +7,7 @@
 }
 
 #navigation-bar-container {
-    background-color: hsl(251, 55%, 12%);
+    background-color: var(--darkw);
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
     display: flex; /* Enable Flexbox */
     align-items: center; /* Vertically center all items */
@@ -45,7 +45,7 @@
 .wordmark {
     font-family: 'Redline'; /* Use the custom font */
     font-size: 20px;
-    color: white;
+    color: var(--lightc);
     max-height: 32px;
     min-width: 200px;
     align-items: center; /* Vertically center the logo */
@@ -55,7 +55,7 @@
 
 .wordmark:hover {
     text-decoration: none; /* Remove underline on hover */
-    color: white;
+    color: var(--cool);
 }
 
 
@@ -64,21 +64,24 @@
 
 li {
     cursor: pointer;
+    font-family: "MontBold";
 }
 
 /********************** Right Side **********************/
 
 #take-quiz-button {
     font-size: 13px;
-    background-color: rgb(219, 144, 5);
-    border: 2px solid rgb(154, 101, 2);
+    color: var(--lightw);
+    background-color: var(--cool);
+    border: 2px solid var(--darkc);
+    font-family: "MontBold";
 }
 
 #user-profile-button {
     width: 25px;
     margin-left: 20px;
     cursor: pointer;
-    transition: width 0.3s ease; /* Adding transition for smooth effect */
+    transition: width 0.3s ease-in-out; /* Adding transition for smooth effect */
 }
 
 #user-profile-button:hover {

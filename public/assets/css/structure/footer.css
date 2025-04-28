@@ -1,12 +1,11 @@
 footer {
     flex-shrink: 0; /* Prevent the footer from shrinking */
     width: 100%; /* Ensure it spans the full width */
-    background-color: hsl(251, 55%, 12%);
-    color: white;
+    background-color: var(--darkw);
+    color: var(--lightc);
     padding: 0 120px;
     padding-top: 40px;
     text-align: left;
-    border-top: 1px solid #e9ecef;
     min-height: max-content;
     position: relative; /* Ensure it stays at the bottom */
 }
@@ -71,7 +70,7 @@ footer h3 {
 /*** Input Fields ***/
 .footer-contact-us-container form input,
 .footer-contact-us-container form textarea {
-    background-color: white;
+    background-color: var(--warm);
     color: black;
     border-radius: 4px;
     width: 80%; /* Ensure fields span the full width of the container */
@@ -80,8 +79,8 @@ footer h3 {
 
 /*** Send Button ***/
 .footer-contact-us-container button {
-    background-color: hsl(129, 90%, 28%);
-    color: white;
+    background-color: var(--darkc);
+    color: var(--lightc);
     width: fit-content;
     border: none;
     padding: 10px 20px;
