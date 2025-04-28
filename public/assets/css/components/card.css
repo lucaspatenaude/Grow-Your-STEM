@@ -26,6 +26,10 @@
     margin-bottom: 5px; /* Add spacing between elements */
 }
 
+.card-article-title {
+    font-family: "MontBold";
+}
+
 .card-article-author {
     margin-bottom: 15px; /* Add spacing between elements */
 }
@@ -33,14 +37,14 @@
 #click-to-read {
     margin-top: auto; /* Push the button to the bottom of the card body */
     align-self: flex-start; /* Align the button to the left */
-	background-color: hsl(251, 55%, 12%);
-	color: white;
-	border: 1px solid #979696;
+	background-color: var(--darkc);
+	color: var(--lightc);
+	border: 1px solid var(--darkc);
 }
 
 #click-to-read:hover {
-	background-color: hsl(249, 39%, 29%);
-	border: 1px solid #979696;
+	background-color: var(--cool);
+	border: 1px solid var(--darkw);
 	box-shadow: 0 0 5px #979696;
 	cursor: pointer;
 }

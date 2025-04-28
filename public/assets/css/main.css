@@ -8,22 +8,22 @@
 
 @font-face {
     font-family: 'Roboto_Slab';
-    src: url('../../fonts/RobotoSlab-VariableFont_wght.woff') format('woff'),
-         url('../../fonts/RobotoSlab-VariableFont_wght.woff2') format('woff2');
+    src: url('../../fonts/RobotoSlab-VariableFont_wght.woff2') format('woff2'),
+         url('../../fonts/RobotoSlab-VariableFont_wght.woff') format('woff');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'MontBold';
-    src: url('../../fonts/MontserratAlternates-SemiBold.woff') format('woff'),
-         url('../../fonts/MontserratAlternates-SemiBold.woff2') format('woff2');
+    src: url('../../fonts/MontserratAlternates-SemiBold.woff2') format('woff2'),
+         url('../../fonts/MontserratAlternates-SemiBold.woff') format('woff');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'MontReg';
-    src: url('../../fonts/MontserratAlternates-Regular.woff') format('woff'),
-         url('../../fonts/MontserratAlternates-Regular.woff2') format('woff2');
+    src: url('../../fonts/MontserratAlternates-Regular.woff2') format('woff2')
+         url('../../fonts/MontserratAlternates-Regular.woff') format('woff');
     font-display: swap;
 }
 
@@ -34,6 +34,7 @@
     --lightc: #C1DBB3;
     --cool: #7EBC89;
     --darkc: #417F54;
+    
   }
 
 html {
@@ -61,4 +62,5 @@ html, body {
     padding-bottom: 100px; /* Add space for the footer */
     box-sizing: border-box; /* Include padding in height calculations */
     font-family: "Roboto_Slab";
+    color: var(--darkc);
 }
