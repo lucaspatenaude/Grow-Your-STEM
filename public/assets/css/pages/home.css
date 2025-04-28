@@ -38,7 +38,7 @@
 	height: 100%;
 	min-width: 400px;
 
-	border: 1px solid #979696;
+	border: 1px solid var(--lightw);
 	position: relative; /* Ensure cards have a position context */
 	z-index: 1; /* Lower z-index than team-wheel */
 }

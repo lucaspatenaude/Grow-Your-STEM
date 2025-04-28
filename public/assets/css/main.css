@@ -27,6 +27,14 @@
     font-display: swap;
 }
 
+:root {
+    --darkw: #FE5D26;
+    --warm: #F2C078;
+    --lightw: #FAEDCA;
+    --lightc: #C1DBB3;
+    --cool: #7EBC89;
+    --darkc: #417F54;
+  }
 
 html {
     scroll-behavior: smooth; /* Enable smooth scrolling */
@@ -37,6 +45,7 @@ html, body {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     min-height: 100%; /* Prevent shrinking below the viewport height */
+
 }
 
 .page-container {
@@ -51,4 +60,5 @@ html, body {
     min-height: fit-content; /* Respect the minimum height of the content */
     padding-bottom: 100px; /* Add space for the footer */
     box-sizing: border-box; /* Include padding in height calculations */
+    font-family: "Roboto_Slab";
 }
