@@ -1,3 +1,33 @@
+/* Add logo font face */
+@font-face {
+    font-family: 'Redline';
+    src: url('../../fonts/redline.woff2') format('woff2'),
+         url('../../fonts/redline.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto_Slab';
+    src: url('../../fonts/RobotoSlab-VariableFont_wght.woff') format('woff'),
+         url('../../fonts/RobotoSlab-VariableFont_wght.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MontBold';
+    src: url('../../fonts/MontserratAlternates-SemiBold.woff') format('woff'),
+         url('../../fonts/MontserratAlternates-SemiBold.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MontReg';
+    src: url('../../fonts/MontserratAlternates-Regular.woff') format('woff'),
+         url('../../fonts/MontserratAlternates-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+
 html {
     scroll-behavior: smooth; /* Enable smooth scrolling */
 }
@@ -8,8 +38,6 @@ html, body {
     flex-direction: column; /* Stack elements vertically */
     min-height: 100%; /* Prevent shrinking below the viewport height */
 }
-
-
 
 .page-container {
     flex: 1; /* Allow the main content to grow and fill available space */
