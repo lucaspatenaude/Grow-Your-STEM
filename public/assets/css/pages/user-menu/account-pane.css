@@ -1,0 +1,27 @@
+#account-panei.hidden {
+  display: none;
+}
+
+#account-pane.visible {
+  display: block;
+}
+
+#account-pane-content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#account-header-container {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 3px solid red;
+
+  #username {
+      font-size: 23px;
+      font-weight: 500;
+  }  
+}

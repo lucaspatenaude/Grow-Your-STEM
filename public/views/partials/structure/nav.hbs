@@ -48,3 +48,17 @@
 
 	</div>
 </nav>
+
+{{#if user.username}}
+  <div class="account-portal" id="account-screen-container">
+    {{> pages/user-menu/account-screen}}
+  </div>
+{{else}}
+<div class="account-portal" id="login-screen-container">
+  {{> pages/user-menu/login}}
+</div>
+{{/if}}
+
+<div class="account-portal" id="register-screen-container">
+  {{> pages/user-menu/register}}
+</div>
