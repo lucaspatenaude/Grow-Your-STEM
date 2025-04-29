@@ -5,13 +5,18 @@
   width: 400px;
   display: flex;
   flex-direction: column;
+  
   position: absolute;
   top: 95px; /* Adjust this value as needed */
   right: 20px; /* Adjust this value as needed */
   z-index: 1000;
+
 	background-color: var(--lightw);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  border: 3px solid var(--darkw);
   border-radius: 20px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+
 }
 
 /* Set Login and Registration Panes to be same size and hidden on start */
@@ -36,8 +41,11 @@
 }
 
 .portal-wordmark {
+  text-decoration: none;
   font-family: 'Redline'; /* Use the custom font */
-  width: 150px;
+  font-size: 25px;
+  color: var(--darkw);
+  min-width: max-content;
 }
 
 .portal-type-header {
