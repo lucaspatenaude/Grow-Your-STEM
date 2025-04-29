@@ -3,13 +3,15 @@
 /* Standardized Styling for Login, Registration, and Account Panes */
 .account-portal-container {
   width: 400px;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 95px; /* Adjust this value as needed */
   right: 20px; /* Adjust this value as needed */
   z-index: 1000;
-  background: linear-gradient(to bottom, white, rgb(245, 245, 245), rgb(227, 227, 227)); /* Gradient from white to gray */
+	background-color: var(--lightw);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-  border: 1px solid gray;
+  border-radius: 20px;
 }
 
 /* Set Login and Registration Panes to be same size and hidden on start */
@@ -18,7 +20,25 @@
   min-height: fit-content;
 }
 
-/********************** Header **********************/
+/********************** Branding Header **********************/
+
+.portal-branding-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.portal-logo {
+  height: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.portal-wordmark {
+  font-family: 'Redline'; /* Use the custom font */
+  width: 150px;
+}
 
 .portal-type-header {
   text-align: center;
