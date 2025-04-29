@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+  min-width: fit-content
 }
 
 #account-header-container {
@@ -18,10 +19,22 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid var(--darkw);
 
   #username {
       font-size: 23px;
       font-weight: 500;
   }  
+}
+
+.account-objectives-container label {
+  display: flex; /* Align checkbox and text on the same line */
+  align-items: center; /* Vertically center the checkbox and text */
+  gap: 8px; /* Add spacing between the checkbox and text */
+  font-family: "Roboto_Slab"; /* Ensure consistent font styling */
+}
+
+.account-objectives-container input[type="checkbox"] {
+  appearance: auto; /* Use the default checkbox styling */
+  margin: 0; /* Remove any default margins */
 }

@@ -13,12 +13,7 @@
   font-family: "MontBold";
 }
 
-.checklist-content input[type="checkbox"] {
-  appearance: auto; /* Ensure the default checkbox styling is applied */
-  margin-top: 5px;
-  margin-right: 8px;
 
-}
 
 .checklist-content label {
   display: flex; /* Align checkbox and text on the same line */
