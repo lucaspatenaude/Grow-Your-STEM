@@ -1,4 +1,4 @@
-#account-panei.hidden {
+#account-pane.hidden {
   display: none;
 }
 
@@ -6,9 +6,8 @@
   display: block;
 }
 
+/* Create separator for header */
 #account-pane-content-container {
-  display: flex;
-  flex-direction: column;
   padding: 10px;
   min-width: fit-content
 }
@@ -17,7 +16,6 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px;
   border-bottom: 3px solid var(--darkw);
 
@@ -37,4 +35,8 @@
 .account-objectives-container input[type="checkbox"] {
   appearance: auto; /* Use the default checkbox styling */
   margin: 0; /* Remove any default margins */
+}
+
+.objective-type-header {
+  
 }
