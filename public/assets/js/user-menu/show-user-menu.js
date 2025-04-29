@@ -16,7 +16,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	// Listen for click event on the register button
-	$("#register-button").click(function (event) {
+	$("#login-page-register-button").click(function (event) {
 		event.preventDefault(); // Prevent the default action of following the link
 
 		$("#login-screen-container").hide();
