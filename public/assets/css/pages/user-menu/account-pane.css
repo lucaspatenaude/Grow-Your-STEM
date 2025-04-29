@@ -13,11 +13,9 @@
 }
 
 #account-header-container {
-
   display: flex;
   justify-content: space-between;
-  border-bottom: 3px solid var(--darkw);
-
+  
   #username {
       font-size: 23px;
       font-weight: 500;
@@ -43,5 +41,10 @@
 
 .objective-header {
   margin-top: 15px;
-  border-bottom: 2px solid var(--darkw);
+  border-bottom: 2px solid var(--darkc);
+  font-size: 25px;
+}
+
+#top-objectives-container {
+  margin: 0px;
 }

@@ -92,16 +92,16 @@ select {
   margin: 10px 0;
   text-decoration: none;
   padding: 5px 20px;
-  background-color: red;
-  border-color: red;
-  border: 1px solid red;
+  background-color: var(--cool);
+  border-color: var(--cool);
+  border: 1px solid var(--cool);
   border-radius: 8px;
   color: white;
 }
 
 .account-portal-button:hover {
-  background-color: darkred;
-  border-color: darkred;
+  background-color: var(--darkc);
+  border-color: var(--darkc);
   color: white;
 }
 
