@@ -3,9 +3,9 @@
 .account-portal-container {
   width: 400px;
   position: absolute;
-  top: 80px; /* Adjust this value as needed */
+  top: 95px; /* Adjust this value as needed */
   right: 20px; /* Adjust this value as needed */
-  z-index: 5;
+  z-index: 1000;
   background: linear-gradient(to bottom, white, rgb(245, 245, 245), rgb(227, 227, 227)); /* Gradient from white to gray */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   border: 1px solid gray;
@@ -17,17 +17,28 @@
   min-height: fit-content;
 }
 
+.portal-type-header {
+  text-align: center;
+}
+
 /* */
 .form-container {
+  display: flex; /* Enable flexbox for alignment */
+  flex-direction: column; /* Keep elements stacked vertically */
   width: 70%; /* Adjust width as needed */
   margin: 0 auto; /* Center horizontally */
   text-align: flex-start; /* Center text horizontally */
 }
 
+.account-submit-button-container {
+  display: flex; /* Enable flexbox for alignment */
+  justify-content: center; /* Align items to the right */
+}
+
 .account-portal-button {
-  align-items: flex-end;
+  margin: 10px 0;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 5px 20px;
   background-color: red;
   border-color: red;
   border: 1px solid red;
@@ -61,5 +72,3 @@ select {
 }
 
 /* Adjust styling for buttons */
-
-
