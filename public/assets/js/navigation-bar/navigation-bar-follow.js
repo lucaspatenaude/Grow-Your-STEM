@@ -21,7 +21,7 @@ function makeNavbarSticky() {
             // Make the account portal follow the navbar
             if (accountPortal) {
                 accountPortal.style.position = "fixed";
-                accountPortal.style.top = navbar.offsetHeight + 15 + "px"; // 15px below the navbar
+                accountPortal.style.top = navbar.offsetHeight + 35 + "px"; // 15px below the navbar
                 accountPortal.style.right = "20px"; // Adjust as needed
             }
         } else {
