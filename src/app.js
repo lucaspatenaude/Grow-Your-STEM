@@ -66,11 +66,18 @@ app.get("/", (req, res) => {
 	res.render("pages/home", { user }); // Pass the user object to the template
 });
 
+// Middleware to set user in res.local
+app.use((req, res, next) => {
+	res.locals.user = req.session.user || null; // Set user to null if not logged in
+	next();
+})
+
 // *****************************************************
 // <!-- 5. Append All Middleware -->
 // *****************************************************
 
 app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // Serve static files from the 'middleware' directory
+
 
 // *****************************************************
 // <!-- 6. Output All Page Routes -->
