@@ -3,26 +3,8 @@ const router = express.Router();
 
 // ************** Home Page Routes ************** 
 
-router.get("/home", async (req, res) => {
-    try {
-        const user = req.session.user;
-
-        if (user) {
-            // Fetch tasks for the logged-in user
-            const tasks = await db.any(
-                "SELECT TaskName, IsCompleted FROM tasks WHERE UserID = $1",
-                [user.UserID]
-            );
-
-            // Attach tasks to the user object
-            user.tasks = tasks;
-        }
-
-        res.render("pages/home", { user });
-    } catch (error) {
-        console.error("Error fetching tasks:", error.message || error);
-        res.render("pages/home", { message: "An error occurred", error: true });
-    }
+router.get("/home", (req, res) => {
+    res.render("pages/home");
 });
 
 router.get("/", (req, res) => {
