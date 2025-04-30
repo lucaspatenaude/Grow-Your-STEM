@@ -26,19 +26,23 @@
 
 .card-container {
 	display: flex;
-	margin-top: 30px;
 	flex-direction: column;
-	align-items: flex-start;
+	margin-top: 30px;
+	overflow-x: auto; /* Enable horizontal scrolling */
+	white-space: nowrap; /* Prevent wrapping of child elements */
+	padding-bottom: 10px; /* Add some padding for better UX */
 }
 
 .card-content-container {
 	display: flex;
 	flex-direction: row;
-	width: 100%;
+	gap: 20px; /* Add spacing between cards */
+	width: max-content; /* Ensure the container expands based on its content */
 	height: 100%;
 }
 
 .card {
+	flex: 0 0 auto; /* Prevent cards from shrinking or growing */
 	margin-top: 10px;
 	margin-right: 20px;
 	height: 100%;
@@ -47,6 +51,12 @@
 	border: 1px solid var(--lightw);
 	position: relative; /* Ensure cards have a position context */
 	z-index: 1; /* Lower z-index than team-wheel */
+
+	/* Ensure text wraps properly */
+	overflow: hidden; /* Prevent content from spilling out */
+	text-overflow: ellipsis; /* Optional: Add ellipsis for overflowing text */
+	white-space: normal; /* Allow text to wrap */
+	word-wrap: break-word; /* Break long words if necessary */
 }
 
 
