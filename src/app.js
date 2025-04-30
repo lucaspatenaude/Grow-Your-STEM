@@ -85,6 +85,7 @@ app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // 
 
 app.use("/", require("./routes/routes")); // Import all routes from the routes directory
 app.use("/", require("./routes/login-and-registration")); // Import all routes from the login-and-registration directory
+app.use("/", require("./routes/tasks")); // Import all routes from the tasks directory
 
 // *****************************************************
 // <!-- 7. Export the App Object -->
