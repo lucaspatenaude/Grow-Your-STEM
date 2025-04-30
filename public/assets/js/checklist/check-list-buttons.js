@@ -1,19 +1,19 @@
-document.getElementById('article-checkbox-1').addEventListener('click', () => {
-  const checkbox = document.getElementById('checkbox-1');
-  checkbox.checked = !checkbox.checked;
-});
+async function completeTask(taskName) {
+    try {
+        const response = await fetch('/api/tasks/complete-task', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId: 1, taskName }) // Replace with dynamic userId
+        });
 
-document.getElementById('article-checkbox-2').addEventListener('click', () => {
-  const checkbox = document.getElementById('checkbox-2');
-  checkbox.checked = !checkbox.checked;
-});
-
-document.getElementById('article-checkbox-3').addEventListener('click', () => {
-  const checkbox = document.getElementById('checkbox-3');
-  checkbox.checked = !checkbox.checked;
-});
-
-document.getElementById('article-checkbox-4').addEventListener('click', () => {
-  const checkbox = document.getElementById('checkbox-4');
-  checkbox.checked = !checkbox.checked;
-});
+        const result = await response.json();
+        if (response.ok) {
+            alert(`Task completed! You earned ${result.points} points.`);
+        } else {
+            alert(`Error: ${result.error}`);
+        }
+    } catch (error) {
+        console.error('Error completing task:', error);
+        alert('An error occurred. Please try again.');
+    }
+}

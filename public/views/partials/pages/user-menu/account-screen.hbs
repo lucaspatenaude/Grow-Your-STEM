@@ -5,7 +5,7 @@
 
             <div id="user-information-container">
                 <a id="username">Hello, {{user.username}}</a>
-                <p>STEM Score: {{user.score}}</p>
+                <p>STEM Score: {{user.score}}</p> <!-- Ensure this dynamically updates -->
             </div>
 
             <div class="logout-container">
@@ -19,9 +19,14 @@
             <div class="objectives-container" id="top-objectives-container">
                 <h2 class="objective-header">📖 Articles</h2>
                 <ul>
-                    <li><label><input type="checkbox" id="checkbox-1" disabled>Read Article "How Tariffs Work"</label></li>
-                    <li><label><input type="checkbox" id="checkbox-2" disabled>Read Article "Credit and Financing Options"</label></li>
-                    <li><label><input type="checkbox" id="checkbox-3" disabled>Read Article "Retirement Accounts"</label></li>
+                    {{#each user.tasks}}
+                    <li>
+                        <label>
+                            <input type="checkbox" id="checkbox-{{@index}}" disabled {{#if this.IsCompleted}}checked{{/if}}>
+                            {{this.TaskName}}
+                        </label>
+                    </li>
+                    {{/each}}
                 </ul>
             </div>
 
