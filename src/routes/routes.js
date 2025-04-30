@@ -47,6 +47,10 @@ router.get("/articles/clay/retirement-accounts", (req, res) => {
     res.render("pages/articles/Clay/Retirement-Accounts");
 });
 
+router.get("/articles/clay/global-reserve", (req, res) => {
+    res.render("pages/articles/Clay/Global-Reserve");
+});
+
 // ******** Lucas' Articles ********
 
 router.get("/articles/lucas/credit-and-financing-options", (req, res) => {

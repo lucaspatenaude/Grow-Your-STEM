@@ -73,6 +73,10 @@
   list-style-type:circle; /* Use numbers for the list */
 }
 
+.article-page-container ol {
+  list-style-type: decimal;
+}
+
 .works-cited li {
   margin-bottom: 10px; /* Add spacing between list items */
   line-height: 1.5; /* Improve readability */
