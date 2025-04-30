@@ -22,7 +22,7 @@
   }  
 }
 
-#user-informatiopn-container {
+#user-information-container {
   display: flex;
   flex-direction: column;
 }
