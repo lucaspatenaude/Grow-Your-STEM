@@ -72,24 +72,7 @@ app.use((req, res, next) => {
 	next();
 })
 
-// Middleware to set user tasks in res.locals
-app.use(async (req, res, next) => {
-    if (req.session.user) {
-        try {
-            const tasks = await db.query(
-                'SELECT TaskName, IsCompleted FROM tasks WHERE UserID = $1',
-                [req.session.user.userid]
-            );
-            res.locals.tasks = tasks.rows;
-        } catch (error) {
-            console.error('Error fetching tasks:', error.message || error);
-            res.locals.tasks = [];
-        }
-    } else {
-        res.locals.tasks = [];
-    }
-    next();
-});
+
 
 // *****************************************************
 // <!-- 5. Append All Middleware -->
@@ -105,6 +88,7 @@ app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // 
 app.use("/", require("./routes/routes")); // Import all routes from the routes directory
 app.use("/", require("./routes/login-and-registration")); // Import all routes from the login-and-registration directory
 app.use("/", require("./routes/tasks")); // Import all routes from the tasks directory
+app.use("/", require("./routes/account")); // Import all routes from the account directory
 
 // *****************************************************
 // <!-- 7. Export the App Object -->

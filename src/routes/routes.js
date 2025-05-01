@@ -55,14 +55,5 @@ router.get("/articles/lucas/credit-and-financing-options", (req, res) => {
 
 // ******** Account Page Route ********
 
-router.get("/account", (req, res) => {
-    if (!req.session.user) {
-        return res.redirect("/login"); // Redirect to login if user is not logged in
-    }
-    res.render("partials/pages/user-menu/account-screen", {
-        user: req.session.user,
-        tasks: res.locals.tasks, // Pass tasks explicitly if needed
-    });
-});
 
 module.exports = router;
