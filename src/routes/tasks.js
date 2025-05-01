@@ -16,12 +16,12 @@ router.post('/complete-task', async (req, res) => {
             [userId, taskId]
         );
 
-        if (!task || task.rows.length === 0) { // Handle undefined or empty rows
+        if (!task || task.length === 0) { // Handle undefined or empty array
             console.error('Task not found for UserID:', userId, 'TaskID:', taskId);
             return res.status(404).json({ error: 'Task not found' });
         }
 
-        const { Points, IsCompleted } = task.rows[0];
+        const { Points, IsCompleted } = task[0]; // Access the first row of the result
 
         if (IsCompleted) {
             return res.status(400).json({ error: 'Task already completed' });
@@ -33,7 +33,7 @@ router.post('/complete-task', async (req, res) => {
         // Update the user's score
         await db.query('UPDATE users SET Score = Score + $1 WHERE UserID = $2', [Points, userId]);
 
-        res.redirect('/account'); // Redirect to the account screen
+        res.redirect('/'); // Redirect to the account screen
     } catch (error) {
         console.error('Error in /complete-task route:', error.message || error);
         res.status(500).json({ error: 'Internal server error' });
