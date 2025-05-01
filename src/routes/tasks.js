@@ -4,31 +4,36 @@ const db = require('../../database/setup'); // Assuming you have a database conn
 
 // Mark task as completed and update user score
 router.post('/complete-task', async (req, res) => {
-    const { userId, taskName } = req.body;
+    const { userId, taskId } = req.body;
 
     console.log("User ID:", userId);
-    console.log("Task Name:", taskName);
+    console.log("Task ID:", taskId);
 
     try {
+        // Fetch the task from the database
         const task = await db.query(
-            'SELECT TaskID, Points, IsCompleted FROM tasks WHERE UserID = $1 AND TaskName = $2',
-            [userId, taskName]
+            'SELECT TaskID, Points, IsCompleted FROM tasks WHERE UserID = $1 AND TaskID = $2',
+            [userId, taskId]
         );
 
-        if (task.rows.length === 0) {
+        if (!task || task.rows.length === 0) { // Handle undefined or empty rows
+            console.error('Task not found for UserID:', userId, 'TaskID:', taskId);
             return res.status(404).json({ error: 'Task not found' });
         }
 
-        const { TaskID, Points, IsCompleted } = task.rows[0];
+        const { Points, IsCompleted } = task.rows[0];
 
         if (IsCompleted) {
             return res.status(400).json({ error: 'Task already completed' });
         }
 
-        await db.query('UPDATE tasks SET IsCompleted = TRUE WHERE TaskID = $1', [TaskID]);
+        // Mark the task as completed
+        await db.query('UPDATE tasks SET IsCompleted = TRUE WHERE TaskID = $1', [taskId]);
+
+        // Update the user's score
         await db.query('UPDATE users SET Score = Score + $1 WHERE UserID = $2', [Points, userId]);
 
-        res.redirect('/'); // Redirect to the home page or account screen
+        res.redirect('/account'); // Redirect to the account screen
     } catch (error) {
         console.error('Error in /complete-task route:', error.message || error);
         res.status(500).json({ error: 'Internal server error' });
