@@ -4,8 +4,3 @@ CREATE TABLE users (
     Password CHAR(60) NOT NULL,
     Score INT DEFAULT 0
 );
-
--- Insert a default user
-INSERT INTO users (Username, Password, Score)
-VALUES
-    ('default_user', 'hashed_password_placeholder', 0);
