@@ -72,6 +72,25 @@ app.use((req, res, next) => {
 	next();
 })
 
+// Middleware to set user tasks in res.locals
+app.use(async (req, res, next) => {
+    if (req.session.user) {
+        try {
+            const tasks = await db.query(
+                'SELECT TaskName, IsCompleted FROM tasks WHERE UserID = $1',
+                [req.session.user.userid]
+            );
+            res.locals.tasks = tasks.rows;
+        } catch (error) {
+            console.error('Error fetching tasks:', error.message || error);
+            res.locals.tasks = [];
+        }
+    } else {
+        res.locals.tasks = [];
+    }
+    next();
+});
+
 // *****************************************************
 // <!-- 5. Append All Middleware -->
 // *****************************************************

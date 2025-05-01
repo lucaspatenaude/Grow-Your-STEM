@@ -57,33 +57,54 @@ router.get("/logout", (req, res) => {
 router.post("/register", async (req, res) => {
     try {
         if (!req.body.username || !req.body.password) {
-            // If username or password is missing, render the home page with an error message
             return res.render("pages/home", { message: "Invalid input", error: true, showRegister: true });
         }
 
-        // Check if the username already exists in the database
+        // Check if the username already exists
         const existingUser = await db.oneOrNone(
             "SELECT * FROM users WHERE username = $1",
             req.body.username
         );
         if (existingUser) {
-            // If a user with the same username already exists, render the home page with an error message
             return res.render("pages/home", { message: "Username already exists", error: true, showRegister: true });
         }
 
-        // Hash the password using bcrypt library
+        // Hash the password
         const hash = await bcrypt.hash(req.body.password, 10);
 
-        // Insert username and hashed password into the 'users' table
-        await db.none("INSERT INTO users (username, password) VALUES ($1, $2)", [
-            req.body.username,
-            hash,
-        ]);
+        // Insert the new user into the database
+        const newUser = await db.one(
+            "INSERT INTO users (username, password) VALUES ($1, $2) RETURNING userid",
+            [req.body.username, hash]
+        );
 
-        // Redirect user to the home page after successful registration
+        // Insert the preset tasks for the new user
+        const tasks = [
+            'Read Article "How Do Tariffs Work"',
+            'Read Article "Credit and Financing Options"',
+            'Read Article "Retirement Accounts"',
+            'Click Fundamentals Button',
+            'Play "Universal Paperclips"',
+            'Complete STEM Quiz',
+            'Watch STEM Webinar',
+            'Submit a STEM Project',
+            'Join STEM Community Forum',
+            'Share STEM Article on Social Media'
+        ];
+
+        const taskQueries = tasks.map(taskName => {
+            return db.none(
+                "INSERT INTO tasks (userid, taskname, points) VALUES ($1, $2, $3)",
+                [newUser.userid, taskName, 10] // Assuming each task is worth 10 points
+            );
+        });
+
+        await Promise.all(taskQueries);
+
+        // Redirect to the home page after successful registration
         res.redirect("/home");
     } catch (error) {
-        // If an error occurs during registration, render the home page with a generic error message
+        console.error("Error during registration:", error.message || error);
         res.render("pages/home", { message: "An error occurred during registration", error: true, showRegister: true });
     }
 });

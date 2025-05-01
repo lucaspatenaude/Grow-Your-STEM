@@ -6,6 +6,9 @@ const db = require('../../database/setup'); // Assuming you have a database conn
 router.post('/complete-task', async (req, res) => {
     const { userId, taskName } = req.body;
 
+    console.log("User ID:", userId);
+    console.log("Task Name:", taskName);
+
     try {
         const task = await db.query(
             'SELECT TaskID, Points, IsCompleted FROM tasks WHERE UserID = $1 AND TaskName = $2',
@@ -25,7 +28,7 @@ router.post('/complete-task', async (req, res) => {
         await db.query('UPDATE tasks SET IsCompleted = TRUE WHERE TaskID = $1', [TaskID]);
         await db.query('UPDATE users SET Score = Score + $1 WHERE UserID = $2', [Points, userId]);
 
-        res.json({ message: 'Task completed successfully', points: Points });
+        res.redirect('/'); // Redirect to the home page or account screen
     } catch (error) {
         console.error('Error in /complete-task route:', error.message || error);
         res.status(500).json({ error: 'Internal server error' });
