@@ -12,7 +12,8 @@
 /********************** General Card Stylization **********************/
 
 .card {
-	border: 1px solid var(--darkc);
+    background-color: var(--lightw) !important; /* Use !important to override Bootstrap */
+	border: 1px solid var(--darkc) !important;
 	border-radius: 20px;
     position: relative; /* Ensure cards have a position context */
     z-index: 1; /* Lower z-index than team-wheel */

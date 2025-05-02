@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Adjust as needed */
+    z-index: 1000; /* Always keep navigation bar at top */
 }
 
 #navigation-bar-container {
@@ -57,14 +57,25 @@
     color: var(--cool);
 }
 
-
-
-/*********** Sub-Menu Section ***********/
+/*********** Sub-Menu ***********/
 
 li {
     cursor: pointer;
     font-family: "MontBold";
 }
+
+/*********** Dropdown Menu ***********/
+
+.dropdown-menu {
+    background: var(--lightw) !important;
+    border-color: var(--darkw) !important;
+}
+
+.dropdown-item {
+    color: var(--darkc) !important;
+}
+
+
 
 /********************** Right Side **********************/
 
