@@ -1,3 +1,49 @@
+/********************** Color Palette **********************/
+
+:root {
+    --darkw: #FE5D26;
+    --warm: #F2C078;
+    --lightw: #FAEDCA;
+    --lightc: #C1DBB3;
+    --cool: #7EBC89;
+    --darkc: #417F54;
+    
+  }
+
+/********************** Universal Styles **********************/
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+html, body {
+    height: 100%; /* Ensure the page fills the viewport height */
+    width: 100%; /* Ensure the page fills the viewport width */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100%; /* Prevent shrinking below the viewport height */
+    background-color: var(--lightc) !important; /* Use !important to override Bootstrap */
+}
+
+.page-container {
+    flex: 1; /* Allow the main content to grow and fill available space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    margin-top: 40px;
+    margin-left: 125px;
+    margin-right: 400px;
+    justify-content: flex-start; /* Align content at the top */
+    position: relative; /* Ensure it has a position context */
+    min-height: fit-content; /* Respect the minimum height of the content */
+    padding-bottom: 100px; /* Add space for the footer */
+    box-sizing: border-box; /* Include padding in height calculations */
+    font-family: "Roboto_Slab";
+    color: var(--darkc);
+    background-color: var(--lightc);
+}
+
+/********************** Custom Fonts **********************/
+
 /* Add logo font face */
 @font-face {
     font-family: 'Redline';
@@ -25,43 +71,4 @@
     src: url('../../fonts/MontserratAlternates-Regular.woff2') format('woff2')
          url('../../fonts/MontserratAlternates-Regular.woff') format('woff');
     font-display: swap;
-}
-
-:root {
-    --darkw: #FE5D26;
-    --warm: #F2C078;
-    --lightw: #FAEDCA;
-    --lightc: #C1DBB3;
-    --cool: #7EBC89;
-    --darkc: #417F54;
-    
-  }
-
-html {
-    scroll-behavior: smooth; /* Enable smooth scrolling */
-}
-
-html, body {
-    height: 100%; /* Ensure the page fills the viewport height */
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    min-height: 100%; /* Prevent shrinking below the viewport height */
-    background-color: var(--lightc);
-}
-
-.page-container {
-    flex: 1; /* Allow the main content to grow and fill available space */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    margin-top: 40px;
-    margin-left: 125px;
-    margin-right: 400px;
-    justify-content: flex-start; /* Align content at the top */
-    position: relative; /* Ensure it has a position context */
-    min-height: fit-content; /* Respect the minimum height of the content */
-    padding-bottom: 100px; /* Add space for the footer */
-    box-sizing: border-box; /* Include padding in height calculations */
-    font-family: "Roboto_Slab";
-    color: var(--darkc);
-    background-color: var(--lightc);
 }

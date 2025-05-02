@@ -19,8 +19,8 @@ router.get("/blog", (req, res) => {
 
 // ************** Lessons Page Routes ************** 
 
-router.get("/lessons", (req, res) => {
-    res.render("pages/lessons");
+router.get("/basics", (req, res) => {
+    res.render("pages/basics");
 });
 
 // ************** Games Page Routes **************
