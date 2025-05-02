@@ -1,0 +1,113 @@
+/********************** Portal Containers **********************/
+
+/* Standardized Styling for Login, Registration, and Account Panes */
+.account-portal-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  
+  position: absolute;
+  top: 95px; /* Adjust this value as needed */
+  right: 20px; /* Adjust this value as needed */
+  z-index: 1000;
+
+	background-color: var(--lightw);
+  border: 3px solid var(--darkw);
+  border-radius: 20px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+/* Set Login and Registration Panes to be same size and hidden on start */
+.account-portal {
+  display: none;
+  min-height: fit-content;
+}
+
+/********************** Branding Header **********************/
+
+.portal-branding-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.portal-logo {
+  height: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.portal-wordmark {
+  text-decoration: none;
+  font-family: 'Redline'; /* Use the custom font */
+  font-size: 25px;
+  color: var(--darkw);
+  min-width: max-content;
+}
+
+.portal-type-header {
+  text-align: center;
+}
+
+/********************** Form Container **********************/
+
+.form-container {
+  display: flex; /* Enable flexbox for alignment */
+  flex-direction: column; /* Keep elements stacked vertically */
+  width: 70%; /* Adjust width as needed */
+  margin: 0 auto; /* Center horizontally */
+  text-align: flex-start; /* Center text horizontally */
+}
+
+/* Apply modern styling to inputs and select elements */
+#form-control,
+select {
+  width: 70%; /* Make inputs and select elements same width */
+  padding: 0.375rem 0.75rem; /* Example padding */
+  font-size: 1rem; /* Example font size */
+  line-height: 1.5; /* Example line height */
+  color: #495057; /* Example text color */
+  background-color: #fff; /* Example background color */
+  border: 1px solid #ced4da; /* Example border */
+  border-radius: 0.25rem; /* Example border radius */
+  margin-bottom: 10px; /* Example margin */
+}
+
+/* Adjust styling for form labels */
+.form-label {
+  font-weight: bold; /* Example font weight */
+}
+
+/********************** Submit Button **********************/
+
+.account-submit-button-container {
+  display: flex; /* Enable flexbox for alignment */
+  justify-content: center; /* Align items to the right */
+}
+
+.account-portal-button {
+  margin: 10px 0;
+  text-decoration: none;
+  padding: 5px 20px;
+  background-color: var(--cool);
+  border-color: var(--cool);
+  border: 1px solid var(--cool);
+  border-radius: 8px;
+  color: white;
+}
+
+.account-portal-button:hover {
+  background-color: var(--darkc);
+  border-color: var(--darkc);
+  color: white;
+}
+
+/********************** Register/Login Switch **********************/
+
+.portal-switch-link-container {
+  display: flex; /* Enable flexbox for alignment */
+  justify-content: center; /* Align items to the right */
+}

@@ -1,0 +1,50 @@
+<div class="account-portal-container" id="account-pane">
+    <div id="account-pane-content-container">
+
+        <div id="account-header-container">
+
+            <div id="user-information-container">
+                <a id="username">Hello, {{user.username}}</a>
+                <p>STEM Score: {{user.score}}</p> <!-- Ensure this dynamically updates -->
+            </div>
+
+            <div class="logout-container">
+                <a id="logout-button" class="account-portal-button" href="/logout">Logout</a>
+            </div>
+        </div>
+
+        <div id="account-objectives-container">
+
+             <!-- Articles To-Do Section  -->
+            <div class="objectives-container">
+                <h2 class="objective-header">📖 Articles</h2>
+                {{#if tasks}}
+                    <ul>
+                        {{#each tasks}}
+                            {{> components/account-screen/task this}}
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <p>No tasks available.</p>
+                {{/if}}
+            </div>
+
+            <!-- Lessons To-Do Section -->
+            <div class="objectives-container">
+                <h2 class="objective-header">🏆 Lessons</h2>
+                <ul>
+                    <li><label><input type="checkbox" id="checkbox-1" disabled>Click Fundamentals Button</label></li>
+                </ul>
+            </div>
+
+            <!-- Games To-Do Section  -->
+            <div class="objectives-container">
+                <h2 class="objective-header">👾 Games</h2>
+                <ul>
+                    <li><label><input type="checkbox" id="checkbox-1" disabled>Play "Universal Paperclips</label></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>

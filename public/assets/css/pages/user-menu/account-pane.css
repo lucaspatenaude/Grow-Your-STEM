@@ -1,0 +1,50 @@
+#account-pane.hidden {
+  display: none;
+}
+
+#account-pane.visible {
+  display: block;
+}
+
+/* Create separator for header */
+#account-pane-content-container {
+  padding: 20px;
+  min-width: fit-content
+}
+
+#account-header-container {
+  display: flex;
+  justify-content: space-between;
+  
+  #username {
+      font-size: 23px;
+      font-weight: 500;
+  }  
+}
+
+#user-information-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.objectives-container label {
+  display: flex; /* Align checkbox and text on the same line */
+  align-items: center; /* Vertically center the checkbox and text */
+  gap: 8px; /* Add spacing between the checkbox and text */
+  font-family: "Roboto_Slab"; /* Ensure consistent font styling */
+}
+
+.objectives-container input[type="checkbox"] {
+  appearance: auto; /* Use the default checkbox styling */
+  margin: 0; /* Remove any default margins */
+}
+
+.objective-header {
+  margin-top: 15px;
+  border-bottom: 2px solid var(--darkc);
+  font-size: 25px;
+}
+
+#top-objectives-container {
+  margin: 0px;
+}

@@ -1,19 +1,32 @@
-services:	
-  web:
-    container_name: web-interface
-    image: node:lts
-    user: "node"
-    working_dir: /home/node/app
+services:
+  db:
+    container_name: GYS-DB
+    image: postgres:14
     environment:
-      NODE_ENV: development
-      SESSION_SECRET: "super duper secret!"
-      API_KEY: "ZjGXIfaEG1G4OkSHyB5wvqOQ5BPb9iav"
+      POSTGRES_USER: "${DB_USER}" # Use DB_USER from .env
+      POSTGRES_PASSWORD: "${DB_PASSWORD}" # Use DB_PASSWORD from .env
+      POSTGRES_DB: "${DB_NAME}" # Use DB_NAME from .env
     ports:
-      - "3003:3000"
+      - "${DB_PORT}:5432" # Map DB_PORT from .env to internal PostgreSQL port 5432
+    volumes:
+      - ./database/init-data:/docker-entrypoint-initdb.d
+      - users-database:/var/lib/postgresql/data
+    env_file:
+      - .env # Load all environment variables from .env
+
+  web:
+    container_name: GYS-Web-Interface
+    image: node:lts
+    user: "${NODE_USER}"
+    working_dir: /home/node/app
+    ports:
+      - "${NODE_PORT}:3000"
     volumes:
       - .:/home/node/app # Mount Client directory
       - ./node_modules:/home/node/app/node_modules # Mount node_modules directory
     command: "npm run start"
+    env_file:
+      - .env # Load all environment variables from .env
 
 volumes:
-  database:
+  users-database:

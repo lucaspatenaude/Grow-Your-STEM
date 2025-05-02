@@ -27,7 +27,6 @@
     display: flex; /* Enable Flexbox */
     align-items: center; /* Vertically center the logo */
     margin-right: 30px; /* Remove extra margin */
-    padding-bottom: 10px;
     cursor: pointer;
     width: 200px;
     transition: transform 0.1s ease-in-out; /* Smooth transition effect */

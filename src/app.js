@@ -11,13 +11,17 @@ const bodyParser = require("body-parser");
 const session = require("express-session"); // To set the session object. To store or access session data, use the `req.session`, which is (generally) serialized as JSON by the store.
 const bcrypt = require("bcryptjs"); //  To hash passwords
 const axios = require("axios"); // To make HTTP requests from our server. We'll learn more about it in Part C.
-const moment = require("moment"); // To extract current time data
-
-// Export the app object to index.js
-module.exports = app;
+const moment = require("moment"); // To extract current time datai
+const fetchTasks = require('./middleware/account-screen/list-tasks-in-menu'); // Import the fetchTasks middlewar
 
 // *****************************************************
-// <!-- Section 2 : Serve Folders as Static Directories -->
+// <!-- 2. Start the Database -->
+// *****************************************************
+
+const db = require("../database/setup"); // Import the db module
+
+// *****************************************************
+// <!-- 3. Setup Handlebars and Static Directories -->
 // *****************************************************
 
 // create `ExpressHandlebars` instance and configure the layouts and partials dir.
@@ -27,21 +31,21 @@ const hbs = handlebars.create({
 	partialsDir: __dirname + "/../public/views/partials",
 });
 
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, "/../public/assets")));
-
-// Serve static files from the 'middleware' directory
-app.use('/middleware', express.static(path.join(__dirname, '/middleware')));
-
-// *****************************************************
-// <!-- Section 3 : App Settings -->
-// *****************************************************
-
 // Register `hbs` as our view engine using its bound `engine()` function.
 app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "/../public/views"));
-app.use(bodyParser.json()); // specify the usage of JSON for parsing request body.
+app.set("views", path.join(__dirname, "/../public/views")); // Set the views directory for Handlebars
+app.use(bodyParser.json());
+
+// Serve static files from the 'Assets" directory
+app.use(express.static(path.join(__dirname, "/../public/assets")));
+
+app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // Serve static files from the 'middleware' directory
+
+
+// *****************************************************
+// <!-- 4. Initialize User Sessions -->
+// *****************************************************
 
 // initialize session variables
 app.get("/welcome", (req, res) => {
@@ -61,23 +65,30 @@ app.use(
 	})
 );
 
+// Middleware to set user in res.locals
+app.use((req, res, next) => {
+    res.locals.user = req.session.user || null; // Set user to null if not logged in
+    next();
+});
+
+// *****************************************************
+// <!-- 5. Append All Middleware -->
+// *****************************************************
+
+app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
+app.use("/", require("./routes/tasks")); // Import all routes from the tasks directory
+
+// *****************************************************
+// <!-- 6. Output All Page Routes -->
+// *****************************************************
+app.use("/", require("./routes/routes")); // Import all routes from the routes directory
+app.use("/", require("./routes/login-and-registration")); // Import all routes from the login-and-registration directory
+app.use("/", require("./routes/account")); // Import all routes from the account directory
 
 
 // *****************************************************
-// <!-- Section 4 : Middleware -->
+// <!-- 7. Export the App Object -->
 // *****************************************************
 
-// *****************************************************
-// <!-- Section 5 : API Routes -->
-// *****************************************************
-
-// Use the routes
-app.use("/", require("./routes/routes"));
-
-// ************************ 
-//    Login Page Routes
-// *************************
-
-
-
-
+// Export the app object to index.js
+module.exports = app;
