@@ -76,6 +76,7 @@ app.use((req, res, next) => {
 // *****************************************************
 
 app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
+app.use("/", require("./routes/tasks")); // Import all routes from the tasks directory
 
 // *****************************************************
 // <!-- 6. Output All Page Routes -->
@@ -83,7 +84,7 @@ app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
 app.use("/", require("./routes/routes")); // Import all routes from the routes directory
 app.use("/", require("./routes/login-and-registration")); // Import all routes from the login-and-registration directory
 app.use("/", require("./routes/account")); // Import all routes from the account directory
-app.use("/", require("./routes/tasks")); // Import all routes from the tasks directory
+
 
 // *****************************************************
 // <!-- 7. Export the App Object -->

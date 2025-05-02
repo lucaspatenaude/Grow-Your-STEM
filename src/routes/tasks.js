@@ -12,16 +12,21 @@ router.post('/complete-task', async (req, res) => {
     try {
         // Fetch the task from the database
         const task = await db.query(
-            'SELECT TaskID, Points, IsCompleted FROM tasks WHERE UserID = $1 AND TaskID = $2',
+            'SELECT TaskID, points, IsCompleted FROM tasks WHERE UserID = $1 AND TaskID = $2',
             [userId, taskId]
         );
 
-        if (!task || task.length === 0) { // Handle undefined or empty array
+        if (!task || task.length === 0) {
             console.error('Task not found for UserID:', userId, 'TaskID:', taskId);
             return res.status(404).json({ error: 'Task not found' });
         }
 
-        const { Points, IsCompleted } = task[0]; // Access the first row of the result
+        const { points: Points, IsCompleted } = task[0];
+
+        if (Points == null) {
+            console.error('Points value is null for TaskID:', taskId);
+            return res.status(500).json({ error: 'Invalid task points' });
+        }
 
         if (IsCompleted) {
             return res.status(400).json({ error: 'Task already completed' });
@@ -32,6 +37,15 @@ router.post('/complete-task', async (req, res) => {
 
         // Update the user's score
         await db.query('UPDATE users SET Score = Score + $1 WHERE UserID = $2', [Points, userId]);
+
+        // Fetch the updated user score
+        const updatedUser = await db.query(
+            'SELECT Score FROM users WHERE UserID = $1',
+            [userId]
+        );
+
+        // Update the session with the new score
+        req.session.user.score = updatedUser[0].score;
 
         res.redirect('/'); // Redirect to the account screen
     } catch (error) {
