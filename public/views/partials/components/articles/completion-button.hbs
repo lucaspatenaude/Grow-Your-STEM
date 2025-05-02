@@ -1,0 +1,9 @@
+<div class="article-button-container">
+  <div class="article-read-button">
+    <form action="/complete-task" method="POST">
+        <input type="hidden" name="userId" value="{{user.userid}}">
+        <input type="hidden" name="taskId" value="{{taskID}}"> <!-- Hardcoded TaskID -->
+        <button type="submit" class="mark-task-done-button">Mark Article as Read</button>
+    </form>
+  </div>
+</div>

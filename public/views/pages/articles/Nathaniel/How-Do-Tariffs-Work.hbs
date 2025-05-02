@@ -60,17 +60,8 @@
     </div>
   </div>
 
-  <!-- Read Button -->
-  {{> components/checkbox-button checkbox-number="1"}} <!-- Controlled by JavaScript @ /assets/js/checklist/check-list-buttons.js -->
-
   <!-- Mark Task as Done Button -->
-  <div class="mark-task-done-container">
-    <form action="/complete-task" method="POST">
-        <input type="hidden" name="userId" value="{{user.userid}}">
-        <input type="hidden" name="taskId" value="1"> <!-- Hardcoded TaskID -->
-        <button type="submit" class="mark-task-done-button">Mark as Done</button>
-    </form>
-  </div>
+  {{> components/articles/completion-button taskID="1"}}
 
 </div>
 

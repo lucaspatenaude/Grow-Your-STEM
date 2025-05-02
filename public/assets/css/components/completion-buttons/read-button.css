@@ -1,0 +1,29 @@
+/*------------------- Article Read Button --------------------*/
+
+.article-button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+}
+
+
+.article-read-button {
+  display: inline-block;
+  margin: 40px;
+  border: 3px solid var(--darkc);
+  background-color: var(--darkc);
+  color: var(--lightc);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+  font-weight: 800;
+  transition-duration: 0.1s;
+}
+
+.article-read-button:hover {
+  background-color: var(--lightc);
+  color: var(--darkc);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
