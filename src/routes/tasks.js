@@ -21,9 +21,9 @@ router.post('/complete-task', async (req, res) => {
             return res.status(404).json({ error: 'Task not found' });
         }
 
-        const { points: Points, iscompleted } = task[0];
+        const { points, iscompleted } = task[0];
 
-        if (Points == null) {
+        if (points == null) {
             console.error('Points value is null for TaskID:', taskId);
             return res.status(500).json({ error: 'Invalid task points' });
         }
@@ -33,17 +33,17 @@ router.post('/complete-task', async (req, res) => {
             await db.query('UPDATE tasks SET iscompleted = FALSE WHERE TaskID = $1', [taskId]);
 
             // Subtract the points from the user's score
-            await db.query('UPDATE users SET Score = Score - $1 WHERE UserID = $2', [Points, userId]);
+            await db.query('UPDATE users SET Score = Score - $1 WHERE UserID = $2', [points, userId]);
 
-            console.log(`Task ${taskId} marked as not completed. Points subtracted: ${Points}`);
+            console.log(`Task ${taskId} marked as not completed. Points subtracted: ${points}`);
         } else {
             // Mark the task as completed
             await db.query('UPDATE tasks SET iscompleted = TRUE WHERE TaskID = $1', [taskId]);
 
             // Add the points to the user's score
-            await db.query('UPDATE users SET Score = Score + $1 WHERE UserID = $2', [Points, userId]);
+            await db.query('UPDATE users SET Score = Score + $1 WHERE UserID = $2', [points, userId]);
 
-            console.log(`Task ${taskId} marked as completed. Points added: ${Points}`);
+            console.log(`Task ${taskId} marked as completed. Points added: ${points}`);
         }
 
         // Fetch the updated user score
