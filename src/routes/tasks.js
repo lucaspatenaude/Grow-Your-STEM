@@ -12,7 +12,7 @@ router.post('/complete-task', async (req, res) => {
     try {
         // Fetch the task from the database
         const task = await db.query(
-            'SELECT TaskID, points, IsCompleted FROM tasks WHERE UserID = $1 AND TaskID = $2',
+            'SELECT TaskID, points, iscompleted FROM tasks WHERE UserID = $1 AND TaskID = $2',
             [userId, taskId]
         );
 
@@ -21,22 +21,30 @@ router.post('/complete-task', async (req, res) => {
             return res.status(404).json({ error: 'Task not found' });
         }
 
-        const { points: Points, IsCompleted } = task[0];
+        const { points: Points, iscompleted } = task[0];
 
         if (Points == null) {
             console.error('Points value is null for TaskID:', taskId);
             return res.status(500).json({ error: 'Invalid task points' });
         }
 
-        if (IsCompleted) {
-            return res.status(400).json({ error: 'Task already completed' });
+        if (iscompleted) {
+            // If the task is already completed, mark it as not completed and subtract points
+            await db.query('UPDATE tasks SET iscompleted = FALSE WHERE TaskID = $1', [taskId]);
+
+            // Subtract the points from the user's score
+            await db.query('UPDATE users SET Score = Score - $1 WHERE UserID = $2', [Points, userId]);
+
+            console.log(`Task ${taskId} marked as not completed. Points subtracted: ${Points}`);
+        } else {
+            // Mark the task as completed
+            await db.query('UPDATE tasks SET iscompleted = TRUE WHERE TaskID = $1', [taskId]);
+
+            // Add the points to the user's score
+            await db.query('UPDATE users SET Score = Score + $1 WHERE UserID = $2', [Points, userId]);
+
+            console.log(`Task ${taskId} marked as completed. Points added: ${Points}`);
         }
-
-        // Mark the task as completed
-        await db.query('UPDATE tasks SET IsCompleted = TRUE WHERE TaskID = $1', [taskId]);
-
-        // Update the user's score
-        await db.query('UPDATE users SET Score = Score + $1 WHERE UserID = $2', [Points, userId]);
 
         // Fetch the updated user score
         const updatedUser = await db.query(
