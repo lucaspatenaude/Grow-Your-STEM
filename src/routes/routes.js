@@ -53,7 +53,4 @@ router.get("/articles/lucas/credit-and-financing-options", (req, res) => {
     res.render("pages/articles/Lucas/Credit-and-Financing-Options");
 });
 
-// ******** Account Page Route ********
-
-
 module.exports = router;

@@ -67,9 +67,6 @@ app.use((req, res, next) => {
     next();
 });
 
-
-
-// Middleware to fetch tasks
 app.use(async (req, res, next) => {
     if (req.session.user) {
         try {
@@ -89,15 +86,7 @@ app.use(async (req, res, next) => {
     next();
 });
 
-
-app.get("/", (req, res) => {
-    console.log("User:", req.session.user);
-    console.log("Tasks:", res.locals.tasks);
-    res.render("pages/home", {
-        user: req.session.user, // Pass the user object
-        tasks: res.locals.tasks, // Pass the tasks array
-    });
-});
+app.use("/", require("./routes/account"));
 
 // *****************************************************
 // <!-- 5. Append All Middleware -->
