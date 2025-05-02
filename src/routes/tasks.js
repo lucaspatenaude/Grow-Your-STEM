@@ -2,26 +2,6 @@ const express = require('express');
 const router = express.Router();
 const db = require('../../database/setup'); // Assuming you have a database connection module
 
-// Middleware to set user tasks in res.locals
-router.use(async (req, res, next) => {
-    if (req.session.user) {
-        try {
-            const tasks = await db.query(
-                'SELECT TaskID, TaskName, Points, IsCompleted FROM tasks WHERE UserID = $1 ORDER BY TaskID',
-                [req.session.user.userid]
-            );
-            console.log('Fetched tasks:', tasks);
-            res.locals.tasks = tasks;
-        } catch (error) {
-            console.error('Error fetching tasks:', error.message || error);
-            res.locals.tasks = [];
-        }
-    } else {
-        res.locals.tasks = [];
-    }
-    next();
-});
-
 // Mark task as completed and update user score
 router.post('/complete-task', async (req, res) => {
     const { userId, taskId } = req.body;

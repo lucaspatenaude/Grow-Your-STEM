@@ -66,13 +66,31 @@ app.get("/", (req, res) => {
 	res.render("pages/home", { user }); // Pass the user object to the template
 });
 
-// Middleware to set user in res.local
+// Middleware to set user in res.locals
 app.use((req, res, next) => {
-	res.locals.user = req.session.user || null; // Set user to null if not logged in
-	next();
-})
+    res.locals.user = req.session.user || null; // Set user to null if not logged in
+    next();
+});
 
-
+// Middleware to fetch tasks
+app.use(async (req, res, next) => {
+    if (req.session.user) {
+        try {
+            const tasks = await db.query(
+                'SELECT TaskID, TaskName, Points, IsCompleted FROM tasks WHERE UserID = $1 ORDER BY TaskID',
+                [req.session.user.userid]
+            );
+            console.log('Fetched tasks:', tasks); // This will now log correctly
+            res.locals.tasks = tasks;
+        } catch (error) {
+            console.error('Error fetching tasks:', error.message || error);
+            res.locals.tasks = [];
+        }
+    } else {
+        res.locals.tasks = [];
+    }
+    next();
+});
 
 // *****************************************************
 // <!-- 5. Append All Middleware -->
@@ -80,6 +98,16 @@ app.use((req, res, next) => {
 
 app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // Serve static files from the 'middleware' directory
 
+// Route for /account
+app.get("/account", (req, res) => {
+    if (!req.session.user) {
+        return res.redirect("/login"); // Redirect to login if user is not logged in
+    }
+    res.render("partials/pages/user-menu/account-screen", {
+        user: req.session.user,
+        tasks: res.locals.tasks, // Explicitly pass tasks
+    });
+});
 
 // *****************************************************
 // <!-- 6. Output All Page Routes -->
@@ -87,7 +115,7 @@ app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // 
 
 app.use("/", require("./routes/routes")); // Import all routes from the routes directory
 app.use("/", require("./routes/login-and-registration")); // Import all routes from the login-and-registration directory
-app.use("/", require("./routes/tasks")); // Ensure this is registered before account.js
+app.use("/", require("./routes/tasks")); // Import all routes from the tasks directory
 app.use("/", require("./routes/account")); // Import all routes from the account directory
 
 // *****************************************************
