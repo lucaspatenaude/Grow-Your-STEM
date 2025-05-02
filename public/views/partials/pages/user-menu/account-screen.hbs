@@ -21,12 +21,7 @@
                 {{#if tasks}}
                     <ul>
                         {{#each tasks}}
-                        <li>
-                            <label>
-                                <input type="checkbox" id="checkbox-{{@index}}" disabled {{#if this.iscompleted}}checked{{/if}}>
-                                {{this.taskname}}
-                            </label>
-                        </li>
+                            {{> components/task this}}
                         {{/each}}
                     </ul>
                 {{else}}
