@@ -10,23 +10,23 @@
 	</div>
 
 	<!---------------- Container to hold cards ------------------->
-	<div class="card-container" id="main-body">	
-		<div class="card-container-header">
+	<div class="body-container" id="articles-container">	
+		<div class="body-container-header" id="articles-header">
 			<h1>Articles</h1>
 		</div>
 		
-		<div class="card-content-container">
+		<div class="cards-container">
 			<!-- Card #1 -->
-			{{> components/home/card title="How do Tariffs Work?" author="Nathaniel Beatty" summary="An in-depth analysis on what the effects of current-day tarrifs look like" link="/articles/nathaniel/how-do-tariffs-work" image-path="/img/articles/Nathaniel/How-Do-Tariffs-Work.webp" image-alt="Sample Event Image"}}
+			{{> components/cards/article-card title="How do Tariffs Work?" author="Nathaniel Beatty" summary="An in-depth analysis on what the effects of current-day tarrifs look like" link="/articles/nathaniel/how-do-tariffs-work" image-path="/img/articles/Nathaniel/How-Do-Tariffs-Work.webp" image-alt="Sample Event Image"}}
 
 			<!-- Card #2 -->
-			{{> components/home/card title="Credit and Financing Options" author="Lucas Patenaude" summary="Navigating funding and credit options for education can be daunting. This article explores popular options for STEM majors" link="/articles/lucas/credit-and-financing-options" image-path="/img/articles/Lucas/Credit-and-Finance-Options.jpeg" image-alt="Sample Event Image"}}
+			{{> components/cards/article-card title="Credit and Financing Options" author="Lucas Patenaude" summary="Navigating funding and credit options for education can be daunting. This article explores popular options for STEM majors" link="/articles/lucas/credit-and-financing-options" image-path="/img/articles/Lucas/Credit-and-Finance-Options.jpeg" image-alt="Sample Event Image"}}
 
 			<!-- Card #3 -->	
-			{{> components/home/card title="Retirement Accounts: How Do They Work?" author="Clay Kress" summary="Saving money at a young age can seem daunting but the benefits are far reaching" link="/articles/clay/retirement-accounts" image-path="/img/articles/Clay/Retirement-Accounts.jpg" image-alt="Sample Event Image"}}
+			{{> components/cards/article-card title="Retirement Accounts: How Do They Work?" author="Clay Kress" summary="Saving money at a young age can seem daunting but the benefits are far reaching" link="/articles/clay/retirement-accounts" image-path="/img/articles/Clay/Retirement-Accounts.jpg" image-alt="Sample Event Image"}}
 
 			<!-- Card #4 -->
-			{{> components/home/card title="The US dollar as the global reserve currency." author="Clay Kress" summary="The United States holds a lot of power as the nation behind the global reserve currency, but what does it mean for us? What happens if we lose it?" link="/articles/Clay/global-reserve" image-path="/img/articles/Clay/Retirement-Accounts.jpg" image-alt="Sample Event Image"}}
+			{{> components/cards/article-card title="The US dollar as the global reserve currency." author="Clay Kress" summary="The United States holds a lot of power as the nation behind the global reserve currency, but what does it mean for us? What happens if we lose it?" link="/articles/Clay/global-reserve" image-path="/img/articles/Clay/Retirement-Accounts.jpg" image-alt="Sample Event Image"}}
 		</div>
 	</div>
 	

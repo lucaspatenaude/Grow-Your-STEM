@@ -1,29 +1,22 @@
 <div class="page-container">
 
-  <div class="fundamentals-basics-container">
-    <div class="basics-container">
-      <h2 class="basics-header">Basics</h2>
-      <p>Learn the fundamentals of math and science.</p>
-      <div class="basics-content">
-        <p>Content goes here...</p>
-      </div>
+  <div class="body-container" id="basics-container">
+    <h1 class="basics-header">Basics</h1>
+    <div class="cards-container">
+      {{> components/cards/basics-card title="Basics of Finance" summary="Learn the fundamentals of finance, including key concepts and terminology." link="/basics/finance" image-path="/img/basics/finance.jpg" image-alt="Finance Basics Image"}}
+      {{> components/cards/basics-card title="Basics of Economics" summary="Understand the basic principles of economics and how they apply to real-world scenarios." link="/basics/economics" image-path="/img/basics/economics.jpg" image-alt="Economics Basics Image"}}
+      {{> components/cards/basics-card title="Basics of Investing" summary="Get started with investing by learning the essential concepts and strategies." link="/basics/investing" image-path="/img/basics/investing.jpg" image-alt="Investing Basics Image"}}
     </div>
   </div>
 
-  <div class="fundamentals-calculator-container">
-    <div class="calculator-container">
-      <h2 class="calculator-header">Calculator</h2>
-      <p>Use the calculator to solve problems and check your answers.</p>
-      <div class="calculator"></div>
-    </div>
+  <div class="body-container" id="calculator-container">
+    <h1 class="body-container-header">Calculator</h1>
+    <p>Use the calculator to solve problems and check your answers.</p>
   </div>
 
-  <div class="fundamentals-lessons-container">
-    <div class="lessons-container">
-      <h2 class="lessons-header">Lessons</h2>
-      <p>Explore various lessons to enhance your knowledge.</p>
-      <div class="lessons-content">
-      </div>
-    </div>
+  <div class="body-container" id="lessons-container">
+    <h1 class="body-container-header">Lessons</h1>
+    <p>Explore various lessons to enhance your knowledge.</p>
   </div>
+
 </div>

@@ -42,6 +42,15 @@ html, body {
     background-color: var(--lightc);
 }
 
+.body-container {
+    display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	overflow-x: auto; /* Enable horizontal scrolling */
+	white-space: nowrap; /* Prevent wrapping of child elements */
+	padding-bottom: 10px; /* Add some padding for better UX */
+}
+
 /********************** Custom Fonts **********************/
 
 /* Add logo font face */
