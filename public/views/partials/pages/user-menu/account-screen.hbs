@@ -2,7 +2,6 @@
     <div id="account-pane-content-container">
 
         <div id="account-header-container">
-
             <div id="user-information-container">
                 <a id="username">Hello, {{user.username}}</a>
                 <p>STEM Score: {{user.score}}</p> <!-- Ensure this dynamically updates -->
@@ -15,34 +14,46 @@
 
         <div id="account-objectives-container">
 
-             <!-- Articles To-Do Section  -->
+            <!-- Articles To-Do Section -->
             <div class="objectives-container">
                 <h2 class="objective-header">📖 Articles</h2>
-                {{#if tasks}}
+                {{#if articles}}
                     <ul>
-                        {{#each tasks}}
+                        {{#each articles}}
                             {{> components/account-screen/task this}}
                         {{/each}}
                     </ul>
                 {{else}}
-                    <p>No tasks available.</p>
+                    <p>No articles available.</p>
                 {{/if}}
             </div>
 
             <!-- Lessons To-Do Section -->
             <div class="objectives-container">
                 <h2 class="objective-header">🏆 Lessons</h2>
-                <ul>
-                    <li><label><input type="checkbox" id="checkbox-1" disabled>Click Fundamentals Button</label></li>
-                </ul>
+                {{#if lessons}}
+                    <ul>
+                        {{#each lessons}}
+                            {{> components/account-screen/task this}}
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <p>No lessons available.</p>
+                {{/if}}
             </div>
 
-            <!-- Games To-Do Section  -->
+            <!-- Games To-Do Section -->
             <div class="objectives-container">
                 <h2 class="objective-header">👾 Games</h2>
-                <ul>
-                    <li><label><input type="checkbox" id="checkbox-1" disabled>Play "Universal Paperclips</label></li>
-                </ul>
+                {{#if games}}
+                    <ul>
+                        {{#each games}}
+                            {{> components/account-screen/task this}}
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <p>No games available.</p>
+                {{/if}}
             </div>
 
         </div>
