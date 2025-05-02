@@ -1,14 +1,15 @@
 /********************** Introduction Container **********************/
 
-
+#introduction-container {
+	margin-bottom: 40px;
+}
 
 #custom-growing-your-stem-header-container {
 	display: flex;
 	font-family: "MontBold";
 }
 
-.redline-header {
-	font-family: "Redline";
+#header-wordmark {
 	font-size: 43px;
 	margin-left: 10px;
 }
