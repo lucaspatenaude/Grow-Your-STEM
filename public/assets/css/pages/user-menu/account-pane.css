@@ -33,7 +33,7 @@
   font-weight: 500;
 }
 
-/********************** Account Pane Layout **********************/
+/********************** Objectives List **********************/
 
 .objectives-container label {
   display: flex; /* Align checkbox and text on the same line */
@@ -53,7 +53,7 @@
 }
 
 .objective-header {
-  margin-top: 15px;
+  margin: 15px 0;
   border-bottom: 2px solid var(--darkc);
   font-size: 25px;
 }
