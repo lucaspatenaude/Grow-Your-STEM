@@ -1,5 +1,17 @@
-.card {
+/********************** Card Container **********************/
 
+.cards-container {
+	display: flex;
+	flex-direction: row;
+    margin: 10px 0;
+	gap: 20px; /* Add spacing between cards */
+	width: max-content; /* Ensure the container expands based on its content */
+	height: 100%;
+}
+
+/********************** General Card Stylization **********************/
+
+.card {
 	border: 1px solid var(--darkc);
 	border-radius: 20px;
     position: relative; /* Ensure cards have a position context */
@@ -7,9 +19,15 @@
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack content vertically */
 	box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+
+    /* Ensure text wraps properly */
+	overflow: hidden; /* Prevent content from spilling out */
+	text-overflow: ellipsis; /* Optional: Add ellipsis for overflowing text */
+	white-space: normal; /* Allow text to wrap */
+	word-wrap: break-word; /* Break long words if necessary */
 }
 
-
+/********************** Card Contents Layout **********************/
 
 .card-body {
     display: flex; /* Use flexbox for layout */
@@ -17,6 +35,8 @@
     justify-content: space-between; /* Push the button to the bottom */
     flex-grow: 1; /* Allow the body to grow and fill available space */
 }
+
+/********************** Card Contents Stylization **********************/
 
 .card img {
     height: 150px;
@@ -35,6 +55,19 @@
     margin-bottom: 15px; /* Add spacing between elements */
 }
 
+/*********** Header Stylization ***********/
+
+.card h1 {
+    font-size: 20px;
+}
+
+.card h2 {
+    font-size: 16px;
+}
+
+
+/********************** Card Button Stylization **********************/
+
 #click-to-read {
     margin-top: auto; /* Push the button to the bottom of the card body */
     align-self: flex-start; /* Align the button to the left */
@@ -48,42 +81,4 @@
 	border: 1px solid var(--darkw);
 	box-shadow: 0 0 5px #979696;
 	cursor: pointer;
-}
-
-.card h1 {
-    font-size: 20px;
-}
-
-.card h2 {
-    font-size: 16px;
-}
-
-/********************** Card Container **********************/
-
-
-
-.cards-container {
-	display: flex;
-	flex-direction: row;
-	gap: 20px; /* Add spacing between cards */
-	width: max-content; /* Ensure the container expands based on its content */
-	height: 100%;
-}
-
-.card {
-	flex: 0 0 auto; /* Prevent cards from shrinking or growing */
-	margin-top: 10px;
-	margin-right: 20px;
-	height: 100%;
-	min-width: 400px;
-
-	border: 1px solid var(--lightw);
-	position: relative; /* Ensure cards have a position context */
-	z-index: 1; /* Lower z-index than team-wheel */
-
-	/* Ensure text wraps properly */
-	overflow: hidden; /* Prevent content from spilling out */
-	text-overflow: ellipsis; /* Optional: Add ellipsis for overflowing text */
-	white-space: normal; /* Allow text to wrap */
-	word-wrap: break-word; /* Break long words if necessary */
 }
