@@ -16,17 +16,17 @@
         <div id="account-objectives-container">
 
              <!-- Articles To-Do Section  -->
-            <div class="objectives-container" id="top-objectives-container">
+            <div class="objectives-container">
                 <h2 class="objective-header">📖 Articles</h2>
-                <ul>
-                    {{#each tasks}}
-                    <li>
-                        <label>
-                            {{this.taskname}}
-                        </label>
-                    </li>
-                    {{/each}}
-                </ul>
+                {{#if tasks}}
+                    <ul>
+                        {{#each tasks}}
+                        <li>{{this.taskname}}</li>
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <p>No tasks available.</p>
+                {{/if}}
             </div>
 
             <!-- Lessons To-Do Section -->

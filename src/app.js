@@ -87,7 +87,7 @@ app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // 
 
 app.use("/", require("./routes/routes")); // Import all routes from the routes directory
 app.use("/", require("./routes/login-and-registration")); // Import all routes from the login-and-registration directory
-app.use("/", require("./routes/tasks")); // Import all routes from the tasks directory
+app.use("/", require("./routes/tasks")); // Ensure this is registered before account.js
 app.use("/", require("./routes/account")); // Import all routes from the account directory
 
 // *****************************************************
