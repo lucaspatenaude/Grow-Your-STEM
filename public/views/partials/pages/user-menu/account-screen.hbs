@@ -21,13 +21,17 @@
                 {{#if tasks}}
                     <ul>
                         {{#each tasks}}
-                        <li>{{this.taskname}}</li>
+                        <li>
+                            <label>
+                                <input type="checkbox" id="checkbox-{{@index}}" disabled {{#if this.iscompleted}}checked{{/if}}>
+                                {{this.taskname}}
+                            </label>
+                        </li>
                         {{/each}}
                     </ul>
                 {{else}}
                     <p>No tasks available.</p>
                 {{/if}}
-                <pre>{{tasks}}</pre>
             </div>
 
             <!-- Lessons To-Do Section -->
