@@ -34,6 +34,11 @@
   font-family: "Roboto_Slab"; /* Ensure consistent font styling */
 }
 
+.objectives-container a {
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Inherit color from parent */
+}
+
 .objectives-container input[type="checkbox"] {
   appearance: auto; /* Use the default checkbox styling */
   margin: 0; /* Remove any default margins */
