@@ -80,22 +80,23 @@ router.post("/register", async (req, res) => {
 
         // Insert the preset tasks for the new user
         const tasks = [
-            { id: 1, name: 'Read Article "How Do Tariffs Work"', points: 10 },
-            { id: 2, name: 'Read Article "Credit and Financing Options"', points: 25 },
-            { id: 3, name: 'Read Article "Retirement Accounts"', points: 30 },
-            { id: 4, name: 'Click Fundamentals Button', points: 15 },
-            { id: 5, name: 'Play "Universal Paperclips"', points: 20 },
-            { id: 6, name: 'Complete STEM Quiz', points: 35 },
-            { id: 7, name: 'Watch STEM Webinar', points: 40 },
-            { id: 8, name: 'Submit a STEM Project', points: 50 },
-            { id: 9, name: 'Join STEM Community Forum', points: 20 },
-            { id: 10, name: 'Share STEM Article on Social Media', points: 10 }
+            { id: 1, name: 'Read Article "How Do Tariffs Work"', points: 10, location: '/articles/nathaniel/how-do-tariffs-work' },
+            { id: 2, name: 'Read Article "Credit and Financing Options"', points: 25, location: '/articles/lucas/credit-and-financing-options' },
+            { id: 3, name: 'Read Article "Retirement Accounts"', points: 30, location: '/articles/clay/retirement-accounts' },
+            { id: 4, name: 'Read Article "Global Reserve"', points: 30, location: '/articles/clay/global-reserve' },
+            { id: 5, name: 'Click Fundamentals Button', points: 15, location: '/' },
+            { id: 6, name: 'Play "Universal Paperclips"', points: 20, location: '/' },
+            { id: 7, name: 'Complete STEM Quiz', points: 35, location: '/' },
+            { id: 8, name: 'Watch STEM Webinar', points: 40, location: '/' },
+            { id: 9, name: 'Submit a STEM Project', points: 50, location: '/' },
+            { id: 10, name: 'Join STEM Community Forum', points: 20, location: '/' },
+            { id: 11, name: 'Share STEM Article on Social Media', points: 10, location: '/' }
         ];
 
         const taskQueries = tasks.map(task => {
             return db.none(
-                "INSERT INTO tasks (userid, taskid, taskname, points) VALUES ($1, $2, $3, $4)",
-                [newUser.userid, task.id, task.name, task.points]
+                "INSERT INTO tasks (userid, taskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
+                [newUser.userid, task.id, task.name, task.points, task.location]
             );
         });
 

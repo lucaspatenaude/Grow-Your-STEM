@@ -5,7 +5,7 @@ const fetchTasks = async (req, res, next) => {
     if (req.session.user) {
         try {
             const tasks = await db.query(
-                'SELECT TaskID, TaskName AS taskname, Points, IsCompleted FROM tasks WHERE UserID = $1 ORDER BY TaskID',
+                'SELECT TaskID, TaskName AS taskname, Points, IsCompleted, Location FROM tasks WHERE UserID = $1 ORDER BY TaskID',
                 [req.session.user.userid]
             );
             console.log('Fetched tasks:', tasks); // This will now log correctly
