@@ -50,7 +50,7 @@
 
 {{#if user.username}}
   <div class="account-portal" id="account-screen-container">
-    {{> pages/user-menu/account-screen}}
+    {{> pages/user-menu/account-screen user=user tasks=tasks}}
   </div>
 {{else}}
 <div class="account-portal" id="login-screen-container">

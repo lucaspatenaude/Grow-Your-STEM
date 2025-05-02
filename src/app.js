@@ -61,23 +61,20 @@ app.use(
 	})
 );
 
-app.get("/", (req, res) => {
-	const user = req.session.user || null; // Get the user from the session
-	res.render("pages/home", { user }); // Pass the user object to the template
-});
-
 // Middleware to set user in res.locals
 app.use((req, res, next) => {
     res.locals.user = req.session.user || null; // Set user to null if not logged in
     next();
 });
 
+
+
 // Middleware to fetch tasks
 app.use(async (req, res, next) => {
     if (req.session.user) {
         try {
             const tasks = await db.query(
-                'SELECT TaskID, TaskName, Points, IsCompleted FROM tasks WHERE UserID = $1 ORDER BY TaskID',
+                'SELECT TaskID, TaskName AS taskname, Points, IsCompleted FROM tasks WHERE UserID = $1 ORDER BY TaskID',
                 [req.session.user.userid]
             );
             console.log('Fetched tasks:', tasks); // This will now log correctly
@@ -92,22 +89,21 @@ app.use(async (req, res, next) => {
     next();
 });
 
+
+app.get("/", (req, res) => {
+    console.log("User:", req.session.user);
+    console.log("Tasks:", res.locals.tasks);
+    res.render("pages/home", {
+        user: req.session.user, // Pass the user object
+        tasks: res.locals.tasks, // Pass the tasks array
+    });
+});
+
 // *****************************************************
 // <!-- 5. Append All Middleware -->
 // *****************************************************
 
 app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // Serve static files from the 'middleware' directory
-
-// Route for /account
-app.get("/account", (req, res) => {
-    if (!req.session.user) {
-        return res.redirect("/login"); // Redirect to login if user is not logged in
-    }
-    res.render("partials/pages/user-menu/account-screen", {
-        user: req.session.user,
-        tasks: res.locals.tasks, // Explicitly pass tasks
-    });
-});
 
 // *****************************************************
 // <!-- 6. Output All Page Routes -->
