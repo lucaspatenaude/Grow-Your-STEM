@@ -1,12 +1,12 @@
 /********************** Color Palette **********************/
 
 :root {
-    --darkw: #FE5D26;
-    --warm: #F2C078;
-    --lightw: #FAEDCA;
-    --lightc: #C1DBB3;
-    --cool: #7EBC89;
-    --darkc: #417F54;
+    --darkw: rgb(254, 93, 38);
+    --warm: rgb(242, 192, 120);
+    --lightw: rgb(250, 237, 202);
+    --lightc: rgb(193, 219, 179);
+    --cool: rgb(126, 188, 137);
+    --darkc: rgb(65, 127, 84);
     
   }
 
