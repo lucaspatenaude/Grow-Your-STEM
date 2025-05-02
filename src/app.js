@@ -40,6 +40,9 @@ app.use(bodyParser.json());
 // Serve static files from the 'Assets" directory
 app.use(express.static(path.join(__dirname, "/../public/assets")));
 
+app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // Serve static files from the 'middleware' directory
+
+
 // *****************************************************
 // <!-- 4. Initialize User Sessions -->
 // *****************************************************
@@ -68,23 +71,19 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
-app.use("/", require("./routes/account"));
-
 // *****************************************************
 // <!-- 5. Append All Middleware -->
 // *****************************************************
 
-app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // Serve static files from the 'middleware' directory
+app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
 
 // *****************************************************
 // <!-- 6. Output All Page Routes -->
 // *****************************************************
-
 app.use("/", require("./routes/routes")); // Import all routes from the routes directory
 app.use("/", require("./routes/login-and-registration")); // Import all routes from the login-and-registration directory
-app.use("/", require("./routes/tasks")); // Import all routes from the tasks directory
 app.use("/", require("./routes/account")); // Import all routes from the account directory
+app.use("/", require("./routes/tasks")); // Import all routes from the tasks directory
 
 // *****************************************************
 // <!-- 7. Export the App Object -->
