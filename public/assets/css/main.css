@@ -25,6 +25,10 @@ html, body {
     background-color: var(--lightc) !important; /* Use !important to override Bootstrap */
 }
 
+.header-container {
+    font-family: "MontBold";
+}
+
 .page-container {
     flex: 1; /* Allow the main content to grow and fill available space */
     display: flex;

@@ -6,7 +6,7 @@
 
 #custom-growing-your-stem-header-container {
 	display: flex;
-	font-family: "MontBold";
+
 }
 
 #header-wordmark {
@@ -16,10 +16,6 @@
 
 /********************** Card Container **********************/
 
-
-.body-container-header {
-	font-family: "MontBold";
-}
 
 
 

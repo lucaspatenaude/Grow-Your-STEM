@@ -1,61 +1,62 @@
 <div class="account-portal-container" id="account-pane">
-    <div id="account-pane-content-container">
 
-        <div id="account-header-container">
-            <div id="user-information-container">
-                <a id="username">Hello, {{user.username}}</a>
-                <p class="redline" id="account-pane-wordmark">STEM</p><p>Score: {{user.score}}</p> <!-- Ensure this dynamically updates -->
-            </div>
-
-            <div class="logout-container">
-                <a id="logout-button" class="account-portal-button" href="/logout">Logout</a>
-            </div>
+    <!------------ Container to Display Account Information ------------>
+    <div class="header-container" id="account-header-container">
+        <div id="user-information-container">
+            <a id="username">Hello, {{user.username}}</a>
+            <p class="redline" id="account-pane-wordmark">STEM</p><p>Score: {{user.score}}</p> <!-- Ensure this dynamically updates -->
         </div>
 
-        <div id="account-objectives-container">
-
-            <!-- Articles To-Do Section -->
-            <div class="objectives-container">
-                <h2 class="objective-header">📖 Articles</h2>
-                {{#if articles}}
-                    <ul>
-                        {{#each articles}}
-                            {{> components/account-screen/task this}}
-                        {{/each}}
-                    </ul>
-                {{else}}
-                    <p>No articles available.</p>
-                {{/if}}
-            </div>
-
-            <!-- Lessons To-Do Section -->
-            <div class="objectives-container">
-                <h2 class="objective-header">🏆 Lessons</h2>
-                {{#if lessons}}
-                    <ul>
-                        {{#each lessons}}
-                            {{> components/account-screen/task this}}
-                        {{/each}}
-                    </ul>
-                {{else}}
-                    <p>No lessons available.</p>
-                {{/if}}
-            </div>
-
-            <!-- Games To-Do Section -->
-            <div class="objectives-container">
-                <h2 class="objective-header">👾 Games</h2>
-                {{#if games}}
-                    <ul>
-                        {{#each games}}
-                            {{> components/account-screen/task this}}
-                        {{/each}}
-                    </ul>
-                {{else}}
-                    <p>No games available.</p>
-                {{/if}}
-            </div>
-
+        <div class="logout-container">
+            <a id="logout-button" class="account-portal-button" href="/logout">Logout</a>
         </div>
+    </div>
+
+
+    <!---------------- Container to Show Objectives ------------------->
+    <div id="account-objectives-container">
+
+        <!-- Articles To-Do Section -->
+        <div class="objectives-container">
+            <h2 class="objective-header">📖 Articles</h2>
+            {{#if articles}}
+                <ul>
+                    {{#each articles}}
+                        {{> components/account-screen/task this}}
+                    {{/each}}
+                </ul>
+            {{else}}
+                <p>No articles available.</p>
+            {{/if}}
+        </div>
+
+        <!-- Lessons To-Do Section -->
+        <div class="objectives-container">
+            <h2 class="objective-header">🏆 Lessons</h2>
+            {{#if lessons}}
+                <ul>
+                    {{#each lessons}}
+                        {{> components/account-screen/task this}}
+                    {{/each}}
+                </ul>
+            {{else}}
+                <p>No lessons available.</p>
+            {{/if}}
+        </div>
+
+        <!-- Games To-Do Section -->
+        <div class="objectives-container">
+            <h2 class="objective-header">👾 Games</h2>
+            {{#if games}}
+                <ul>
+                    {{#each games}}
+                        {{> components/account-screen/task this}}
+                    {{/each}}
+                </ul>
+            {{else}}
+                <p>No games available.</p>
+            {{/if}}
+        </div>
+
     </div>
 </div>

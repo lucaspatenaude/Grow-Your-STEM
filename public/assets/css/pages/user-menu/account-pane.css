@@ -1,3 +1,5 @@
+/********************** Set Pane Display Status **********************/
+
 #account-pane.hidden {
   display: none;
 }
@@ -6,26 +8,32 @@
   display: block;
 }
 
-/* Create separator for header */
-#account-pane-content-container {
+/********************** Account Pane Layout **********************/
+
+/* Create padding and set width for main container (contains all) */
+#account-pane {
   padding: 20px;
   min-width: fit-content
 }
 
+/*********** Information Section ***********/
+
 #account-header-container {
   display: flex;
-  justify-content: space-between;
-  
-  #username {
-      font-size: 23px;
-      font-weight: 500;
-  }  
+  justify-content: space-between; 
 }
 
 #user-information-container {
   display: flex;
   flex-direction: column;
 }
+
+#username {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+/********************** Account Pane Layout **********************/
 
 .objectives-container label {
   display: flex; /* Align checkbox and text on the same line */
