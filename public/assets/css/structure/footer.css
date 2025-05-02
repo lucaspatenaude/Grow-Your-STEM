@@ -96,3 +96,32 @@ footer h3 {
     justify-content: center;
     margin-top: 40px;
 }
+
+/********************** GitHub Button **********************/
+
+#github-button {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Optional: Center items horizontally */
+    margin-top: 30px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    border: 2px solid white;
+    padding: 8px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#github-button:hover {
+    transform: scale(1.1); /* Slightly enlarge the button */
+    background-color: rgb(50, 50, 50); /* Lighten the background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a stronger box shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#github-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Add spacing between the icon and text */
+}
