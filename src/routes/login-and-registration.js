@@ -74,7 +74,7 @@ router.post("/register", async (req, res) => {
 
         // Insert the new user into the database
         const newUser = await db.one(
-            "INSERT INTO users (username, password) VALUES ($1, $2) RETURNING userid",
+            "INSERT INTO users (username, password, score) VALUES ($1, $2, DEFAULT) RETURNING userid",
             [req.body.username, hash]
         );
 
