@@ -42,7 +42,15 @@ html, body {
     background-color: var(--lightc);
 }
 
-.body-container {
+.text-container {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--lightw);
+	border-radius: 20px;
+	padding:15px;
+}
+
+.content-container {
     display: flex;
 	flex-direction: column;
 	margin-top: 30px;

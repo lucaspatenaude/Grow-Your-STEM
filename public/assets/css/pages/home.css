@@ -1,19 +1,13 @@
 /********************** Introduction Container **********************/
 
-.introduction-container {
-	display: flex;
-	flex-direction: column;
-	background-color: var(--lightw);
-	border-radius: 20px;
-	padding:15px;
-}
+
 
 #custom-growing-your-stem-header-container {
 	display: flex;
 	font-family: "MontBold";
 }
 
-#growing-your-stem-home-custom {
+.redline-header {
 	font-family: "Redline";
 	font-size: 43px;
 	margin-left: 10px;
