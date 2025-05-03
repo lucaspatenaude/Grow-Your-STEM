@@ -11,9 +11,9 @@ const bodyParser = require("body-parser");
 const session = require("express-session"); // To set the session object. To store or access session data, use the `req.session`, which is (generally) serialized as JSON by the store.
 const bcrypt = require("bcryptjs"); //  To hash passwords
 const axios = require("axios"); // To make HTTP requests from our server. We'll learn more about it in Part C.
-const moment = require("moment"); // To extract current time datai
+const moment = require("moment"); // To extract current time data
 const fetchTasks = require('./middleware/database/fetch-tasks'); // Import the fetchTasks middleware
-const fetchArticles = require('./middleware/database/fetch-articles'); // Import the fetchTasks middleware
+const fetchArticles = require('./middleware/database/fetch-articles'); // Import the fetchArticles middleware
 
 // *****************************************************
 // <!-- 2. Start the Database -->
@@ -27,9 +27,9 @@ const db = require("../database/setup"); // Import the db module
 
 // create `ExpressHandlebars` instance and configure the layouts and partials dir.
 const hbs = handlebars.create({
-	extname: "hbs",
-	layoutsDir: __dirname + "/../public/views/layouts",
-	partialsDir: __dirname + "/../public/views/partials",
+    extname: "hbs",
+    layoutsDir: __dirname + "/../public/views/layouts",
+    partialsDir: __dirname + "/../public/views/partials",
 });
 
 // Register `hbs` as our view engine using its bound `engine()` function.
@@ -43,28 +43,27 @@ app.use(express.static(path.join(__dirname, "/../public/assets")));
 
 app.use('/middleware', express.static(path.join(__dirname, '/middleware'))); // Serve static files from the 'middleware' directory
 
-
 // *****************************************************
 // <!-- 4. Initialize User Sessions -->
 // *****************************************************
 
 // initialize session variables
 app.get("/welcome", (req, res) => {
-	res.json({ status: "success", message: "Welcome!" });
+    res.json({ status: "success", message: "Welcome!" });
 });
 
 app.use(
-	session({
-		secret: process.env.SESSION_SECRET,
-		saveUninitialized: false,
-		resave: false,
-	})
+    session({
+        secret: process.env.SESSION_SECRET,
+        saveUninitialized: false,
+        resave: false,
+    })
 );
 
 app.use(
-	bodyParser.urlencoded({
-		extended: true,
-	})
+    bodyParser.urlencoded({
+        extended: true,
+    })
 );
 
 // Middleware to set user in res.locals
@@ -84,10 +83,7 @@ app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
 // <!-- 6. Output All Page Routes -->
 // *****************************************************
 
-app.use("/", require("./routes/tasks")); // Import all routes from the tasks directory
-app.use("/", require("./routes/routes")); // Import all routes from the routes directory
-app.use("/", require("./routes/login-and-registration")); // Import all routes from the login-and-registration directory
-app.use("/", require("./routes/account")); // Import all routes from the account directory
+app.use("/", require("./routes/routes")); // Use the consolidated routes file
 
 // *****************************************************
 // <!-- 7. Export the App Object -->
