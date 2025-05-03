@@ -1,6 +1,7 @@
 CREATE TABLE authors (
     AuthorID SERIAL PRIMARY KEY,
-    Name VARCHAR(255) NOT NULL UNIQUE
+    Name VARCHAR(255) NOT NULL UNIQUE,
+    Route VARCHAR(255)
 );
 
 CREATE TABLE articles (
@@ -14,11 +15,11 @@ CREATE TABLE articles (
 );
 
 -- Insert authors
-INSERT INTO authors (Name)
+INSERT INTO authors (Name, Route)
 VALUES
-    ('Lucas Patenaude'),
-    ('Nathaniel Beatty'),
-    ('Clay Kress');
+    ('Lucas Patenaude', 'lucas'),
+    ('Nathaniel Beatty', 'nathaniel'),
+    ('Clay Kress', 'clay');
 
 -- Insert articles
 INSERT INTO articles (AuthorID, Title, Summary, Link, ImagePath, ImageAlt)

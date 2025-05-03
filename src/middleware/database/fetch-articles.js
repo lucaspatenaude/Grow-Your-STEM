@@ -5,7 +5,7 @@ const fetchArticles = async (req, res, next) => {
     try {
         // Fetch articles from the database
         const articles = await db.query(
-            `SELECT a.ArticleID, a.Title, a.Summary, a.Link, a.ImagePath, a.ImageAlt, au.Name AS Author
+            `SELECT a.ArticleID, a.Title, a.Summary, a.Link, a.ImagePath, a.ImageAlt, au.Name AS Author, au.Route AS Route
             FROM articles a
             INNER JOIN authors au ON a.AuthorID = au.AuthorID
             ORDER BY a.ArticleID`

@@ -33,6 +33,7 @@ const fetchArticlesByAuthor = async (req, res, next) => {
         // Attach the fetched data to `res.locals`
         res.locals.articles = articles;
         res.locals.authorName = author[0].name;
+        res.locals.authorRoute = authorParam;
 
     } catch (error) {
         console.error("Error fetching articles by author:", error.message || error);
