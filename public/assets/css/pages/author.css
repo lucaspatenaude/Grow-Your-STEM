@@ -1,0 +1,20 @@
+.author-header-container {
+  display: flex;
+  width: 100%;
+}
+
+.author-header-image {
+  width: 300px;
+  height: 300px;
+  margin-right: 100px;
+  border-radius: 50%;
+  flex-shrink: 0; /* Prevent shrinking of the image */
+}
+
+#author-info-container {
+  margin: 10px;
+  flex-grow: 1; /* Allow this container to fill the remaining space */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+}
