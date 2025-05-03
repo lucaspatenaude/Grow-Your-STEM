@@ -6,19 +6,19 @@ const fetchTasks = async (req, res, next) => {
         try {
             // Fetch article task
             const articleTasks = await db.query(
-                'SELECT ArticleID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM articleTasks WHERE UserID = $1 ORDER BY ArticleID',
+                'SELECT ArticleTaskID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM articleTasks WHERE UserID = $1 ORDER BY ArticleTaskID',
                 [req.session.user.userid]
             );
 
             // Fetch lesson task
             const lessonTasks = await db.query(
-                'SELECT LessonID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM lessonTasks WHERE UserID = $1 ORDER BY LessonID',
+                'SELECT LessonTaskID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM lessonTasks WHERE UserID = $1 ORDER BY LessonTaskID',
                 [req.session.user.userid]
             );
 
             // Fetch game tasks
             const gameTasks = await db.query(
-                'SELECT GameID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM gameTasks WHERE UserID = $1 ORDER BY GameID',
+                'SELECT GameTaskID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM gameTasks WHERE UserID = $1 ORDER BY GameTaskID',
                 [req.session.user.userid]
             );
 

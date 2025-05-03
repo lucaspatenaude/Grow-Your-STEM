@@ -15,14 +15,14 @@ router.post('/complete-task', async (req, res) => {
         let tableName;
         let columnName;
         if (taskType === 'article') {
-            tableName = 'articleTasks';
-            columnName = 'articleid';
+            tableName = 'articletasks';
+            columnName = 'articletaskid';
         } else if (taskType === 'lesson') {
-            tableName = 'lessonTasks';
-            columnName = 'lessonid';
+            tableName = 'lessontasks';
+            columnName = 'lessontaskid';
         } else if (taskType === 'game') {
-            tableName = 'gameTasks';
-            columnName = 'gameid';
+            tableName = 'gametasks';
+            columnName = 'gametaskid';
         } else {
             return res.status(400).json({ error: 'Invalid task type' });
         }

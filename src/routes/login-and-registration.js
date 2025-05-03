@@ -102,7 +102,7 @@ router.post("/register", async (req, res) => {
         // Insert articles into the articleTasks table
         const articleTaskQueries = articleTasks.map(articleTask => {
             return db.none(
-                "INSERT INTO articleTasks (userid, articleid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
+                "INSERT INTO articleTasks (userid, articletaskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
                 [newUser.userid, articleTask.id, articleTask.name, articleTask.points, articleTask.location]
             );
         });
@@ -110,7 +110,7 @@ router.post("/register", async (req, res) => {
         // Insert lessons into the lessonTasks table
         const lessonTaskQueries = lessonTasks.map(lessonTask => {
             return db.none(
-                "INSERT INTO lessonTasks (userid, lessonid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
+                "INSERT INTO lessonTasks (userid, lessontaskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
                 [newUser.userid, lessonTask.id, lessonTask.name, lessonTask.points, lessonTask.location]
             );
         });
@@ -118,7 +118,7 @@ router.post("/register", async (req, res) => {
         // Insert games into the gameTasks table
         const gameTaskQueries = gameTasks.map(gameTask => {
             return db.none(
-                "INSERT INTO gameTasks (userid, gameid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
+                "INSERT INTO gameTasks (userid, gametaskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
                 [newUser.userid, gameTask.id, gameTask.name, gameTask.points, gameTask.location]
             );
         });
