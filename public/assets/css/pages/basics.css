@@ -24,6 +24,30 @@
   background-color: var(--lightw);
   border: 1px solid #ccc;
   border-radius: 4px;
+  appearance: none; /* Remove default browser styling */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+}
+
+select {
+  max-width: 45%;
+  background-color: var(--lightw);
+
+}
+
+#salary {
+  margin-bottom: 20px;
+}
+
+#custom-salary {
+  display: none;
+  margin-bottom: 20px;
+}
+
+select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #007acc; /* Add a custom focus border color */
+  box-shadow: 0 0 5px rgba(0, 122, 204, 0.5); /* Add a subtle focus shadow */
 }
 
 button {

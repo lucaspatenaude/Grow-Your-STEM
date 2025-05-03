@@ -1,3 +1,15 @@
+function toggleCustomSalaryInput() {
+  const salaryDropdown = document.getElementById("salary");
+  const customSalaryInput = document.getElementById("custom-salary");
+  if (salaryDropdown.value === "custom") {
+    customSalaryInput.style.display = "block";
+  } else {
+    customSalaryInput.style.display = "none";
+    customSalaryInput.value = ""; // Clear custom input if not used
+  }
+}
+
+// Update the calculate function to use the custom salary if provided
 function calculate() {
   const tuition = +document.getElementById("tuition").value;
   const fees = +document.getElementById("fees").value;
@@ -6,7 +18,12 @@ function calculate() {
   const scholarships = +document.getElementById("scholarships").value;
   const loans = +document.getElementById("loans").value;
   const income = +document.getElementById("income").value;
-  const salary = +document.getElementById("salary").value;
+  const salaryDropdown = document.getElementById("salary");
+  const customSalaryInput = document.getElementById("custom-salary");
+
+  const salary = customSalaryInput.value 
+    ? +customSalaryInput.value 
+    : +salaryDropdown.value;
 
   const totalCost = tuition + fees + books + software;
   const netOutOfPocket = totalCost - scholarships - (income * 4); // 4-month semester
