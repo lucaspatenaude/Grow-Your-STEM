@@ -12,9 +12,9 @@ function toggleCustomSalaryInput() {
 // Update the calculate function to use the custom salary if provided
 function calculate() {
   const tuition = +document.getElementById("tuition").value;
-  const fees = +document.getElementById("fees").value;
   const books = +document.getElementById("books").value;
   const housing = +document.getElementById("housing").value;
+  const living = +document.getElementById("living").value;
   const scholarships = +document.getElementById("scholarships").value;
   const loans = +document.getElementById("loans").value;
   const income = +document.getElementById("income").value;
@@ -27,7 +27,7 @@ function calculate() {
     : +salaryDropdown.value;
 
   // Calculate total cost for all semesters
-  const totalCostPerSemester = tuition + fees + books + housing;
+  const totalCostPerSemester = tuition + books + housing + living;
   const totalCost = totalCostPerSemester * semesters;
 
   // Calculate net out-of-pocket cost
