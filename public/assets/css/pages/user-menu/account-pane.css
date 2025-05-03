@@ -21,6 +21,7 @@
 #account-header-container {
   display: flex;
   justify-content: space-between; 
+  margin: 0;
 }
 
 #user-information-container {
@@ -31,6 +32,18 @@
 #username {
   font-size: 23px;
   font-weight: 500;
+  margin-right: 25px;
+}
+
+#account-pane-score {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+#account-pane-wordmark {
+  font-size: 23px;
+  margin-right: 6px;
 }
 
 /********************** Objectives List **********************/

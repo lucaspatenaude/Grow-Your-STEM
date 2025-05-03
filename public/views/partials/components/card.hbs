@@ -1,9 +1,16 @@
 <div class="card" id="{{type}}-card">
+    
     <img src="{{image-path}}" class="card-img-top" alt="{{image-alt}}">
+    
     <div class="card-body">
+        
         <h1 class="card-article-title">{{title}}</h1>
         <h2 class="card-article-author">{{author}}</h2>
         <p class="card-article-summary">{{summary}}</p>
-        <a href="{{link}}" class="btn btn-primary" id="click-to-read">Click to Read</a>
+
+        <div class="card-button-container" id="{{type}}-card-button-container">
+            <a href="{{link}}" class="completion-button" id="{{type}}-card-button" {{#if target}}target="{{target}}"{{/if}}>Click to Read</a> <!-- Add target for ability to specify opening lcoation (ie. new tab) -->
+        </div>
+    
     </div>
 </div>

@@ -16,5 +16,16 @@
 
 #game-card {
   min-height: 400px;
-  width: 400px;
+  max-width: 400px;
+}
+
+#game-card-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto; /* Push the button to the bottom of the card body */
+}
+
+#game-card-button {
+  padding: 8px 32px !important;
 }

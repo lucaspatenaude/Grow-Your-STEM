@@ -4,7 +4,9 @@
     <div class="header-container" id="account-header-container">
         <div id="user-information-container">
             <a id="username">Hello, {{user.username}}</a>
-            <p class="redline" id="account-pane-wordmark">STEM</p><p>Score: {{user.score}}</p> <!-- Ensure this dynamically updates -->
+            <div id="account-pane-score">
+                <p class="redline" id="account-pane-wordmark">STEM</p><p>Score: {{user.score}}</p> <!-- Ensure this dynamically updates -->
+            </div>
         </div>
 
         <div class="logout-container">

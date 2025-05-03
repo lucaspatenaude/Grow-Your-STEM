@@ -17,7 +17,7 @@
 .card {
     background-color: var(--lightw) !important; /* Use !important to override Bootstrap */
     border: 2px solid var(--darkc) !important;
-    border-radius: 20px;
+    border-radius: 12px !important;
     position: relative; /* Ensure cards have a position context */
     z-index: 1; /* Lower z-index than team-wheel */
     display: flex; /* Use flexbox for layout */
@@ -72,15 +72,21 @@
 
 /********************** Card Button Stylization **********************/
 
-#click-to-read {
-    margin-top: auto; /* Push the button to the bottom of the card body */
+.card-button-container {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.completion-button { /* Push the button to the bottom of the card body */
     align-self: flex-start; /* Align the button to the left */
+    padding: 8px 12px;
     background-color: var(--darkc);
     color: var(--lightc);
     border: 1px solid var(--darkc);
+    border-radius: 10px;
 }
 
-#click-to-read:hover {
+.completion-button:hover {
     background-color: var(--cool);
     border: 1px solid var(--darkw);
     box-shadow: 0 0 5px #979696;
