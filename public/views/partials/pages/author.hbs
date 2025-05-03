@@ -1,13 +1,31 @@
 <div class="author-page-container">
-    <h1>Articles by {{authorName}}</h1>
 
-    <div class="articles-list">
-        {{#each articles}}
-            <div class="article-item">
-                <h2>{{this.title}}</h2>
-                <p>{{this.summary}}</p>
-                <a href="{{this.link}}">Read More</a>
-            </div>
-        {{/each}}
+    <div class="author-header-container">
+        <div class="header-image">
+            <img src="{{authorImage}}" alt="{{authorName}}">
+        </div>
+        
+        <div class="text-container">
+            <h1 class="author-name">{{authorName}}</h1>
+            <p class="author-bio">{{authorBio}}</p>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <h1 class="page-header-1">Articles by {{authorName}}</h1>
+        
+        <div class="cards-container">
+            {{#each articles}}
+                {{> components/card
+                    type="article"
+                    title=this.title
+                    author=../authorName
+                    summary=this.summary
+                    link=this.link
+                    image-path=this.imagepath
+                    image-alt=this.imagealt
+                }}
+            {{/each}}
+        </div>
     </div>
 </div>
