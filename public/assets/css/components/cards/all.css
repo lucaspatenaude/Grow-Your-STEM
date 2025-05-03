@@ -66,12 +66,13 @@
     margin-bottom: 15px; /* Add spacing between elements */
 }
 
-.card-article-author a {
+.author-link {
     color: var(--darkc);
     text-decoration: none;
 }
 
-.card-article-author a:hover {
+.author-link:hover,
+.author-link:focus {
     color: var(--cool);
     text-decoration: underline;
 }
