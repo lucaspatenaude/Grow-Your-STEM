@@ -3,8 +3,7 @@ const { locals } = require('../../app');
 
 const fetchArticlesByAuthor = async (req, res, next) => {
     try {
-        console.log("Starting fetchArticlesByAuthor middleware...");
-
+        
         const authorMap = {
             lucas: 1,
             nathaniel: 2,
@@ -12,17 +11,7 @@ const fetchArticlesByAuthor = async (req, res, next) => {
         };
 
         const authorParam = req.params.author.toLowerCase();
-        console.log(`Author parameter received: ${authorParam}`);
-
         const authorID = authorMap[authorParam];
-        console.log(`Resolved author ID: ${authorID}`);
-
-        if (!authorID) {
-            console.warn(`Author not found for parameter: ${authorParam}`);
-            res.locals.articles = [];
-            res.locals.authorName = "Unknown Author";
-            return next();
-        }
 
         // Fetch articles for the given authorID
         console.log(`Fetching articles for author ID: ${authorID}`);
@@ -34,8 +23,6 @@ const fetchArticlesByAuthor = async (req, res, next) => {
             [authorID]
         );
 
-        console.log(`Articles query result:`, articles);
-
         // Fetch the author's name
         console.log(`Fetching author name for author ID: ${authorID}`);
         const author = await db.query(
@@ -43,13 +30,9 @@ const fetchArticlesByAuthor = async (req, res, next) => {
             [authorID]
         );
 
-        console.log(`Author query result:`, author);
-
         // Attach the fetched data to `res.locals`
-        res.locals.articles = articles || [];
-        res.locals.authorName = author.length > 0 ? author[0].name : "Unknown Author";
-        console.log(`Resolved author name: ${res.locals.authorName}`);
-        console.log(`Resolved articles:`, res.locals.articles);
+        res.locals.articles = articles;
+        res.locals.authorName = author[0].name;
 
     } catch (error) {
         console.error("Error fetching articles by author:", error.message || error);
@@ -57,7 +40,6 @@ const fetchArticlesByAuthor = async (req, res, next) => {
         res.locals.authorName = "Unknown Author";
     }
 
-    console.log("fetchArticlesByAuthor middleware completed.");
     next();
 };
 
