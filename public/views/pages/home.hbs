@@ -15,9 +15,7 @@
 			<h1>Articles</h1>
 		</div>
 		
-		<div class="cards-container">
-
-			<!--  If adding an article be sure to do the following:
+					<!--  If adding an article be sure to do the following:
 
 				1. Add the article to the articles folder in the public/views/pages directory
 				2. Add the article's routes to the routes.js file in the src/routes directory
@@ -25,71 +23,23 @@
 			
 			-->
 
-			{{> components/card
-					type="article"
-					title="How do Tariffs Work?"
-					author="Nathaniel Beatty"
-					summary="An in-depth analysis on what the effects of current-day tarrifs look like"
-					link="/articles/nathaniel/how-do-tariffs-work"
-					image-path="/img/articles/Nathaniel/How-Do-Tariffs-Work.webp" 
-					image-alt="Sample Event Image"
-			}}
-
-			{{> components/card
-					type="article"
-					title="Credit and Financing Options"
-					author="Lucas Patenaude"
-					summary="Navigating funding and credit options for education can be daunting. This article explores popular options for STEM majors"
-					link="/articles/lucas/credit-and-financing-options"
-					image-path="/img/articles/Lucas/Credit-and-Finance-Options.jpeg"
-					image-alt="Sample Event Image"
-			}}
-
-			{{> components/card
-					type="article"
-					title="Retirement Accounts: How Do They Work?"
-					author="Clay Kress"
-					summary="Saving money at a young age can seem daunting but the benefits are far reaching"
-					link="/articles/clay/retirement-accounts"
-					image-path="/img/articles/Clay/Retirement-Accounts.jpg"
-					image-alt="Sample Event Image"
-			}}
-
-			{{> components/card
-					type="article"
-					title="The US Dollar as the Global Reserve Currency."
-					author="Clay Kress"
-					summary="The United States holds a lot of power as the nation behind the global reserve currency, but what does it mean for us? What happens if we lose it?"
-					link="/articles/Clay/global-reserve"
-					image-path="/img/articles/Clay/Retirement-Accounts.jpg"
-					image-alt="Sample Event Image"
-			}}
-			
-			{{> components/card
-					type="article"
-					title="The Future of AI in the Workplace"
-					author="Lucas Patenaude"
-					summary="An in-depth analysis on what the effects of current-day tarrifs look like"
-					link="/articles/nathaniel/the-future-of-ai-in-the-workplace"
-					image-path="/img/articles/Nathaniel/The-Future-of-AI-in-the-Workplace.webp" 
-					image-alt="Sample Event Image"
-			}}
-
-			<!-- !! Card Template (Do Not Modify -> Please copy & paste) !!
-
-			{{> components/card
-					type="article" 
-					title=""
-					author=""
-					summary=""
-					link="/articles/<author>/<article-name>"
-					image-path="/img/articles/<author>/<article-name>.jpg"
-					image-alt="Image description"
-			}} 
-			-->
-
+		<div class="cards-container">			
+			{{#if articles}}
+        {{#each articles}}
+					{{> components/card
+						type="article"
+						title=this.title
+						author=this.author
+						summary=this.summary
+						link=this.link
+						image-path=this.imagepath
+						image-alt=this.imagealt
+					}}
+				{{/each}}
+			{{else}}
+				<p>No articles available at the moment.</p>
+			{{/if}}
 		</div>
+
 	</div>
-	
-</div>
 </div>

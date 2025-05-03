@@ -79,52 +79,52 @@ router.post("/register", async (req, res) => {
         );
 
         // Separate tasks into categories
-        const articles = [
+        const articleTasks = [
             { id: 1, name: 'Read Article "How Do Tariffs Work"', points: 10, location: '/articles/nathaniel/how-do-tariffs-work' },
             { id: 2, name: 'Read Article "Credit and Financing Options"', points: 25, location: '/articles/lucas/credit-and-financing-options' },
             { id: 3, name: 'Read Article "Retirement Accounts"', points: 30, location: '/articles/clay/retirement-accounts' },
             { id: 4, name: 'Read Article "Global Reserve"', points: 30, location: '/articles/clay/global-reserve' }
         ];
 
-        const lessons = [
+        const lessonTasks = [
             { id: 1, name: 'Click Fundamentals Button', points: 15, location: '/' },
             { id: 2, name: 'Complete STEM Quiz', points: 35, location: '/' },
             { id: 3, name: 'Watch STEM Webinar', points: 40, location: '/' }
         ];
 
-        const games = [
+        const gameTasks = [
             { id: 1, name: 'Play "Universal Paperclips"', points: 20, location: '/' },
             { id: 2, name: 'Submit a STEM Project', points: 50, location: '/' },
             { id: 3, name: 'Join STEM Community Forum', points: 20, location: '/' },
             { id: 4, name: 'Share STEM Article on Social Media', points: 10, location: '/' }
         ];
 
-        // Insert articles into the articles table
-        const articleQueries = articles.map(article => {
+        // Insert articles into the articleTasks table
+        const articleTaskQueries = articleTasks.map(articleTask => {
             return db.none(
-                "INSERT INTO articles (userid, articleid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
-                [newUser.userid, article.id, article.name, article.points, article.location]
+                "INSERT INTO articleTasks (userid, articletaskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
+                [newUser.userid, articleTask.id, articleTask.name, articleTask.points, articleTask.location]
             );
         });
 
-        // Insert lessons into the lessons table
-        const lessonQueries = lessons.map(lesson => {
+        // Insert lessons into the lessonTasks table
+        const lessonTaskQueries = lessonTasks.map(lessonTask => {
             return db.none(
-                "INSERT INTO lessons (userid, lessonid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
-                [newUser.userid, lesson.id, lesson.name, lesson.points, lesson.location]
+                "INSERT INTO lessonTasks (userid, lessontaskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
+                [newUser.userid, lessonTask.id, lessonTask.name, lessonTask.points, lessonTask.location]
             );
         });
 
-        // Insert games into the games table
-        const gameQueries = games.map(game => {
+        // Insert games into the gameTasks table
+        const gameTaskQueries = gameTasks.map(gameTask => {
             return db.none(
-                "INSERT INTO games (userid, gameid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
-                [newUser.userid, game.id, game.name, game.points, game.location]
+                "INSERT INTO gameTasks (userid, gametaskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
+                [newUser.userid, gameTask.id, gameTask.name, gameTask.points, gameTask.location]
             );
         });
 
         // Execute all queries
-        await Promise.all([...articleQueries, ...lessonQueries, ...gameQueries]);
+        await Promise.all([...articleTaskQueries, ...lessonTaskQueries, ...gameTaskQueries]);
 
         // Redirect to the home page after successful registration
         res.redirect("/home");

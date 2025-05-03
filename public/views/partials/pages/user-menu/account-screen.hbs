@@ -16,48 +16,44 @@
 
 
     <!---------------- Container to Show Objectives ------------------->
+    
     <div id="account-objectives-container">
+
+        <!-- 
+        * The files that create the routes for the articles, lessons, and games are:
+        * 1. src/routes/login-and-registration.js - Create the tasks for the user when they register
+        * 2. src/middleware/database/fetch-tasks.js - Queries the DB for the tasks and create the objects, <type>Task, that are imported (ex: articleTask)
+        * 3. src/routes/tasks.js - Create the routes that query the DB and change the completion status    
+        -->
 
         <!-- Articles To-Do Section -->
         <div class="objectives-container">
             <h2 class="objective-header">📖 Articles</h2>
-            {{#if articles}}
-                <ul>
-                    {{#each articles}}
-                        {{> components/account-screen/task this}}
-                    {{/each}}
-                </ul>
-            {{else}}
-                <p>No articles available.</p>
-            {{/if}}
+            <ul> <!-- Import tasks for articleTasks DB table in DB -->
+                {{#each articleTasks}}
+                    {{> components/account-screen/task this}}
+                {{/each}}
+            </ul>
         </div>
 
         <!-- Lessons To-Do Section -->
         <div class="objectives-container">
             <h2 class="objective-header">🏆 Lessons</h2>
-            {{#if lessons}}
-                <ul>
-                    {{#each lessons}}
-                        {{> components/account-screen/task this}}
-                    {{/each}}
-                </ul>
-            {{else}}
-                <p>No lessons available.</p>
-            {{/if}}
+            <ul> <!-- Import tasks for lessonTasks DB table in DB -->
+                {{#each lessonTasks}}
+                    {{> components/account-screen/task this}}
+                {{/each}}
+            </ul>
         </div>
 
         <!-- Games To-Do Section -->
         <div class="objectives-container">
             <h2 class="objective-header">👾 Games</h2>
-            {{#if games}}
-                <ul>
-                    {{#each games}}
-                        {{> components/account-screen/task this}}
-                    {{/each}}
-                </ul>
-            {{else}}
-                <p>No games available.</p>
-            {{/if}}
+            <ul> <!-- Import tasks for gameTasks table in DB -->
+                {{#each gameTasks}}
+                    {{> components/account-screen/task this}}
+                {{/each}}
+            </ul>
         </div>
 
     </div>
