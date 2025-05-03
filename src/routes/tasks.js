@@ -4,7 +4,15 @@ const db = require('../../database/setup'); // Assuming you have a database conn
 
 // Mark task as completed and update user score
 router.post('/complete-task', async (req, res) => {
-    const { userId, taskId, taskType } = req.body; // Include taskType to identify the table (e.g., 'articles', 'lessons', 'games')
+    if (!req.session.user) {
+        // Redirect back to the article page with an article-specific message
+        return res.render('pages/articles/Nathaniel/How-Do-Tariffs-Work', { 
+            articleMessage: 'You must be logged in to complete this task.', 
+            error: true 
+        });
+    }
+
+    const { userId, taskId, taskType } = req.body;
 
     console.log("User ID:", userId);
     console.log("Task ID:", taskId);

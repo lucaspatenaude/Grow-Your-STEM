@@ -1,68 +1,72 @@
 <div class="page-container">
 
-<div class="article-page-container">
-  
-  <!-- Container for the article -->
-  <div class="article-container">
+  <div class="article-page-container">
 
-    <!-- Header and Title -->
-    <div class="article-header-container">
-      <div class="article-title-container">
-        <h1>How Do Tariffs Work?</h1>
+    <!-- Display the message partial if an article-specific message exists -->
+    {{#if articleMessage}}
+      {{> components/message message=articleMessage error=error}}
+    {{/if}}
+
+    <!-- Container for the article -->
+    <div class="article-container">
+
+      <!-- Header and Title -->
+      <div class="article-header-container">
+        <div class="article-title-container">
+          <h1>How Do Tariffs Work?</h1>
+        </div>
+      
+        <div class="article-meta">
+          <p>Author: Nathaniel Beatty</p>
+          <p>Published on: 4/23/2025<p>
+        </div>
       </div>
-    
-      <div class="article-meta">
-        <p>Author: Nathaniel Beatty</p>
-        <p>Published on: 4/23/2025<p>
+
+      <!-- Article Content -->
+      <div class="article-content-container">
+
+        <!-- Article Image -->
+        <div class="article-image">
+          
+        </div>
+
+        <!-- Article Body -->
+        <h2 class="article-inner-header">Tariffs as Taxes</h2>
+
+        <p>Tariffs have taken over the news cycle recently with the current administration’s proposed and enacted policies, but what could these changes mean? How do they affect the American working class? How do they affect the technology we use in everyday life? What even is a tariff and why do certain groups want to enact them?</p>
+        <p>Well, these questions are incredibly complicated and in depth, with even professional economists and political scholars arguing over what the effects of these policies may be, but to even scratch the surface of this topic, tariffs must be defined. In general, a tariff is simply a tax created on certain or all imported goods from another country. Generally speaking, the person or company importing the goods is the group that pays for the tax, and tariffs are enacted as an attempt to protect certain manufacturing industries and to prevent trade with that country.</p>
+
+         <h2 class="article-inner-header">What do economists say?</h2>
+
+        <p>Generally, those against tariffs point to a vast array of drawbacks, such as increased prices for things such as luxury goods, like cars, computers, televisions, and other commodities, and groceries. These price increases come from corporations having to increase prices to compensate for the increased taxes, and from the fact that most of these things, and a significant portion of the food we eat, is imported from abroad. Additionally, detractors point out that tariffs could sour international relations with both allies and rivals, which could isolate us on the world stage and lead to political issues. Moreover, reduced trade with the rest of the world may slow economic growth and wellbeing, as market efficiency decreases. All of these effects have been seen in markets and countries that have implemented tariffs in the past, yet it is not entirely clear whether the reasoning applies to America and the industries that it upholds.</p>
+        <p>Those who advocate for tariffs present a different story and set of priorities, mainly focusing on how it could bring back American manufacturing, which has been decreasing for decades, or how it could decrease our trade deficit, a term which refers to the fact that we import more than we export. Tariffs can also be used as an extra source of income, reducing the tax on the public. However, one of the most recent ways that tariff supporters advocate for this policy is discussing its use as a bargaining chip in global politics, leveraging the economic threat to push other countries in a direction beneficial for the country who enacts them. These two sides have argued about the specifics of how tariffs work since the inception of tariffs, yet recently, in America, these debates have come to a head with the recent discussion of tariffs being enacted worldwide.</p>
+         <h2 class="article-inner-header">What do tariffs mean for America and technology?</h2>
+        <p>The recent policies enacted by the Trump administration were marketed to the American people as “[leveling] the playing field for American businesses and workers by confronting the unfair tariff disparities and non-tariff barriers imposed by other countries” [1]. The administration usually proceeds to explain how many other countries have very high tariffs on our country in certain industries while we keep our tariffs on them low. This is a flawed argument though, as due to our status as a wealthy global superpower, the majority of our economy is from finance, service, and of course, STEM and technology. The National Institute of Standards and Technology states that only 10.2% of America’s entire GDP is composed of manufacturing. This shift towards import as our country becomes wealthier and wealthier is even pointed out by the Administration itself, stating, “In 2023, U.S. manufacturing output as a share of global manufacturing output was 17.4%, down from 28.4% in 2001” [1]. This desire to move towards a manufacturing economy in this case is entirely unwarranted and unsupported, done seemingly simply for the idea of “American manufacturing,” while hurting consumers and workers by raising prices and decreasing American-bought commodity consumption.</p>
+        <p>As STEM people, we may wonder how all of these politics and economics affect us, as we see ourselves generally disconnected from the economy and business, yet these tariffs have the potential to destroy our job market and decrease innovation. Namely, the cost of materials, supplies, and research tools has the potential to skyrocket under this new economic policy, massively stunting new innovation and breakthroughs that could guide our industries forward. Companies may have to cut costs due to the importing of these materials too, causing either a massive increase in price or the unfortunate laying off of employees, reducing the size of the job market. As the final nail in the coffin though, devastating for anyone from software developers to general technology enthusiasts, the price of technology will skyrocket. Since most tech factories are in China, which is one of the most affected recipients of the tariffs, prices for tech may become prohibitively expensive, leading to cutbacks, stagnation, and ultimately the decay of the American tech industry. These are just a few examples from the tip of the iceberg of how these policies may affect us for the worse.</p>
+        <p>Tariffs are a complicated concept, which encompasses many ideas, opinions, and concepts, yet nearly all economists, including but not limited to Economic Policy Institute, the BBC, the University of Chicago, and the Tax Foundation believe that these tariffs will ultimately destroy the American economy. Taxes are almost certainly not the solution to the economic problems that America is facing, and will ultimately hurt domestic industry, consumers, grocery prices, and many other important aspects of our lives and livelihoods, and not only are they important for us as people, but as innovators, creators, and STEM people.</p>
+
+        <!-- Works Cited Section -->
+        <div class="works-cited">
+
+          <h2 id="works-cited-header">Works Cited</h2>
+
+          <p><b>[1]</b> - https://www.whitehouse.gov/fact-sheets/2025/04/fact-sheet-president-donald-j-trump-declares-national-emergency-to-increase-our-competitive-edge-protect-our-sovereignty-and-strengthen-our-national-and-economic-security/</p> 
+
+          <h3 id="extra-sources-header">Other Sources</h3>
+          <ul>
+            <li>https://www.nist.gov/el/applied-economics-office/manufacturing/manufacturing-economy/total-us-manufacturing#:~:text=In%202023%2C%20Manufacturing%20contributed%20%242.3,of%20AMS%20600%2D16</li>
+            <li>https://www.bbc.com/news/articles/cn93e12rypgo</li>
+            <li>https://taxfoundation.org/taxedu/glossary/tariffs/</li>
+            <li>https://news.uchicago.edu/story/how-do-tariffs-work-and-who-will-they-impact-uchicago-experts-explain#:~:text=Ad%C3%A3o:%20Any%20negative%20impact%20that,relations%20among%20even%20close%20partners</li>
+          </ol>
+        </div>
+
       </div>
     </div>
 
-    <!-- Article Content -->
-    <div class="article-content-container">
+    <!-- Mark Task as Done Button -->
+    {{> components/articles/completion-button taskID="1" taskType="article"}}
 
-      <!-- Article Image -->
-      <div class="article-image">
-        
-      </div>
-
-      <!-- Article Body -->
-      <h2 class="article-inner-header">Tariffs as Taxes</h2>
-
-      <p>Tariffs have taken over the news cycle recently with the current administration’s proposed and enacted policies, but what could these changes mean? How do they affect the American working class? How do they affect the technology we use in everyday life? What even is a tariff and why do certain groups want to enact them?</p>
-      <p>Well, these questions are incredibly complicated and in depth, with even professional economists and political scholars arguing over what the effects of these policies may be, but to even scratch the surface of this topic, tariffs must be defined. In general, a tariff is simply a tax created on certain or all imported goods from another country. Generally speaking, the person or company importing the goods is the group that pays for the tax, and tariffs are enacted as an attempt to protect certain manufacturing industries and to prevent trade with that country.</p>
-
-       <h2 class="article-inner-header">What do economists say?</h2>
-
-      <p>Generally, those against tariffs point to a vast array of drawbacks, such as increased prices for things such as luxury goods, like cars, computers, televisions, and other commodities, and groceries. These price increases come from corporations having to increase prices to compensate for the increased taxes, and from the fact that most of these things, and a significant portion of the food we eat, is imported from abroad. Additionally, detractors point out that tariffs could sour international relations with both allies and rivals, which could isolate us on the world stage and lead to political issues. Moreover, reduced trade with the rest of the world may slow economic growth and wellbeing, as market efficiency decreases. All of these effects have been seen in markets and countries that have implemented tariffs in the past, yet it is not entirely clear whether the reasoning applies to America and the industries that it upholds.</p>
-      <p>Those who advocate for tariffs present a different story and set of priorities, mainly focusing on how it could bring back American manufacturing, which has been decreasing for decades, or how it could decrease our trade deficit, a term which refers to the fact that we import more than we export. Tariffs can also be used as an extra source of income, reducing the tax on the public. However, one of the most recent ways that tariff supporters advocate for this policy is discussing its use as a bargaining chip in global politics, leveraging the economic threat to push other countries in a direction beneficial for the country who enacts them. These two sides have argued about the specifics of how tariffs work since the inception of tariffs, yet recently, in America, these debates have come to a head with the recent discussion of tariffs being enacted worldwide.</p>
-       <h2 class="article-inner-header">What do tariffs mean for America and technology?</h2>
-      <p>The recent policies enacted by the Trump administration were marketed to the American people as “[leveling] the playing field for American businesses and workers by confronting the unfair tariff disparities and non-tariff barriers imposed by other countries” [1]. The administration usually proceeds to explain how many other countries have very high tariffs on our country in certain industries while we keep our tariffs on them low. This is a flawed argument though, as due to our status as a wealthy global superpower, the majority of our economy is from finance, service, and of course, STEM and technology. The National Institute of Standards and Technology states that only 10.2% of America’s entire GDP is composed of manufacturing. This shift towards import as our country becomes wealthier and wealthier is even pointed out by the Administration itself, stating, “In 2023, U.S. manufacturing output as a share of global manufacturing output was 17.4%, down from 28.4% in 2001” [1]. This desire to move towards a manufacturing economy in this case is entirely unwarranted and unsupported, done seemingly simply for the idea of “American manufacturing,” while hurting consumers and workers by raising prices and decreasing American-bought commodity consumption.</p>
-      <p>As STEM people, we may wonder how all of these politics and economics affect us, as we see ourselves generally disconnected from the economy and business, yet these tariffs have the potential to destroy our job market and decrease innovation. Namely, the cost of materials, supplies, and research tools has the potential to skyrocket under this new economic policy, massively stunting new innovation and breakthroughs that could guide our industries forward. Companies may have to cut costs due to the importing of these materials too, causing either a massive increase in price or the unfortunate laying off of employees, reducing the size of the job market. As the final nail in the coffin though, devastating for anyone from software developers to general technology enthusiasts, the price of technology will skyrocket. Since most tech factories are in China, which is one of the most affected recipients of the tariffs, prices for tech may become prohibitively expensive, leading to cutbacks, stagnation, and ultimately the decay of the American tech industry. These are just a few examples from the tip of the iceberg of how these policies may affect us for the worse.</p>
-      <p>Tariffs are a complicated concept, which encompasses many ideas, opinions, and concepts, yet nearly all economists, including but not limited to Economic Policy Institute, the BBC, the University of Chicago, and the Tax Foundation believe that these tariffs will ultimately destroy the American economy. Taxes are almost certainly not the solution to the economic problems that America is facing, and will ultimately hurt domestic industry, consumers, grocery prices, and many other important aspects of our lives and livelihoods, and not only are they important for us as people, but as innovators, creators, and STEM people.</p>
-
-      <!-- Works Cited Section -->
-      <div class="works-cited">
-
-        <h2 id="works-cited-header">Works Cited</h2>
-
-        <p><b>[1]</b> - https://www.whitehouse.gov/fact-sheets/2025/04/fact-sheet-president-donald-j-trump-declares-national-emergency-to-increase-our-competitive-edge-protect-our-sovereignty-and-strengthen-our-national-and-economic-security/</p> 
-
-        <h3 id="extra-sources-header">Other Sources</h3>
-        <ul>
-          <li>https://www.nist.gov/el/applied-economics-office/manufacturing/manufacturing-economy/total-us-manufacturing#:~:text=In%202023%2C%20Manufacturing%20contributed%20%242.3,of%20AMS%20600%2D16</li>
-          <li>https://www.bbc.com/news/articles/cn93e12rypgo</li>
-          <li>https://taxfoundation.org/taxedu/glossary/tariffs/</li>
-          <li>https://news.uchicago.edu/story/how-do-tariffs-work-and-who-will-they-impact-uchicago-experts-explain#:~:text=Ad%C3%A3o:%20Any%20negative%20impact%20that,relations%20among%20even%20close%20partners</li>
-        </ol>
-      </div>
-
-    </div>
   </div>
 
-  <!-- Mark Task as Done Button -->
-  {{> components/articles/completion-button taskID="1" taskType="article"}}
-
-</div>
-
-</div>
 </div>
