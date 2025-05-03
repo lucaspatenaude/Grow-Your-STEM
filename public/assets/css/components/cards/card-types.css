@@ -16,7 +16,9 @@
 
 #basics-card {
   min-height: 300px;
-  width: 300px;
+  max-height: 300px;
+  min-width: 300px;
+  max-width: 300px;
 }
 
 #basics-card-button {
