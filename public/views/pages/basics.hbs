@@ -48,35 +48,46 @@
       This calculator helps you estimate the real cost of your education, how much of it is covered by aid, and when your investment may pay off.
     </p>
 
+    <!--------- Calculator Form --------->
     <form id="finance-form">
+
       <h2>Education Expenses (per semester)</h2>
 
+      <!-- Tuition Costs -->
       <label class="calculator-label">Tuition</label>
       <input type="number" class="calculator-input" id="tuition" placeholder="e.g. 6000" value="6000">
 
-      <label class="calculator-label">Lab/Tech Fees</label>
+      <!-- Extra Course Fees -->
+      <label class="calculator-label">Extra Course Fees</label>
       <input type="number" class="calculator-input" id="fees" placeholder="e.g. 500" value="500">
 
+      <!-- Book & Material Costs -->
       <label class="calculator-label">Books & Materials</label>
       <input type="number" class="calculator-input" id="books" placeholder="e.g. 400" value="400">
 
+      <!-- Housing Costs -->
       <label class="calculator-label">STEM Software Subscriptions</label>
       <input type="number" class="calculator-input" id="software" placeholder="e.g. 100" value="100">
 
       <h2>Financial Aid</h2>
 
+      <!-- Scholarships & Grants -->
       <label class="calculator-label">Scholarships & Grants</label>
       <input type="number" class="calculator-input" id="scholarships" placeholder="e.g. 3000" value="3000">
 
+      <!-- Federal Loans -->
       <label class="calculator-label">Federal Loans Accepted</label>
       <input type="number" class="calculator-input" id="loans" placeholder="e.g. 2500" value="2500">
 
+      <!-- Work-Study or Internship Income -->
       <label class="calculator-label">Work-Study or Internship Income (monthly)</label>
       <input type="number" class="calculator-input" id="income" placeholder="e.g. 800" value="800">
 
       <h2>Career Projection</h2>
 
+      <!-- Salary Dropdown -->
       <label class="calculator-label">Expected Starting Salary (annual)</label>
+
       <select id="salary" onchange="toggleCustomSalaryInput()">
         <option value="50000">Biology / Chemistry – $50,000</option>
         <option value="65000">Engineering – $65,000</option>
@@ -84,16 +95,19 @@
         <option value="40000">Environmental Science – $40,000</option>
         <option value="custom">Other (Enter Custom Salary)</option>
       </select>
-      <input 
-        type="number" 
-        id="custom-salary" 
-        class="calculator-input" 
-        placeholder="Enter custom salary" 
-      />
+        <!-- Custom Salary Input -->
+        <input 
+          type="number" 
+          id="custom-salary" 
+          class="calculator-input" 
+          placeholder="Enter custom salary" 
+        />
 
+      <!-- Calculate Button -->
       <button type="button" onclick="calculate()">Calculate</button>
     </form>
 
+    <!-- Results Pop-Up Panel -->
     <div class="result" id="results" style="display: none;">
       <h2>Results</h2>
       <p><strong>Total Cost Per Semester:</strong> $<span id="totalCost"></span></p>
