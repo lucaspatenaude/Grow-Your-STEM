@@ -1,14 +1,23 @@
+#calculator-container h1 {
+  margin: 30px 0;
+}
+
+#calculator-container h2 {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
 #finance-form {
   display: flex;
   flex-direction: column;
 }
 
-label {
+.calculator-label {
   display: block;
   margin-top: 1em;
 }
 
-input, select {
+.calculator-input, select {
   width: 45%;
   padding: 0.5em;
   margin-top: 0.3em;
