@@ -14,10 +14,6 @@ router.post('/complete-task', async (req, res) => {
 
     const { userId, taskId, taskType } = req.body;
 
-    console.log("User ID:", userId);
-    console.log("Task ID:", taskId);
-    console.log("Task Type:", taskType);
-
     try {
         // Determine the table and column based on taskType
         let tableName;

@@ -20,16 +20,17 @@
 				1. Add the article to the articles folder in the public/views/pages directory
 				2. Add the article's routes to the routes.js file in the src/routes directory
 				3. Add the article attributes (title, points) to database in '/src/routes/login-and-restrigation.js' under the POST '/register' route
-			
+        4. Refresh your database
 			-->
 
 		<div class="cards-container">			
 			{{#if articles}}
         {{#each articles}}
-					{{> components/card
+					{{> components/cards/image-header
 						type="article"
 						title=this.title
 						author=this.author
+            route=this.route
 						summary=this.summary
 						link=this.link
 						image-path=this.imagepath

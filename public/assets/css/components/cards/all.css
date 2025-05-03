@@ -66,6 +66,16 @@
     margin-bottom: 15px; /* Add spacing between elements */
 }
 
+.card-article-author a {
+    color: var(--darkc);
+    text-decoration: none;
+}
+
+.card-article-author a:hover {
+    color: var(--cool);
+    text-decoration: underline;
+}
+
 /*********** Header Stylization ***********/
 
 .card h1 {

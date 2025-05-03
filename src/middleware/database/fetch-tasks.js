@@ -27,7 +27,6 @@ const fetchTasks = async (req, res, next) => {
             res.locals.lessonTasks = lessonTasks;
             res.locals.gameTasks = gameTasks;
 
-            console.log('Fetched tasks:', { articleTasks, lessonTasks, gameTasks });
         } catch (error) {
             console.error('Error fetching tasks:', error.message || error);
             res.locals.articleTasks = [];
