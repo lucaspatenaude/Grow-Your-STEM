@@ -6,9 +6,9 @@ const fetchArticles = async (req, res, next) => {
         // Fetch articles from the database
         const articles = await db.query(
             `SELECT a.ArticleID, a.Title, a.Summary, a.Link, a.ImagePath, a.ImageAlt, au.Name AS Author
-             FROM articles a
-             INNER JOIN authors au ON a.AuthorID = au.AuthorID
-             ORDER BY a.ArticleID`
+            FROM articles a
+            INNER JOIN authors au ON a.AuthorID = au.AuthorID
+            ORDER BY a.ArticleID`
         );
 
         // Attach the fetched articles to `res.locals`

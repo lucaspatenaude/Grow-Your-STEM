@@ -1,0 +1,13 @@
+<div class="author-page-container">
+    <h1>Articles by {{author}}</h1>
+
+    <div class="articles-list">
+        {{#each articles}}
+            <div class="article-item">
+                <h2>{{this.Title}}</h2>
+                <p>{{this.Summary}}</p>
+                <a href="{{this.Link}}">Read More</a>
+            </div>
+        {{/each}}
+    </div>
+</div>
