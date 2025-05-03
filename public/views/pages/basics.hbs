@@ -1,19 +1,51 @@
 <div class="page-container">
 
+  <!---------------- Fundamentals Cards Container ------------------->
   <div class="content-container" id="basics-container">
     <h1 class="basics-header">Basics</h1>
+
     <div class="cards-container">
-      {{> components/card type="basics" title="Basics of Finance" summary="Learn the fundamentals of finance, including key concepts and terminology." link="/basics/finance" image-path="/img/basics/finance.jpg" image-alt="Finance Basics Image"}}
-      {{> components/card type="basics" title="Basics of Economics" summary="Understand the basic principles of economics and how they apply to real-world scenarios." link="/basics/economics" image-path="/img/basics/economics.jpg" image-alt="Economics Basics Image"}}
-      {{> components/card type="basics" title="Basics of Investing" summary="Get started with investing by learning the essential concepts and strategies." link="/basics/investing" image-path="/img/basics/investing.jpg" image-alt="Investing Basics Image"}}
+      
+      <!-- Fundamental #1 -->
+      {{> components/card 
+          type="basics" 
+          title="Basics of Finance" 
+          summary="Learn the fundamentals of finance, including key concepts and terminology." 
+          link="/basics/finance" 
+          image-path="/img/basics/finance.jpg" 
+          image-alt="Finance Basics Image"
+      }}
+
+      <!-- Fundamental #2 -->
+      {{> components/card 
+          type="basics" 
+          title="Basics of Economics" 
+          summary="Understand the basic principles of economics and how they apply to real-world scenarios." 
+          link="/basics/economics" 
+          image-path="/img/basics/economics.jpg" 
+          image-alt="Economics Basics Image"
+      }}
+
+      <!-- Fundamental #3 -->
+      {{> components/card 
+          type="basics" 
+          title="Basics of Investing" 
+          summary="Get started with investing by learning the essential concepts and strategies." 
+          link="/basics/investing"
+          image-path="/img/basics/investing.jpg" 
+          image-alt="Investing Basics Image"
+      }}
+
     </div>
   </div>
 
+  <!---------------- Calculator Container ------------------->
   <div class="content-container" id="calculator-container">
     <h1 class="content-container-header">Calculator</h1>
     <p>Use the calculator to solve problems and check your answers.</p>
   </div>
 
+  <!---------------- Lessons Container ------------------->
   <div class="content-container" id="lessons-container">
     <h1 class="content-container-header">Lessons</h1>
     <p>Explore various lessons to enhance your knowledge.</p>
