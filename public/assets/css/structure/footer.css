@@ -111,7 +111,8 @@ footer h2 {
     cursor: pointer;
 }
 
-#github-button:hover {
+#github-button:hover,
+#github-button:focus {
     transform: scale(1.02); /* Slightly enlarge the button */
     background-color: rgb(69, 68, 68); /* Lighten the background color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a stronger box shadow */

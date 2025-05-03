@@ -99,7 +99,8 @@ select {
   color: white;
 }
 
-.account-portal-button:hover {
+.account-portal-button:hover,
+.account-portal-button:focus {
   background-color: var(--darkc);
   border-color: var(--darkc);
   color: white;

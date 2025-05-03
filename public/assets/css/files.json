@@ -1,7 +1,7 @@
 [
 
 "reset.css", "main.css", 
-"pages/home.css", "pages/article.css", "pages/user-menu/account-pane.css", "pages/user-menu/login-and-registration-pane.css",
+"pages/home.css", "pages/basics.css","pages/article.css", "pages/user-menu/account-pane.css", "pages/user-menu/login-and-registration-pane.css",
 "structure/navigation-bar.css", "structure/footer.css", "structure/checklist.css", 
 "components/cards/all.css", "components/cards/card-types.css",
 "components/completion-buttons/read-button.css"

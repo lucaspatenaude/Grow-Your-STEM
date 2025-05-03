@@ -54,6 +54,36 @@ html, body {
 	padding:15px;
 }
 
+/********************** Text Structuring **********************/
+
+.page-header-1 {
+    margin: 20px 0;
+}
+
+.page-header-2 {
+font-size: 28px;
+    margin-top: 40px;
+}
+
+/********************** Components **********************/
+
+button {
+    background-color: var(--darkc);
+    color: var(--lightc);
+    border: none;
+    border-radius: 12px;
+}
+
+button:hover,
+button:focus {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: var(--cool);
+    border: 2px solid var(--darkc);
+    box-shadow: 0 0 5px #979696;
+    cursor: pointer;
+  }
+
 /********************** Custom Fonts **********************/
 
 .redline {
