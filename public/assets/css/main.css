@@ -35,7 +35,7 @@ html, body {
     flex-direction: column; /* Stack content vertically */
     margin-top: 40px;
     margin-left: 125px;
-    margin-right: 400px;
+    margin-right: 140px;
     justify-content: flex-start; /* Align content at the top */
     position: relative; /* Ensure it has a position context */
     min-height: fit-content; /* Respect the minimum height of the content */

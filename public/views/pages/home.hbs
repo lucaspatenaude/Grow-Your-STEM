@@ -17,7 +17,13 @@
 		
 		<div class="cards-container">
 
-			<!-- If adding an article be sure to add it's route to /src/routes/articles.js -->
+			<!--  If adding an article be sure to do the following:
+
+				1. Add the article to the articles folder in the public/views/pages directory
+				2. Add the article's routes to the routes.js file in the src/routes directory
+				3. Add the article attributes (title, points) to database in '/src/routes/login-and-restrigation.js' under the POST '/register' route
+			
+			-->
 
 			{{> components/card
 					type="article"
