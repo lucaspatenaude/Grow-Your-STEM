@@ -54,6 +54,17 @@ html, body {
 	padding:15px;
 }
 
+/********************** Text Structuring **********************/
+
+.page-header-1 {
+    margin: 20px 0;
+}
+
+.page-header-2 {
+font-size: 28px;
+    margin-top: 40px;
+}
+
 /********************** Components **********************/
 
 button {

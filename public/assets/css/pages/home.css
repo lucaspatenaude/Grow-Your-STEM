@@ -2,7 +2,7 @@
 
 #introduction-container {
 	margin-bottom: 40px;
-	margin-right: 400px;
+	margin-right: 200px;
 }
 
 #custom-growing-your-stem-header-container {
@@ -15,8 +15,73 @@
 	margin-left: 10px;
 }
 
-/********************** Card Container **********************/
+/********************** Calculator Container **********************/
 
+
+
+#finance-form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.calculator-label {
+  display: block;
+	margin-top: 10px;
+}
+
+.calculator-input {
+  width: 45%;
+  padding: 10px;
+  padding-left: 20px;
+  background-color: var(--lightw);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+}
+
+#salary {
+  margin-bottom: 20px;
+	max-width: 45%;
+	background-color: var(--lightw);
+	color: var(--darkc);
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+
+#custom-salary {
+  display: none;
+  margin-bottom: 20px;
+}
+
+select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color:         #007acc; /* Add a custom focus border color */
+  box-shadow: 0 0 5px rgba(0, 122, 204, 0.5); /* Add a subtle focus shadow */
+}
+
+#calculate-button {
+  width: 200px;
+  margin: 20px 0;
+  padding: 10px 25px;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center the text */ text-align: center; /* Center the text */
+  display: inline-block; /* Ensure text-align works */  display: inline-block; /* Ensure text-align works */
+}
+
+.result {
+  padding: 1em;
+  background: var(--lightw);ghtw);
+  border: 3px solid var(--darkc); border: 3px solid var(--darkc);
+  border-radius: 12px;  
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center the text */ text-align: center; /* Center the text */
+  display: inline-block; /* Ensure text-align works */  display: inline-block; /* Ensure text-align works */
+}
 
 
 
