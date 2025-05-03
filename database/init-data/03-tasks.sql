@@ -1,11 +1,11 @@
 -- Drop tables if they already exist
 DROP TABLE IF EXISTS tasks;
-DROP TABLE IF EXISTS articles;
-DROP TABLE IF EXISTS lessons;
-DROP TABLE IF EXISTS games;
+DROP TABLE IF EXISTS articleTasks;
+DROP TABLE IF EXISTS lessonTasks;
+DROP TABLE IF EXISTS gameTasks;
 
--- Create the articles table
-CREATE TABLE articles (
+-- Create the articleTasks table
+CREATE TABLE articleTasks (
     ArticleID INT NOT NULL, -- Unique identifier for each article
     UserID INT REFERENCES users(UserID) ON DELETE CASCADE,
     TaskName VARCHAR(255) NOT NULL,
@@ -15,8 +15,8 @@ CREATE TABLE articles (
     PRIMARY KEY (UserID, ArticleID) -- Composite primary key
 );
 
--- Create the lessons table
-CREATE TABLE lessons (
+-- Create the lessonTasks table
+CREATE TABLE lessonTasks (
     LessonID INT NOT NULL, -- Unique identifier for each lesson
     UserID INT REFERENCES users(UserID) ON DELETE CASCADE,
     TaskName VARCHAR(255) NOT NULL,
@@ -26,8 +26,8 @@ CREATE TABLE lessons (
     PRIMARY KEY (UserID, LessonID) -- Composite primary key
 );
 
--- Create the games table
-CREATE TABLE games (
+-- Create the gameTasks table
+CREATE TABLE gameTasks (
     GameID INT NOT NULL, -- Unique identifier for each game
     UserID INT REFERENCES users(UserID) ON DELETE CASCADE,
     TaskName VARCHAR(255) NOT NULL,

@@ -21,9 +21,9 @@
         <!-- Articles To-Do Section -->
         <div class="objectives-container">
             <h2 class="objective-header">📖 Articles</h2>
-            {{#if articles}}
+            {{#if articleTasks}}
                 <ul>
-                    {{#each articles}}
+                    {{#each articleTasks}}
                         {{> components/account-screen/task this}}
                     {{/each}}
                 </ul>
@@ -35,9 +35,9 @@
         <!-- Lessons To-Do Section -->
         <div class="objectives-container">
             <h2 class="objective-header">🏆 Lessons</h2>
-            {{#if lessons}}
+            {{#if lessonTasks}}
                 <ul>
-                    {{#each lessons}}
+                    {{#each lessonTasks}}
                         {{> components/account-screen/task this}}
                     {{/each}}
                 </ul>
@@ -49,9 +49,9 @@
         <!-- Games To-Do Section -->
         <div class="objectives-container">
             <h2 class="objective-header">👾 Games</h2>
-            {{#if games}}
+            {{#if gameTasks}}
                 <ul>
-                    {{#each games}}
+                    {{#each gameTasks}}
                         {{> components/account-screen/task this}}
                     {{/each}}
                 </ul>

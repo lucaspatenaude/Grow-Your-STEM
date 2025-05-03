@@ -12,7 +12,8 @@ const session = require("express-session"); // To set the session object. To sto
 const bcrypt = require("bcryptjs"); //  To hash passwords
 const axios = require("axios"); // To make HTTP requests from our server. We'll learn more about it in Part C.
 const moment = require("moment"); // To extract current time datai
-const fetchTasks = require('./middleware/account-screen/list-tasks-in-menu'); // Import the fetchTasks middlewar
+const fetchTasks = require('./middleware/database/fetch-tasks'); // Import the fetchTasks middleware
+const fetchArticles = require('./middleware/database/fetch-articles'); // Import the fetchTasks middleware
 
 // *****************************************************
 // <!-- 2. Start the Database -->
@@ -76,6 +77,7 @@ app.use((req, res, next) => {
 // <!-- 5. Append All Middleware -->
 // *****************************************************
 
+app.use(fetchArticles); // Middleware to fetch articles for the logged-in user
 app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
 
 // *****************************************************
