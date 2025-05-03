@@ -3,6 +3,11 @@
 #article-card {
   min-height: 200px;
   min-width: 300px;
+  
+}
+
+#article-card-button {
+  padding: 8px 12px;
 }
 
 /*********** Basics Card Stylization ***********/
@@ -10,6 +15,10 @@
 #basics-card {
   min-height: 300px;
   width: 300px;
+}
+
+#basics-card-button {
+  padding: 8px 12px;
 }
 
 /*********** Games Card Stylization ***********/
@@ -27,5 +36,5 @@
 }
 
 #game-card-button {
-  padding: 8px 32px !important;
+  padding: 8px 32px;
 }

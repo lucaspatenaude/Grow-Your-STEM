@@ -4,7 +4,7 @@
     display: flex;
     z-index: 990;
     flex-direction: row;
-    margin: 10px 0;
+    padding: 20px;
     gap: 20px; /* Add spacing between cards */
     width: 100%; /* Ensure the container spans the full width */
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -29,6 +29,13 @@
     text-overflow: ellipsis; /* Optional: Add ellipsis for overflowing text */
     white-space: normal; /* Allow text to wrap */
     word-wrap: break-word; /* Break long words if necessary */
+}
+
+.card:hover {
+    margin-left: 5px;
+    transform: scale(1.03); /* Slightly enlarge the entire card */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Make the box-shadow more prominent */
+    transition: all 0.3s ease; /* Smooth transition for the hover effect */
 }
 
 /********************** Card Contents Layout **********************/
@@ -79,16 +86,16 @@
 
 .completion-button { /* Push the button to the bottom of the card body */
     align-self: flex-start; /* Align the button to the left */
-    padding: 8px 12px;
     background-color: var(--darkc);
     color: var(--lightc);
-    border: 1px solid var(--darkc);
     border-radius: 10px;
 }
 
 .completion-button:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
     background-color: var(--cool);
-    border: 1px solid var(--darkw);
+    border: 2px solid var(--darkc);
     box-shadow: 0 0 5px #979696;
     cursor: pointer;
 }
