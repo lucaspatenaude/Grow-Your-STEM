@@ -14,7 +14,6 @@ const fetchArticles = async (req, res, next) => {
         // Attach the fetched articles to `res.locals`
         res.locals.articles = articles;
 
-        console.log('Fetched articles:', articles);
     } catch (error) {
         console.error('Error fetching articles:', error.message || error);
         res.locals.articles = [];
