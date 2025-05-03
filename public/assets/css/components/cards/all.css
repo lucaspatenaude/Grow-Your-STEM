@@ -84,14 +84,14 @@
     padding-top: 20px;
 }
 
-.completion-button { /* Push the button to the bottom of the card body */
+.card-button { /* Push the button to the bottom of the card body */
     align-self: flex-start; /* Align the button to the left */
     background-color: var(--darkc);
     color: var(--lightc);
     border-radius: 10px;
 }
 
-.completion-button:hover {
+.card-button:hover {
     text-decoration: none;
     color: rgb(255, 255, 255);
     background-color: var(--cool);
