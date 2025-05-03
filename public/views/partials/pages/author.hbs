@@ -1,25 +1,13 @@
 <div class="page-container">
 
-    <div class="author-header-container">
-        <div class="author-header-image">
-            <img src="{{authorImage}}" alt="{{authorName}}">
-        </div>
-        
-        <div class="text-container" id="author-info-container">
-            <h1 class="author-name">{{authorName}}</h1>
-            <p class="author-bio">{{authorBio}}</p>
-        </div>
-    </div>
-
-    <div class="content-container">
         <h1 class="page-header-1">Articles by {{authorName}}</h1>
         
         <div class="cards-container">
             {{#each articles}}
-                {{> components/card
+                {{> components/cards/image-header
                     type="article"
                     title=this.title
-                    author=../authorName
+                    author=this.name
                     summary=this.summary
                     link=this.link
                     image-path=this.imagepath
@@ -27,5 +15,4 @@
                 }}
             {{/each}}
         </div>
-    </div>
 </div>
