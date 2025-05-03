@@ -2,6 +2,13 @@ const express = require("express");
 const router = express.Router();
 const fetchArticlesByAuthor = require('../middleware/database/fetch-articles-by-author'); // Import middleware
 
+// ******** Dynamic Author Articles ********
+
+router.get("/articles/:author", fetchArticlesByAuthor, (req, res) => {
+    const { author } = req.params;
+    res.render("partials/pages/author", { author });
+});
+
 // ******** Nathaniel's Page & Articles ********
 
 router.get("/articles/nathaniel/how-do-tariffs-work", (req, res) => {
@@ -22,13 +29,6 @@ router.get("/articles/clay/global-reserve", (req, res) => {
 
 router.get("/articles/lucas/credit-and-financing-options", (req, res) => {
     res.render("pages/articles/Lucas/Credit-and-Financing-Options");
-});
-
-// ******** Dynamic Author Articles ********
-
-router.get("/articles/:author", fetchArticlesByAuthor, (req, res) => {
-    const { author } = req.params;
-    res.render("partials/pages/author", { author });
 });
 
 module.exports = router;
