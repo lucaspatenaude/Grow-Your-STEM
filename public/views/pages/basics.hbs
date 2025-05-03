@@ -66,8 +66,8 @@
       <input type="number" class="calculator-input" id="books" placeholder="e.g. 400" value="400">
 
       <!-- Housing Costs -->
-      <label class="calculator-label">STEM Software Subscriptions</label>
-      <input type="number" class="calculator-input" id="software" placeholder="e.g. 100" value="100">
+      <label class="calculator-label">Housing</label>
+      <input type="number" class="calculator-input" id="housing" placeholder="e.g. 2400" value="2400">
 
       <h2>Financial Aid</h2>
 
@@ -81,10 +81,10 @@
 
       <!-- Work-Study or Internship Income -->
       <label class="calculator-label">Work-Study or Internship Income (monthly)</label>
-      <input type="number" class="calculator-input" id="income" placeholder="e.g. 800" value="800">
+      <input type="number" class="calculator-input" id="income" placeholder="e.g. 0" value="0">
 
       <h2>Education Length</h2>
-      
+
       <!-- Number of Semesters -->
       <label class="calculator-label">Number of Semesters</label>
       <input type="number" class="calculator-input" id="semesters" placeholder="e.g. 8" value="8">
@@ -116,7 +116,8 @@
     <!-- Results Pop-Up Panel -->
     <div class="result" id="results" style="display: none;">
       <h2>Results</h2>
-      <p><strong>Total Cost Per Semester:</strong> $<span id="totalCost"></span></p>
+      <p><strong>Total Cost Per Semester:</strong> $<span id="totalCostPerSemester"></span></p>
+      <p><strong>Total Cost:</strong> $<span id="totalCost"></span></p>
       <p><strong>Covered by Scholarships:</strong> <span id="scholarshipPercent"></span>%</p>
       <p><strong>Estimated ROI:</strong> <span id="roiYears"></span> years to break even post-graduation</p>
     </div>

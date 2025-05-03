@@ -14,7 +14,7 @@ function calculate() {
   const tuition = +document.getElementById("tuition").value;
   const fees = +document.getElementById("fees").value;
   const books = +document.getElementById("books").value;
-  const software = +document.getElementById("software").value;
+  const housing = +document.getElementById("housing").value;
   const scholarships = +document.getElementById("scholarships").value;
   const loans = +document.getElementById("loans").value;
   const income = +document.getElementById("income").value;
@@ -27,12 +27,12 @@ function calculate() {
     : +salaryDropdown.value;
 
   // Calculate total cost for all semesters
-  const totalCostPerSemester = tuition + fees + books + software;
+  const totalCostPerSemester = tuition + fees + books + housing;
   const totalCost = totalCostPerSemester * semesters;
 
   // Calculate net out-of-pocket cost
   const totalScholarships = scholarships * semesters;
-  const totalIncome = income * 4 * semesters; // 4 months per semester
+  const totalIncome = income * semesters; // 4 months per semester
   const netOutOfPocket = totalCost - totalScholarships - totalIncome;
 
   // Calculate scholarship percentage
@@ -43,6 +43,7 @@ function calculate() {
   const roiYears = (totalLoanDebt / (salary * 0.15)).toFixed(1); // 15% of salary to loans
 
   // Update the results in the UI
+  document.getElementById("totalCostPerSemester").textContent = totalCostPerSemester.toFixed(2);
   document.getElementById("totalCost").textContent = totalCost.toFixed(2);
   document.getElementById("scholarshipPercent").textContent = scholarshipPercent;
   document.getElementById("roiYears").textContent = roiYears;
