@@ -9,7 +9,13 @@
         <p class="card-article-summary">{{summary}}</p>
 
         <div class="card-button-container" id="{{type}}-card-button-container">
-            <a href="{{link}}" class="completion-button" id="{{type}}-card-button" {{#if target}}target="{{target}}"{{/if}}>Click to Read</a> <!-- Add target for ability to specify opening lcoation (ie. new tab) -->
+            <a href="{{link}}" class="completion-button" id="{{type}}-card-button" {{#if target}}target="{{target}}"{{/if}}>
+                {{#if button-text}}
+                    {{button-text}}
+                {{else}}
+                    Read More
+                {{/if}}
+            </a>
         </div>
     
     </div>
