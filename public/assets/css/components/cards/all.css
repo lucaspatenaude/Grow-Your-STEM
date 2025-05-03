@@ -31,7 +31,8 @@
     word-wrap: break-word; /* Break long words if necessary */
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
     margin-left: 5px;
     transform: scale(1.03); /* Slightly enlarge the entire card */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Make the box-shadow more prominent */
@@ -91,6 +92,7 @@
     border-radius: 10px;
 }
 
-.card-button:hover {
+.card-button:hover,
+.card-button:focus {
 
 }

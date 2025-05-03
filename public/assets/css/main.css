@@ -63,7 +63,8 @@ button {
     border-radius: 12px;
 }
 
-button:hover {
+button:hover,
+button:focus {
     text-decoration: none;
     color: rgb(255, 255, 255);
     background-color: var(--cool);

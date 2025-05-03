@@ -47,7 +47,7 @@ select {
 
 select:focus {
   outline: none; /* Remove default focus outline */
-  border-color: #007acc; /* Add a custom focus border color */
+  border-color:         #007acc; /* Add a custom focus border color */
   box-shadow: 0 0 5px rgba(0, 122, 204, 0.5); /* Add a subtle focus shadow */
 }
 

@@ -32,7 +32,8 @@
     transition: transform 0.1s ease-in-out; /* Smooth transition effect */
 }
 
-.branding:hover {
+.branding:hover,
+.branding:focus {
     transform: scale(1.1); /* Scale up the branding slightly */
 }
 
@@ -52,7 +53,8 @@
     margin-right: 10px;
 }
 
-.wordmark:hover {
+.wordmark:hover,
+.wordmark:focus {
     text-decoration: none; /* Remove underline on hover */
     color: var(--cool);
 }
@@ -94,6 +96,7 @@ li {
     transition: width 0.3s ease-in-out; /* Adding transition for smooth effect */
 }
 
-#user-profile-button:hover {
+#user-profile-button:hover,
+#user-profile-button:focus {
     width: 30px;
 }
