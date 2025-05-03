@@ -1,8 +1,8 @@
 /*********** Article Card Stylization ***********/
 
 #article-card {
-  min-height: 40px;
-  width: 300px;
+  min-height: 200px;
+  min-width: 300px;
 }
 
 /*********** Basics Card Stylization ***********/
