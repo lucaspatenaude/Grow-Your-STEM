@@ -4,13 +4,13 @@ const db = require('../../../database/setup'); // Import the database connection
 const fetchTasks = async (req, res, next) => {
     if (req.session.user) {
         try {
-            // Fetch article tasks
+            // Fetch article task
             const articleTasks = await db.query(
                 'SELECT ArticleID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM articleTasks WHERE UserID = $1 ORDER BY ArticleID',
                 [req.session.user.userid]
             );
 
-            // Fetch lesson tasks
+            // Fetch lesson task
             const lessonTasks = await db.query(
                 'SELECT LessonID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM lessonTasks WHERE UserID = $1 ORDER BY LessonID',
                 [req.session.user.userid]

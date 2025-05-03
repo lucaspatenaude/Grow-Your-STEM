@@ -11,23 +11,27 @@ router.post('/complete-task', async (req, res) => {
     console.log("Task Type:", taskType);
 
     try {
-        // Determine the table based on taskType
+        // Determine the table and column based on taskType
         let tableName;
+        let columnName;
         if (taskType === 'article') {
-            tableName = 'articlesTasks';
+            tableName = 'articleTasks';
+            columnName = 'articleid';
         } else if (taskType === 'lesson') {
             tableName = 'lessonTasks';
+            columnName = 'lessonid';
         } else if (taskType === 'game') {
             tableName = 'gameTasks';
+            columnName = 'gameid';
         } else {
             return res.status(400).json({ error: 'Invalid task type' });
         }
 
         // Fetch the task from the appropriate table
-        const task = await db.query( // Use slice to remove 's' from table name ex: articles -> article
-            `SELECT ${tableName.slice(0, -1)}ID AS taskid, points, iscompleted 
+        const task = await db.query(
+            `SELECT ${columnName} AS taskid, points, iscompleted 
              FROM ${tableName} 
-             WHERE UserID = $1 AND ${tableName.slice(0, -1)}ID = $2`,
+             WHERE UserID = $1 AND ${columnName} = $2`,
             [userId, taskId]
         );
 
@@ -46,7 +50,7 @@ router.post('/complete-task', async (req, res) => {
         if (iscompleted) {
             // If the task is already completed, mark it as not completed and subtract points
             await db.query(
-                `UPDATE ${tableName} SET iscompleted = FALSE WHERE ${tableName.slice(0, -1)}ID = $1 AND UserID = $2`,
+                `UPDATE ${tableName} SET iscompleted = FALSE WHERE ${columnName} = $1 AND UserID = $2`,
                 [taskId, userId]
             );
 
@@ -57,7 +61,7 @@ router.post('/complete-task', async (req, res) => {
         } else {
             // Mark the task as completed
             await db.query(
-                `UPDATE ${tableName} SET iscompleted = TRUE WHERE ${tableName.slice(0, -1)}ID = $1 AND UserID = $2`,
+                `UPDATE ${tableName} SET iscompleted = TRUE WHERE ${columnName} = $1 AND UserID = $2`,
                 [taskId, userId]
             );
 
