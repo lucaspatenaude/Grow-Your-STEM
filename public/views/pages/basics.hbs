@@ -42,7 +42,57 @@
   <!---------------- Calculator Container ------------------->
   <div class="content-container" id="calculator-container">
     <h1 class="content-container-header">Calculator</h1>
-    <p>Use the calculator to solve problems and check your answers.</p>
+    <h2>Plan Your STEM Education Costs</h2>
+    <p>
+      Whether you're heading into your first semester or preparing to graduate, it's important to understand the financial tradeoffs of a STEM degree.
+      This calculator helps you estimate the real cost of your education, how much of it is covered by aid, and when your investment may pay off.
+    </p>
+
+    <form id="finance-form">
+      <h2>Education Expenses (per semester)</h2>
+
+      <label>Tuition</label>
+      <input type="number" id="tuition" placeholder="e.g. 6000" value="6000">
+
+      <label>Lab/Tech Fees</label>
+      <input type="number" id="fees" placeholder="e.g. 500" value="500">
+
+      <label>Books & Materials</label>
+      <input type="number" id="books" placeholder="e.g. 400" value="400">
+
+      <label>STEM Software Subscriptions</label>
+      <input type="number" id="software" placeholder="e.g. 100" value="100">
+
+      <h2>Financial Aid</h2>
+
+      <label>Scholarships & Grants</label>
+      <input type="number" id="scholarships" placeholder="e.g. 3000" value="3000">
+
+      <label>Federal Loans Accepted</label>
+      <input type="number" id="loans" placeholder="e.g. 2500" value="2500">
+
+      <label>Work-Study or Internship Income (monthly)</label>
+      <input type="number" id="income" placeholder="e.g. 800" value="800">
+
+      <h2>Career Projection</h2>
+
+      <label>Expected Starting Salary (annual)</label>
+      <select id="salary">
+        <option value="50000">Biology / Chemistry – $50,000</option>
+        <option value="65000">Engineering – $65,000</option>
+        <option value="75000" selected>Computer Science – $75,000</option>
+        <option value="40000">Environmental Science – $40,000</option>
+      </select>
+
+      <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+
+    <div class="result" id="results" style="display: none;">
+      <h2>Results</h2>
+      <p><strong>Total Cost Per Semester:</strong> $<span id="totalCost"></span></p>
+      <p><strong>Covered by Scholarships:</strong> <span id="scholarshipPercent"></span>%</p>
+      <p><strong>Estimated ROI:</strong> <span id="roiYears"></span> years to break even post-graduation</p>
+    </div>
   </div>
 
   <!---------------- Lessons Container ------------------->
