@@ -74,9 +74,18 @@ router.post("/register", async (req, res) => {
 
         // Insert the new user into the database
         const newUser = await db.one(
-            "INSERT INTO users (username, password, score) VALUES ($1, $2, DEFAULT) RETURNING userid",
+            "INSERT INTO users (username, password, score) VALUES ($1, $2, DEFAULT) RETURNING userid, username, score",
             [req.body.username, hash]
         );
+
+        // Set session data for the new user
+        req.session.user = {
+            userid: newUser.userid,
+            username: newUser.username,
+            score: newUser.score
+        };
+
+        req.session.save(); // Save the session
 
         // Separate tasks into categories
         const articleTasks = [
@@ -151,7 +160,7 @@ router.post("/register", async (req, res) => {
         // Execute all queries
         await Promise.all([...articleTaskQueries, ...basicsTaskQueries, ...lessonTaskQueries, ...gameTaskQueries]);
 
-        // Redirect to the home page after successful registration
+        // Redirect to the home page after successful registration and login
         res.redirect("/home");
     } catch (error) {
         console.error("Error during registration:", error.message || error);
