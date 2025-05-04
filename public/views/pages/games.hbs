@@ -4,53 +4,36 @@
 
       <!-- Universal Paperclips Container -->
       <div class="games-row" id="universal-paperclips-container">
+        
         <div class="games-image" id="universal-paperclips-image">
           <img src="/img/games/universal-paperclips.jpg" alt="Universal Paperclips Image">
         </div>
 
         <div class="games-information">
           <h2 class="games-column-header">Universal Paperclips</h2>
-          <p class="games-column-text">Explore a variety of games that will help you learn and grow in STEM.</p>
+          <div class="text-container">
+            <p class="games-column-text">Learn how market dynamics quickly build into a complex system.</p>
+          </div>
+          {{> components/articles/completion-button taskID="1" taskType="game" button-text="Play Now"}}
         </div>
+
       </div>
 
       <!-- Investopedia Simulator Container -->
       <div class="games-row" id="investopedia-simulator-container">
+
         <div class="games-information">
           <h2 class="games-column-header">Investopedia Simulator</h2>
-          <p class="games-column-text">Explore a variety of games that will help you learn and grow in STEM.</p>
+          <div class="text-container">
+            <p class="games-column-text">Learn the fundamentals of finance, including key concepts and terminology.</p>
+          </div>
+          {{> components/articles/completion-button taskID="2" taskType="game" button-text="Play Now"}}
         </div>
         
         <div class="games-image" id="investopedia-simulator-image">
           <img src="/img/games/investopedia-simulator.jpg" alt="Universal Paperclips Image" >
         </div>
+
       </div>
-
-
-
-
-      
-      <!-- "Universal Paperclips" Game Card -->
-      {{> components/cards/image-header 
-        type="game"
-        button-text="Play Now" 
-        title="Universal Paperclips" 
-        summary="Learn how market dynamics quickly build into a complex system." 
-        link="https://www.decisionproblem.com/paperclips/index2.html" 
-        target="_blank" 
-        image-path="/img/games/universal-paperclips.jpg" 
-        image-alt="Finance Basics Image"
-      }}
-
-      {{> components/cards/image-header 
-        type="game" 
-        title="Investopedia Simulator" 
-        summary="Learn the fundamentals of finance, including key concepts and terminology." 
-        link="https://www.investopedia.com/simulator/portfolio" 
-        target="_blank" 
-        image-path="/img/games/investopedia-simulator.jpg" 
-        image-alt="Finance Basics Image"
-      }}
-
 
 </div>
