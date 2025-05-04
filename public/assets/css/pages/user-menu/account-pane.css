@@ -70,7 +70,7 @@
   align-items: center; /* Vertically center the text */
   width: 20px; /* Set a fixed width */
   height: 20px; /* Set the same height as the width */
-  background-color: rgb(211, 128, 38); /* Background color for the circle */
+  background-color: rgb(226, 202, 66); /* Background color for the circle */
   border: 1px solid rgb(144, 95, 16); /* Add a border */
   border-radius: 50%; /* Make it a perfect circle */
   font-size: 12px; /* Adjust font size to fit inside the circle */
