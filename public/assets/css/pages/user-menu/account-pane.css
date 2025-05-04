@@ -54,8 +54,30 @@
 .objectives-container label {
   display: flex; /* Align checkbox and text on the same line */
   align-items: center; /* Vertically center the checkbox and text */
-  gap: 8px; /* Add spacing between the checkbox and text */
   font-family: "Roboto_Slab"; /* Ensure consistent font styling */
+}
+
+/* Center the checkbox, points, and link vertically */
+.task-content {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    gap: 5px; /* Add spacing between elements */
+}
+
+#points {
+  display: flex; /* Ensures content is centered */
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+  width: 20px; /* Set a fixed width */
+  height: 20px; /* Set the same height as the width */
+  background-color: rgb(211, 128, 38); /* Background color for the circle */
+  border: 1px solid rgb(144, 95, 16); /* Add a border */
+  border-radius: 50%; /* Make it a perfect circle */
+  font-size: 12px; /* Adjust font size to fit inside the circle */
+  color: white; /* Text color for better contrast */
+  margin: 0 5px; /* Add spacing around the circle */
+  padding: 0; /* Remove padding to avoid affecting dimensions */
+  box-sizing: border-box; /* Ensure border is included in the width/height */
 }
 
 .objectives-container a {

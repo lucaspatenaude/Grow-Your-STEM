@@ -1,6 +1,9 @@
 <li>
-    <label>
-        <input type="checkbox" id="checkbox-{{@index}}" disabled {{#if this.iscompleted}}checked{{/if}}>
-        <a href="{{this.location}}">{{this.taskname}}</a>
+    <label class="task-item">
+        <div class="task-content">
+            <input type="checkbox" id="checkbox-{{@index}}" disabled {{#if this.iscompleted}}checked{{/if}}>
+            <p id="points">{{this.points}}</p>
+            <a href="{{this.location}}">{{this.taskname}}</a>
+        </div>
     </label>
 </li>
