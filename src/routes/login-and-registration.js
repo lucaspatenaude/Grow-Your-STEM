@@ -80,21 +80,26 @@ router.post("/register", async (req, res) => {
 
         // Separate tasks into categories
         const articleTasks = [
-            { id: 1, name: 'Read Article "How Do Tariffs Work"', points: 10, location: '/articles/nathaniel/how-do-tariffs-work' },
-            { id: 2, name: 'Read Article "Credit and Financing Options"', points: 25, location: '/articles/lucas/credit-and-financing-options' },
-            { id: 3, name: 'Read Article "Retirement Accounts"', points: 30, location: '/articles/clay/retirement-accounts' },
-            { id: 4, name: 'Read Article "Global Reserve"', points: 30, location: '/articles/clay/global-reserve' }
+            { id: 1, name: 'Read Article "How Do Tariffs Work"', points: 10, location: '/articles/Nathaniel/How-Do-Tariffs-Work' },
+            { id: 2, name: 'Read Article "Credit and Financing Options"', points: 25, location: '/articles/Lucas/Credit-and-Financing-Options' },
+            { id: 3, name: 'Read Article "Retirement Accounts"', points: 30, location: '/articles/Clay/Retirement-Accounts' },
+            { id: 4, name: 'Read Article "Global Reserve"', points: 30, location: '/articles/Clay/Global-Reserve'},
+            { id: 5, name: 'Read Article "Meme Stocks & Cryptocurrency"', points: 20, location: '/articles/Clay/Meme-Stocks-and-Crypto' },
+            { id: 6, name: 'Read Article "Future of AI in the Workplace"', points: 20, location: '/articles/Lucas/Future-of-AI-in-the-Workplace' },
+            { id: 7, name: 'Read Article "Investment Trends of 2025"', points: 20, location: '/articles/Lucas/Investment-Trends-of-2025' },
+            { id: 8, name: 'Read Article "Dangers of Modern Investment Platforms"', points: 20, location: '/articles/Lucas/Dangers-of-Modern-Investment-Platforms' },
+            { id: 9, name: 'Read Article "Popularity of Options Trading"', points: 20, location: '/articles/Lucas/Popularity-of-Options-Trading' }
         ];
 
         const basicsTasks = [
-            { id: 1, name: 'Understanding Net Worth', points: 10, location: '/basics/net-worth' },
-            { id: 2, name: 'Student Loans and Debt Hierarchies', points: 20, location: '/basics/student-loans' },
-            { id: 3, name: 'Budgeting That Doesn’t Suck (Seriously)', points: 30, location: '/basics/budgeting' },
-            { id: 4, name: 'Emergency Funds: The First $1K and Beyond', points: 15, location: '/basics/emergency-funds' },
-            { id: 5, name: 'Credit Scores and Credit Building', points: 25, location: '/basics/credit-scores' },
-            { id: 6, name: 'Intro to Investing', points: 35, location: '/basics/investing' },
-            { id: 7, name: 'Paychecks: What Are All These Deductions?', points: 20, location: '/basics/paychecks' },
-            { id: 8, name: 'Benefits Beyond Salary', points: 30, location: '/basics/benefits' }
+            { id: 1, name: 'Understanding Net Worth', points: 10, location: '/basics/Net-Worth' },
+            { id: 2, name: 'Student Loans and Debt Hierarchies', points: 20, location: '/basics/Student-Loans' },
+            { id: 3, name: 'Budgeting That Doesn’t Suck (Seriously)', points: 30, location: '/basics/Budgeting' },
+            { id: 4, name: 'Emergency Funds: The First $1K and Beyond', points: 15, location: '/basics/Emergency-Funds' },
+            { id: 5, name: 'Credit Scores and Credit Building', points: 25, location: '/basics/Credit-Scores' },
+            { id: 6, name: 'Intro to Investing', points: 35, location: '/basics/Investing' },
+            { id: 7, name: 'Paychecks: What Are All These Deductions?', points: 20, location: '/basics/Paychecks' },
+            { id: 8, name: 'Benefits Beyond Salary', points: 30, location: '/basics/Benefits' }
         ];
 
         const lessonTasks = [
