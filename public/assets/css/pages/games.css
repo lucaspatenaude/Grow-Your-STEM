@@ -1,0 +1,42 @@
+.games-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.games-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.games-image {
+  display: flex; /* Add this */
+  align-items: center; /* Center vertically */
+  width: 50%;
+
+  img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+.games-image img {
+  width: 90%;
+  height: auto;
+  border-radius: 15px; /* Adjust the value for the desired curve */
+}
+
+#universal-paperclips-image {
+  justify-content: flex-start;
+}
+
+#investopedia-simulator-image {
+  justify-content: flex-end !important;
+}
+
