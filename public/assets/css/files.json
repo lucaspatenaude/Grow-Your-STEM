@@ -4,5 +4,5 @@
 "pages/home.css", "pages/basics.css", "pages/games.css","pages/article.css", "pages/author.css", "pages/user-menu/account-pane.css", "pages/user-menu/login-and-registration-pane.css",
 "structure/navigation-bar.css", "structure/footer.css", "structure/checklist.css", 
 "components/cards/all.css", "components/cards/card-types.css",
-"components/completion-buttons/read-button.css"
+"components/buttons/button-types.css"
 ]

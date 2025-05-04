@@ -61,6 +61,8 @@ select:focus {
   box-shadow: 0 0 5px rgba(0, 122, 204, 0.5); /* Add a subtle focus shadow */
 }
 
+
+
 .result {
   padding: 1em;
   background: var(--lightw);ghtw);

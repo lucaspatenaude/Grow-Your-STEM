@@ -88,26 +88,3 @@
 }
 
 
-/********************** Card Button Stylization **********************/
-
-.card-button-container {
-    margin-top: auto;
-    padding-top: 20px;
-}
-
-.card-button { /* Push the button to the bottom of the card body */
-    align-self: flex-start; /* Align the button to the left */
-    background-color: var(--darkc);
-    color: var(--lightc);
-    border-radius: 10px;
-}
-
-.card-button:hover,
-.card-button:focus {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    background-color: var(--cool);
-    border: 2px solid var(--darkc);
-    box-shadow: 0 0 5px #979696;
-    cursor: pointer;
-}

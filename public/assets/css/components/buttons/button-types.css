@@ -1,0 +1,43 @@
+button {
+  background-color: var(--darkc);
+  color: var(--lightc);
+  border-radius: 10px !important;
+  
+  text-decoration: none;
+  border: 1px solid var(--darkc);
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center the text */
+  display: inline-block; /* Ensure text-align works */
+}
+
+button:hover,
+button:focus {
+  color: rgb(255, 255, 255);
+  background-color: var(--cool);
+  border: 2px solid var(--darkc);
+  box-shadow: 0 0 5px #979696;
+  cursor: pointer;
+}
+
+/********************** Card Button Stylization **********************/
+
+.card-button-container {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.card-button { /* Push the button to the bottom of the card body */
+  align-self: flex-start; /* Align the button to the left */
+  padding: 10px 20px;
+}
+
+/********************** "Mark Done" Button Stylization **********************/
+
+.mark-done-button {
+  min-width: fit-content;
+  margin: 20px 0;
+  padding: 10px 25px
+}

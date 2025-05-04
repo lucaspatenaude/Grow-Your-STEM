@@ -67,22 +67,7 @@ font-size: 28px;
 
 /********************** Components **********************/
 
-button {
-    background-color: var(--darkc);
-    color: var(--lightc);
-    border: none;
-    border-radius: 12px;
-}
 
-button:hover,
-button:focus {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    background-color: rgb(102, 141, 114);
-    border: 2px solid var(--darkc);
-    box-shadow: 0 0 5px #979696;
-    cursor: pointer;
-  }
 
 /********************** Custom Fonts **********************/
 
