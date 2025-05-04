@@ -84,7 +84,7 @@ router.post("/register", async (req, res) => {
             { id: 2, name: 'Read Article "Credit and Financing Options"', points: 25, location: '/articles/lucas/credit-and-financing-options' },
             { id: 3, name: 'Read Article "Retirement Accounts"', points: 30, location: '/articles/Clay/retirement-accounts' },
             { id: 4, name: 'Read Article "Global Reserve"', points: 30, location: '/articles/Clay/global-reserve'},
-            { id: 5, name: 'Read Article "What\'s a Negative Price"', points: 20, location: '/articles/Clay/whats-a-negative-price' },
+            { id: 5, name: 'Read Article "What\'s a Negative Price?"', points: 20, location: '/articles/Clay/whats-a-negative-price' },
             { id: 6, name: 'Read Article "Meme Stocks & Cryptocurrency"', points: 20, location: '/articles/Clay/meme-stocks-and-crypto' },
             { id: 7, name: 'Read Article "Future of AI in the Workplace"', points: 20, location: '/articles/lucas/future-of-ai-in-the-workplace' },
             { id: 8, name: 'Read Article "Investment Trends of 2025"', points: 20, location: '/articles/lucas/investment-trends-of-2025' },
