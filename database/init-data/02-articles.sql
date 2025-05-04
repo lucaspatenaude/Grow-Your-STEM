@@ -23,7 +23,8 @@ VALUES
     ('Nathaniel Beatty', 'Nathaniel'), -- AuthorID 2
     ('Clay Kress', 'Clay'); -- AuthorID 3
 
--- Insert articles
+-- Insert articles into the articles table
+-- Note: These are the order the cards will be displayed on the articles page
 INSERT INTO articles (AuthorID, Title, Summary, Link, ImagePath, ImageAlt)
 VALUES
     
