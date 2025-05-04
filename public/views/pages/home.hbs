@@ -63,7 +63,7 @@
 		</div>
 
     <!--------- Calculator Form --------->
-    <form id="finance-form">
+    <id="finance-form">
 
       <h2 class="page-header-2">Education Expenses (per semester)</h2>
 
@@ -124,7 +124,17 @@
         />
 
       <!-- Calculate Button -->
-      <button type="button" id="calculate-button" onclick="calculate()">Calculate</button>
+      <div class="article-button-container">
+        <div class="article-read-button">
+          <form action="/complete-task" method="POST">
+            <input type="hidden" name="userId" value="{{user.userid}}">
+            <input type="hidden" name="taskId" value="1">
+            <input type="hidden" name="taskType" value="calculator">
+            <button type="submit" id="calculate-button" onclick="calculate()">Calculate</button>
+          </form>
+        </div>
+      </div>
+
     </form>
 
     <!-- Results Pop-Up Panel -->

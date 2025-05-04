@@ -54,7 +54,7 @@
 .objectives-container label {
   display: flex; /* Align checkbox and text on the same line */
   align-items: center; /* Vertically center the checkbox and text */
-  font-family: "Roboto_Slab"; /* Ensure consistent font styling */
+  font-family: "Roboto"; /* Ensure consistent font styling */
 }
 
 /* Center the checkbox, points, and link vertically */
