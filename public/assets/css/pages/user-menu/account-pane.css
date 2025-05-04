@@ -73,7 +73,7 @@
   background-color: rgb(226, 202, 66); /* Background color for the circle */
   border: 1px solid rgb(144, 95, 16); /* Add a border */
   border-radius: 50%; /* Make it a perfect circle */
-  font-size: 12px; /* Adjust font size to fit inside the circle */
+  font-size: 11px; /* Adjust font size to fit inside the circle */
   color: white; /* Text color for better contrast */
   margin: 0 5px; /* Add spacing around the circle */
   padding: 0; /* Remove padding to avoid affecting dimensions */
