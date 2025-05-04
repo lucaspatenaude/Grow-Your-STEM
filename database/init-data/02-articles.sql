@@ -17,7 +17,7 @@ CREATE TABLE articles (
 -- Insert authors
 INSERT INTO authors (Name, Route)
 VALUES
-    ('lucas Patenaude', 'Lucas'),
+    ('Lucas Patenaude', 'Lucas'),
     ('Nathaniel Beatty', 'Nathaniel'),
     ('Clay Kress', 'Clay');
 
