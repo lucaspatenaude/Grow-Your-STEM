@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const fetchArticles = require('../middleware/database/fetch-articles'); // Import middleware
 const articleRoutes = require("./articles"); // Import article routes
+const basicsRoutes = require("./basics"); // Import basics routes
 const loginRoutes = require("./login-and-registration"); // Import login and registration routes
 const accountRoutes = require("./account"); // Import account routes
 const taskRoutes = require("./tasks"); // Import task routes
@@ -36,6 +37,7 @@ router.get("/games", (req, res) => {
 
 // Use other route files
 router.use("/", articleRoutes);
+router.use("/", basicsRoutes);
 router.use("/", loginRoutes);
 router.use("/", accountRoutes);
 router.use("/", taskRoutes);

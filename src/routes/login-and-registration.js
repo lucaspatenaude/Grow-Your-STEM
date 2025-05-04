@@ -86,6 +86,17 @@ router.post("/register", async (req, res) => {
             { id: 4, name: 'Read Article "Global Reserve"', points: 30, location: '/articles/clay/global-reserve' }
         ];
 
+        const basicsTasks = [
+            { id: 1, name: 'Understanding Net Worth', points: 10, location: '/basics/net-worth' },
+            { id: 2, name: 'Student Loans and Debt Hierarchies', points: 20, location: '/basics/student-loans' },
+            { id: 3, name: 'Budgeting That Doesn’t Suck (Seriously)', points: 30, location: '/basics/budgeting' },
+            { id: 4, name: 'Emergency Funds: The First $1K and Beyond', points: 15, location: '/basics/emergency-funds' },
+            { id: 5, name: 'Credit Scores and Credit Building', points: 25, location: '/basics/credit-scores' },
+            { id: 6, name: 'Intro to Investing', points: 35, location: '/basics/investing' },
+            { id: 7, name: 'Paychecks: What Are All These Deductions?', points: 20, location: '/basics/paychecks' },
+            { id: 8, name: 'Benefits Beyond Salary', points: 30, location: '/basics/benefits' }
+        ];
+
         const lessonTasks = [
             { id: 1, name: 'Click Fundamentals Button', points: 15, location: '/' },
             { id: 2, name: 'Complete STEM Quiz', points: 35, location: '/' },
@@ -107,6 +118,14 @@ router.post("/register", async (req, res) => {
             );
         });
 
+        // Insert basics into the basicsTasks table
+        const basicsTaskQueries = basicsTasks.map(basicsTask => {
+            return db.none(
+                "INSERT INTO basicsTasks (userid, basictaskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
+                [newUser.userid, basicsTask.id, basicsTask.name, basicsTask.points, basicsTask.location]
+            );
+        });
+
         // Insert lessons into the lessonTasks table
         const lessonTaskQueries = lessonTasks.map(lessonTask => {
             return db.none(
@@ -124,7 +143,7 @@ router.post("/register", async (req, res) => {
         });
 
         // Execute all queries
-        await Promise.all([...articleTaskQueries, ...lessonTaskQueries, ...gameTaskQueries]);
+        await Promise.all([...articleTaskQueries, ...basicsTaskQueries, ...lessonTaskQueries, ...gameTaskQueries]);
 
         // Redirect to the home page after successful registration
         res.redirect("/home");

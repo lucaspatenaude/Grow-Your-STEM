@@ -15,6 +15,17 @@ CREATE TABLE articleTasks (
     PRIMARY KEY (UserID, ArticleTaskID) -- Composite primary key
 );
 
+-- Create the basicTasks table
+CREATE TABLE basicsTasks (
+    BasicTaskID INT NOT NULL, -- Unique identifier for each basic
+    UserID INT REFERENCES users(UserID) ON DELETE CASCADE,
+    TaskName VARCHAR(255) NOT NULL,
+    Points INT NOT NULL,
+    Location VARCHAR(255),
+    IsCompleted BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY (UserID, BasicTaskID) -- Composite primary key
+);
+
 -- Create the lessonTasks table
 CREATE TABLE lessonTasks (
     LessonTaskID INT NOT NULL, -- Unique identifier for each lesson

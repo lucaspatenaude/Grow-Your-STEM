@@ -36,6 +36,16 @@
             </ul>
         </div>
 
+        <!-- Basics To-Do Section -->
+        <div class="objectives-container">
+            <h2 class="objective-header">🧪 Basics</h2>
+            <ul> <!-- Import tasks for basicsTasks DB table in DB -->
+                {{#each basicsTasks}}
+                    {{> components/account-screen/task this}}
+                {{/each}}
+            </ul>
+        </div>
+
         <!-- Lessons To-Do Section -->
         <div class="objectives-container">
             <h2 class="objective-header">🏆 Lessons</h2>

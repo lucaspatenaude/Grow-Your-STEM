@@ -4,13 +4,19 @@ const db = require('../../../database/setup'); // Import the database connection
 const fetchTasks = async (req, res, next) => {
     if (req.session.user) {
         try {
-            // Fetch article task
+            // Fetch article tasks
             const articleTasks = await db.query(
                 'SELECT ArticleTaskID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM articleTasks WHERE UserID = $1 ORDER BY ArticleTaskID',
                 [req.session.user.userid]
             );
 
-            // Fetch lesson task
+            // Fetch basics tasks
+            const basicsTasks = await db.query(
+                'SELECT BasicTaskID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM basicsTasks WHERE UserID = $1 ORDER BY BasicTaskID',
+                [req.session.user.userid]
+            );
+
+            // Fetch lesson tasks
             const lessonTasks = await db.query(
                 'SELECT LessonTaskID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM lessonTasks WHERE UserID = $1 ORDER BY LessonTaskID',
                 [req.session.user.userid]
@@ -24,17 +30,20 @@ const fetchTasks = async (req, res, next) => {
 
             // Attach the fetched tasks to `res.locals`
             res.locals.articleTasks = articleTasks;
+            res.locals.basicsTasks = basicsTasks; // Add basics tasks to res.locals
             res.locals.lessonTasks = lessonTasks;
             res.locals.gameTasks = gameTasks;
 
         } catch (error) {
             console.error('Error fetching tasks:', error.message || error);
             res.locals.articleTasks = [];
+            res.locals.basicsTasks = []; // Default to an empty array if an error occurs
             res.locals.lessonTasks = [];
             res.locals.gameTasks = [];
         }
     } else {
         res.locals.articleTasks = [];
+        res.locals.basicsTasks = []; // Default to an empty array if the user is not logged in
         res.locals.lessonTasks = [];
         res.locals.gameTasks = [];
     }

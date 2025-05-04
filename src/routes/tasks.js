@@ -5,8 +5,9 @@ const db = require('../../database/setup'); // Assuming you have a database conn
 // Mark task as completed and update user score
 router.post('/complete-task', async (req, res) => {
     if (!req.session.user) {
-        // Redirect back to the article page with an article-specific message
-        return res.render('pages/articles/Nathaniel/How-Do-Tariffs-Work', { 
+        // Redirect back to the current page with an error message
+        const referer = req.headers.referer || '/'; // Fallback to home if referer is not available
+        return res.render(referer, { 
             articleMessage: 'You must be logged in to complete this task.', 
             error: true 
         });
@@ -21,7 +22,12 @@ router.post('/complete-task', async (req, res) => {
         if (taskType === 'article') {
             tableName = 'articletasks';
             columnName = 'articletaskid';
-        } else if (taskType === 'lesson') {
+        } 
+        else if (taskType === 'basic') {
+            tableName = 'basictasks';
+            columnName = 'basictaskid';
+        }
+        else if (taskType === 'lesson') {
             tableName = 'lessontasks';
             columnName = 'lessontaskid';
         } else if (taskType === 'game') {

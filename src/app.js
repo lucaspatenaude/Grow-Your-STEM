@@ -14,6 +14,7 @@ const axios = require("axios"); // To make HTTP requests from our server. We'll 
 const moment = require("moment"); // To extract current time data
 const fetchTasks = require('./middleware/database/fetch-tasks'); // Import the fetchTasks middleware
 const fetchArticles = require('./middleware/database/fetch-articles'); // Import the fetchArticles middleware
+const fetchBasics = require('./middleware/database/fetch-basics'); // Import the fetchBasics middleware
 
 // *****************************************************
 // <!-- 2. Start the Database -->
@@ -77,6 +78,7 @@ app.use((req, res, next) => {
 // *****************************************************
 
 app.use(fetchArticles); // Middleware to fetch articles for the logged-in user
+app.use (fetchBasics); // Middleware to fetch basics for all pages
 app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
 
 // *****************************************************

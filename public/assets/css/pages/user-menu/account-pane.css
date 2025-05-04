@@ -13,7 +13,10 @@
 /* Create padding and set width for main container (contains all) */
 #account-pane {
   padding: 20px;
-  min-width: fit-content
+  min-width: fit-content;
+  max-height: 80%;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /*********** Information Section ***********/
