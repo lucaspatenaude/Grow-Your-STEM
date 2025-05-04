@@ -4,7 +4,8 @@
 function makeNavbarSticky() {
     // Get the navigation bar element
     var navbar = document.getElementById("navigation-bar-container");
-    var accountPortal = document.querySelector(".account-portal-container");
+    var loginPane = document.getElementById("login-pane");
+    var registerPane = document.getElementById("register-pane");
 
     // Function to add sticky behavior when scrolling
     function stickyNavbar() {
@@ -18,11 +19,18 @@ function makeNavbarSticky() {
             // Add padding to the body to prevent content from jumping when the navbar becomes sticky
             document.body.style.paddingTop = navbar.offsetHeight + "px";
 
-            // Make the account portal follow the navbar
-            if (accountPortal) {
-                accountPortal.style.position = "fixed";
-                accountPortal.style.top = navbar.offsetHeight + 35 + "px"; // 15px below the navbar
-                accountPortal.style.right = "20px"; // Adjust as needed
+            // Make the login pane follow the navbar
+            if (loginPane) {
+                loginPane.style.position = "fixed";
+                loginPane.style.top = navbar.offsetHeight + 35 + "px"; // 35px below the navbar
+                loginPane.style.right = "20px"; // Adjust as needed
+            }
+
+            // Make the register pane follow the navbar
+            if (registerPane) {
+                registerPane.style.position = "fixed";
+                registerPane.style.top = navbar.offsetHeight + 35 + "px"; // 35px below the navbar
+                registerPane.style.right = "20px"; // Adjust as needed
             }
         } else {
             // Remove the 'fixed-top' class to make the navbar non-sticky
@@ -30,11 +38,18 @@ function makeNavbarSticky() {
             // Reset the padding of the body
             document.body.style.paddingTop = 0 + "px";
 
-            // Reset the account portal position
-            if (accountPortal) {
-                accountPortal.style.position = "absolute";
-                accountPortal.style.top = "95px"; // Original top position
-                accountPortal.style.right = "20px"; // Adjust as needed
+            // Reset the login pane position
+            if (loginPane) {
+                loginPane.style.position = "absolute";
+                loginPane.style.top = "95px"; // Original top position
+                loginPane.style.right = "20px"; // Adjust as needed
+            }
+
+            // Reset the register pane position
+            if (registerPane) {
+                registerPane.style.position = "absolute";
+                registerPane.style.top = "95px"; // Original top position
+                registerPane.style.right = "20px"; // Adjust as needed
             }
         }
     }
