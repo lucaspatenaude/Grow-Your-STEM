@@ -1,64 +1,62 @@
 <div class="page-container">
 
-<div class="article-page-container">
-  
-  <!-- Container for the article -->
-  <div class="article-container">
-
-    <!-- Header and Title -->
-    <div class="article-header-container">
-      <div class="article-title-container">
-        <h1>Student Credit & Financing Options?</h1>
-      </div>
+  <div class="article-page-container">
     
-      <div class="article-meta">
-        <p>Author: Lucas Patenaude</p>
-        <p>Published on: 4/23/2025<p>
+    <!-- Container for the article -->
+    <div class="article-container">
+
+      <!-- Header and Title -->
+      <div class="article-header-container">
+        <div class="article-title-container">
+          <h1>Student Credit & Financing Options?</h1>
+        </div>
+      
+        <div class="article-meta">
+          <p>Author: <a class="author-link" href="/articles/lucas">Lucas Patenaude</a></p>
+          <p>Published on: 4/23/2025<p>
+        </div>
+      </div>
+
+      <!-- Article Content -->
+      <div class="article-content-container">
+
+        <!-- Article Image -->
+        <div class="article-image">
+          
+        </div>
+
+        <!-- Article Body -->
+        <h2 class="article-inner-header">What are my options?</h2>
+
+        <p>In today’s shifting economic landscape—where tech sector volatility, student debt, and geopolitical trade shifts shape opportunity—STEM students and graduate researchers face a double-bind: their skill sets are in high demand, yet long-term financial clarity often feels out of reach. While securing that first job or research position is a major milestone, knowing what to do with that first paycheck matters just as much. For many, financial stability isn’t just about salary—it’s about structure.</p>
+        <p>That’s where understanding options like IRAs, tax credits, and institutional retirement plans becomes essential early on.</p>
+        <p>For those pursuing careers at universities, research hospitals, or nonprofits—common destinations for engineering grads, data scientists, and life science researchers—TIAA-CREF looms large. Originally founded to provide retirement income for educators, TIAA-CREF (now operating simply as TIAA) remains a pillar of nonprofit financial services. If you land a position in academia or a research institution, chances are your employer’s retirement plan runs through TIAA. And that’s not a bad thing.</p>
+        <p>Unlike Wall Street-driven brokers, TIAA operates with a nonprofit ethos, focusing on low-fee, long-term investments that include both fixed annuities (which guarantee monthly income in retirement) and variable investment options through CREF (College Retirement Equities Fund). For STEM grads used to modeling systems, the idea of turning a predictable salary into a structured retirement income stream may resonate more than flashy, meme-stock speculation. TIAA’s strength lies in turning complexity into habit, particularly for professionals who want to set and forget their retirement pathway.</p>
+        <p>Outside of employer-sponsored options, individual plans like Roth IRAs remain compelling. While graduate stipends often don’t allow for major contributions, any earned income—like a summer internship or part-time gig—can be funneled into a Roth IRA. Unlike traditional 401(k)s, Roth IRAs are funded with after-tax dollars, meaning your investments grow tax-free and can be withdrawn tax-free in retirement. For those just starting their careers, this can mean decades of compounding without future tax burdens.</p>
+        <p>Also worth noting are education-related tax credits like the Lifetime Learning Credit, which provides up to $2,000 annually for tuition and related expenses—even for grad school. If you’re juggling a coding bootcamp or evening data science certificate while employed, these credits might apply. Likewise, Student Loan Interest Deductions can reduce taxable income even as you chip away at debt.</p>
+        <p>The bottom line? Your financial future isn’t a distant problem to solve later—it’s a structure that starts now. Whether it’s opting into a TIAA plan with a small contribution, opening an IRA on a grad student budget, or taking full advantage of education credits, the systems you build now will shape the options you have a decade from now. And for STEM majors used to debugging code or designing efficient circuits, this mindset shift should feel less like finance and more like forward planning.</p>
+
+        <!-- Works Cited Section -->
+        <div class="works-cited">
+
+          <h2 id="works-cited-header">Works Cited</h2>
+
+          <p><b>[1]</b> - https://www.whitehouse.gov/fact-sheets/2025/04/fact-sheet-president-donald-j-trump-declares-national-emergency-to-increase-our-competitive-edge-protect-our-sovereignty-and-strengthen-our-national-and-economic-security/</p> 
+
+          <h3 id="extra-sources-header">Other Sources</h3>
+          <ul>
+            <li>https://www.nist.gov/el/applied-economics-office/manufacturing/manufacturing-economy/total-us-manufacturing#:~:text=In%202023%2C%20Manufacturing%20contributed%20%242.3,of%20AMS%20600%2D16</li>
+            <li>https://www.bbc.com/news/articles/cn93e12rypgo</li>
+            <li>https://taxfoundation.org/taxedu/glossary/tariffs/</li>
+            <li>https://news.uchicago.edu/story/how-do-tariffs-work-and-who-will-they-impact-uchicago-experts-explain#:~:text=Ad%C3%A3o:%20Any%20negative%20impact%20that,relations%20among%20even%20close%20partners</li>
+          </ol>
+        </div>
+
       </div>
     </div>
 
-    <!-- Article Content -->
-    <div class="article-content-container">
+    <!-- Mark Task as Done Button -->
+    {{> components/articles/completion-button taskID="2" taskType="article"}}
 
-      <!-- Article Image -->
-      <div class="article-image">
-        
-      </div>
-
-      <!-- Article Body -->
-      <h2 class="article-inner-header">What are my options?</h2>
-
-      <p>In today’s shifting economic landscape—where tech sector volatility, student debt, and geopolitical trade shifts shape opportunity—STEM students and graduate researchers face a double-bind: their skill sets are in high demand, yet long-term financial clarity often feels out of reach. While securing that first job or research position is a major milestone, knowing what to do with that first paycheck matters just as much. For many, financial stability isn’t just about salary—it’s about structure.</p>
-      <p>That’s where understanding options like IRAs, tax credits, and institutional retirement plans becomes essential early on.</p>
-      <p>For those pursuing careers at universities, research hospitals, or nonprofits—common destinations for engineering grads, data scientists, and life science researchers—TIAA-CREF looms large. Originally founded to provide retirement income for educators, TIAA-CREF (now operating simply as TIAA) remains a pillar of nonprofit financial services. If you land a position in academia or a research institution, chances are your employer’s retirement plan runs through TIAA. And that’s not a bad thing.</p>
-      <p>Unlike Wall Street-driven brokers, TIAA operates with a nonprofit ethos, focusing on low-fee, long-term investments that include both fixed annuities (which guarantee monthly income in retirement) and variable investment options through CREF (College Retirement Equities Fund). For STEM grads used to modeling systems, the idea of turning a predictable salary into a structured retirement income stream may resonate more than flashy, meme-stock speculation. TIAA’s strength lies in turning complexity into habit, particularly for professionals who want to set and forget their retirement pathway.</p>
-      <p>Outside of employer-sponsored options, individual plans like Roth IRAs remain compelling. While graduate stipends often don’t allow for major contributions, any earned income—like a summer internship or part-time gig—can be funneled into a Roth IRA. Unlike traditional 401(k)s, Roth IRAs are funded with after-tax dollars, meaning your investments grow tax-free and can be withdrawn tax-free in retirement. For those just starting their careers, this can mean decades of compounding without future tax burdens.</p>
-      <p>Also worth noting are education-related tax credits like the Lifetime Learning Credit, which provides up to $2,000 annually for tuition and related expenses—even for grad school. If you’re juggling a coding bootcamp or evening data science certificate while employed, these credits might apply. Likewise, Student Loan Interest Deductions can reduce taxable income even as you chip away at debt.</p>
-      <p>The bottom line? Your financial future isn’t a distant problem to solve later—it’s a structure that starts now. Whether it’s opting into a TIAA plan with a small contribution, opening an IRA on a grad student budget, or taking full advantage of education credits, the systems you build now will shape the options you have a decade from now. And for STEM majors used to debugging code or designing efficient circuits, this mindset shift should feel less like finance and more like forward planning.</p>
-
-      <!-- Works Cited Section -->
-      <div class="works-cited">
-
-        <h2 id="works-cited-header">Works Cited</h2>
-
-        <p><b>[1]</b> - https://www.whitehouse.gov/fact-sheets/2025/04/fact-sheet-president-donald-j-trump-declares-national-emergency-to-increase-our-competitive-edge-protect-our-sovereignty-and-strengthen-our-national-and-economic-security/</p> 
-
-        <h3 id="extra-sources-header">Other Sources</h3>
-        <ul>
-          <li>https://www.nist.gov/el/applied-economics-office/manufacturing/manufacturing-economy/total-us-manufacturing#:~:text=In%202023%2C%20Manufacturing%20contributed%20%242.3,of%20AMS%20600%2D16</li>
-          <li>https://www.bbc.com/news/articles/cn93e12rypgo</li>
-          <li>https://taxfoundation.org/taxedu/glossary/tariffs/</li>
-          <li>https://news.uchicago.edu/story/how-do-tariffs-work-and-who-will-they-impact-uchicago-experts-explain#:~:text=Ad%C3%A3o:%20Any%20negative%20impact%20that,relations%20among%20even%20close%20partners</li>
-        </ol>
-      </div>
-
-    </div>
   </div>
-
-  <!-- Mark Task as Done Button -->
-  {{> components/articles/completion-button taskID="2" taskType="article"}}
-
-</div>
-
-</div>
 </div>
