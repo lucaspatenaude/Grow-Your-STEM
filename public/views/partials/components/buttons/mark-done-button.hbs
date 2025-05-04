@@ -1,8 +1,13 @@
-  <div class="article-read-button">
+<div class="article-read-button">
     <form action="/complete-task" method="POST">
         <input type="hidden" name="userId" value="{{user.userid}}">
         <input type="hidden" name="taskId" value="{{taskID}}">
         <input type="hidden" name="taskType" value="{{taskType}}">
-        <button type="submit" class="mark-done-button">{{button-text}}</button>
+        <button 
+            type="submit" 
+            class="mark-done-button" 
+            {{#if link}}onclick="window.location.href='{{link}}'"{{/if}}>
+            {{button-text}}
+        </button>
     </form>
-  </div>
+</div>
