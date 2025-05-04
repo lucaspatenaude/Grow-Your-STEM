@@ -18,9 +18,15 @@
 					<!--  If adding an article be sure to do the following:
 
 				1. Add the article to the articles folder in the public/views/pages directory
-				2. Add the article's routes to the routes.js file in the src/routes directory
-				3. Add the article attributes (title, points) to database in '/src/routes/login-and-restrigation.js' under the POST '/register' route
-        4. Refresh your database
+				2. Add the article's routes to the articles.js file in the src/routes directory
+        3. Add the article to the articles table in the database in /database/init-data/02-articles.sql
+				4. Add the article attributes (title, points) to database in '/src/routes/login-and-restrigation.js' under the POST '/register' route
+
+        !!! Important To Do the Following for Any Changes to Take Effect Every Single Time a Database Change is Made !!!
+        *** Certain items in the database are created at start and are not updated when the database is changed. ***
+
+        5. Delete database in 'Volumes' tab in Docker Desktop. It should be titled something like 'grow-your-stem_users-database'
+        6. Run 'docker-compose up' in the terminal.
 			-->
 
 		<div class="cards-container">			
