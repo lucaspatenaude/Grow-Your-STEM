@@ -4,14 +4,7 @@ const db = require('../../database/setup'); // Assuming you have a database conn
 
 // Mark task as completed and update user score
 router.post('/complete-task', async (req, res) => {
-    if (!req.session.user) {
-        // Redirect back to the current page with an error message
-        const referer = req.headers.referer || '/'; // Fallback to home if referer is not available
-        return res.render(referer, { 
-            articleMessage: 'You must be logged in to complete this task.', 
-            error: true 
-        });
-    }
+
 
     const { userId, taskId, taskType } = req.body;
 
@@ -19,21 +12,24 @@ router.post('/complete-task', async (req, res) => {
         // Determine the table and column based on taskType
         let tableName;
         let columnName;
+
         if (taskType === 'article') {
             tableName = 'articletasks';
             columnName = 'articletaskid';
         } 
         else if (taskType === 'basic') {
-            tableName = 'basictasks';
+            tableName = 'basicstasks';
             columnName = 'basictaskid';
         }
         else if (taskType === 'lesson') {
             tableName = 'lessontasks';
             columnName = 'lessontaskid';
-        } else if (taskType === 'game') {
+        } 
+        else if (taskType === 'game') {
             tableName = 'gametasks';
             columnName = 'gametaskid';
-        } else {
+        } 
+        else {
             return res.status(400).json({ error: 'Invalid task type' });
         }
 
