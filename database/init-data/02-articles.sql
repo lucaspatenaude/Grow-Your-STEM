@@ -1,15 +1,17 @@
 CREATE TABLE authors (
-    AuthorID SERIAL PRIMARY KEY,
+    AuthorID SERIAL PRIMARY KEY, -- Unique identifier for each author <-- linked to in articles table
     Name VARCHAR(255) NOT NULL UNIQUE,
-    Route VARCHAR(255)
+    Route VARCHAR(255) -- Used to add route to button in article cards for author pages
 );
 
 CREATE TABLE articles (
-    ArticleID SERIAL PRIMARY KEY,
-    AuthorID INT NOT NULL REFERENCES authors(AuthorID) ON DELETE CASCADE,
+    ArticleID SERIAL PRIMARY KEY, -- Unique identifier for each article
+    AuthorID INT NOT NULL REFERENCES authors(AuthorID) ON DELETE CASCADE, -- Foreign key to link to author in authors table
+    
+    -- Article Attributes
     Title VARCHAR(255) NOT NULL,
     Summary TEXT NOT NULL,
-    Link VARCHAR(255) NOT NULL,
+    Link VARCHAR(255) NOT NULL, -- Used to add route to button in article cards for article pages
     ImagePath VARCHAR(255) NOT NULL,
     ImageAlt VARCHAR(255) NOT NULL
 );
