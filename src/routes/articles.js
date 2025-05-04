@@ -25,6 +25,10 @@ router.get("/articles/clay/global-reserve", (req, res) => {
     res.render("pages/articles/Clay/Global-Reserve");
 });
 
+router.get("/articles/clay/whats-a-negative-price", (req, res) => {
+    res.render("pages/articles/Clay/Negative-Price");
+});
+
 router.get("/articles/clay/meme-stocks-and-crypto", (req, res) => {
     res.render("pages/articles/Clay/Meme-Stocks-and-Crypto");
 });
