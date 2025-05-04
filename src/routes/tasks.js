@@ -54,17 +54,13 @@ router.post('/complete-task', async (req, res) => {
         }
 
         if (iscompleted) {
-            // If the task is already completed, mark it as not completed
-            await db.query(
-                `UPDATE ${tableName} SET iscompleted = FALSE WHERE ${columnName} = $1 AND UserID = $2`,
-                [taskId, userId]
-            );
-
-        console.log(`Task Type: ${taskType}`);
 
             // Subtract the points from the user's score only if the task is not a lesson or game
             if (taskType !== 'lesson' && taskType !== 'game') {
-                await db.query('UPDATE users SET Score = Score - $1 WHERE UserID = $2', [points, userId]);
+                await db.query(
+                    'UPDATE users SET Score = Score - $1, iscompleted = FALSE WHERE UserID = $2',
+                    [points, userId]
+                );
                 console.log(`Task ${taskId} in ${tableName} marked as not completed. Points subtracted: ${points}`);
             } else {
                 console.log(`Task ${taskId} in ${tableName} marked as not completed. No points subtracted for task type: ${taskType}`);
