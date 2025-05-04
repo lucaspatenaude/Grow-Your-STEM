@@ -87,7 +87,7 @@ router.post("/register", async (req, res) => {
             { id: 5, name: 'Read Article "What\'s a Negative Price?"', points: 20, location: '/articles/Clay/whats-a-negative-price' },
             { id: 6, name: 'Read Article "Meme Stocks & Cryptocurrency"', points: 20, location: '/articles/Clay/meme-stocks-and-crypto' },
             { id: 7, name: 'Read Article "Future of AI in the Workplace"', points: 20, location: '/articles/lucas/future-of-ai-in-the-workplace' },
-            { id: 8, name: 'Read Article "Investment Trends of 2025"', points: 50, location: '/articles/lucas/investment-trends-of-2025' },
+            { id: 8, name: 'Read Article "Investment Trends of 2025"', points: 50, location: '/articles/lucas/investment-trends-2025' },
             { id: 9, name: 'Read Article "Dangers of Modern Investment Platforms"', points: 20, location: '/articles/Lucas/dangers-of-modern-investment-platforms' },
             { id: 10, name: 'Read Article "Popularity of Options Trading"', points: 20, location: '/articles/lucas/popularity-of-options-trading' }
         ];
