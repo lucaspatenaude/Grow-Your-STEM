@@ -14,6 +14,7 @@ CREATE TABLE basics (
 -- Insert basics into the basics table
 INSERT INTO basics (Title, Summary, Link, ImagePath, ImageAlt)
 VALUES
+    ('Growing Your Tree', 'Learn to build your forest, starting with a tree.', '/basics/your-tree', '/img/branding/logo.svg', 'Your Tree Image'),
     ('Understanding Net Worth', 'Learn how to calculate and understand your net worth.', '/basics/net-worth', '/img/basics/Net-Worth.jpg', 'Understanding Net Worth Image'),
     ('Student Loans and Debt Hierarchies', 'Explore strategies for managing student loans and understanding debt hierarchies.', '/basics/student-loans', '/img/basics/Student-Loans.jpg', 'Student Loans and Debt Hierarchies Image'),
     ('Budgeting Like an Adult', 'Discover practical budgeting techniques that will set you up for success.', '/basics/budgeting', '/img/basics/Budgeting.jpg', 'Budgeting That Doesn’t Suck Image'),

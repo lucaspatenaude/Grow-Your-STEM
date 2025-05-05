@@ -16,6 +16,9 @@ router.get("/articles/nathaniel/how-do-tariffs-work", (req, res) => {
 router.get("/articles/nathaniel/tech-stocks", (req, res) => {
     res.render("pages/articles/Nathaniel/Tech-Stocks");
 });
+router.get("/articles/nathaniel/cost-of-living", (req, res) => {
+    res.render("pages/articles/Nathaniel/Cost-of-Living");
+});
 
 // ******** Clay's Articles ********
 

@@ -100,6 +100,7 @@ router.post("/register", async (req, res) => {
             { id: 9, name: 'Read Article "Dangers of Modern Investment Platforms"', points: 30, location: '/articles/Lucas/dangers-of-modern-investment-platforms' },
             { id: 10, name: 'Read Article "Popularity of Options Trading"', points: 25, location: '/articles/lucas/popularity-of-options-trading' },
             { id: 11, name: 'Read Article "Why are Tech Stocks Falling"', points: 20, location: '/articles/nathaniel/tech-stocks' }
+            { id: 12, name: 'Read Article "Eggs and Milk"', points: 20, location: '/articles/nathaniel/cost-of-living' }
         ];
 
         const basicsTasks = [
@@ -111,6 +112,7 @@ router.post("/register", async (req, res) => {
             { id: 6, name: 'Read "Intro to Investing" Basic', points: 5, location: '/basics/investing' },
             { id: 7, name: 'Read "Paychecks: What Are All These Deductions?" Basic', points: 20, location: '/basics/paychecks' },
             { id: 8, name: 'Read "Employment Benefits Beyond Salary" Basic', points: 10, location: '/basics/benefits' }
+            { id: 9, name: 'Read "Growing Your Tree" Basic', points: 10, location: '/basics/your-tree' }
         ];
 
         const topicTasks = [

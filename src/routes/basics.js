@@ -43,4 +43,9 @@ router.get("/basics/benefits", (req, res) => {
     res.render("pages/basics/Benefits");
 });
 
+// Route for "Your Tree"
+router.get("/basics/your-tree", (req, res) => {
+    res.render("pages/basics/Your-Tree");
+});
+
 module.exports = router;

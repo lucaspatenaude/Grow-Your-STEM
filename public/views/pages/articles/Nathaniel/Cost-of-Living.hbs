@@ -1,0 +1,78 @@
+<div class="page-container">
+
+  <div class="article-page-container">
+
+    <!-- Display the message partial if an article-specific message exists -->
+    {{#if articleMessage}}
+      {{> components/message message=articleMessage error=error}}
+    {{/if}}
+
+    <!-- Container for the article -->
+    <div class="article-container">
+
+      <!-- Header and Title -->
+      <div class="article-header-container">
+        <div class="article-title-container">
+          <h1>Milk and Eggs: A Short Summary of the Cost of Living Crisis</h1>
+        </div>
+      
+        <div class="article-meta">
+          <p>Author: <a class="author-link" href="/articles/nathaniel">Nathaniel Beatty</a></p>
+          <p>Published on: 5/3/2025<p>
+        </div>
+      </div>
+
+      <!-- Article Content -->
+      <div class="article-content-container">
+
+        <!-- Article Image -->
+        <div class="article-image">
+          
+        </div>
+
+        <!-- Article Body -->
+
+        <p>You know what’s more important than stocks? Food. Food, rent, water, electricity, basic things that motivate us to get out of bed and work because, well, we want to live. However, we progress through this year, and for nearly every year prior for half a decade, doesn’t it feel like how much you need to work just keeps growing and growing to meet these basic needs?
+</p>
+
+<h2 class="article-inner-header">But Why?</h2>
+
+
+        <p>This idea of how much money you need is called “cost of living,” and it varies wildly by country, city, area, type of work, and a plethora of other factors, but recent tragedies and policies have driven this cost way up. </p>
+
+         <h2 class="article-inner-header">COVID-19</h2>
+
+        <p>Firstly, and most notably, is the 2020 COVID-19 pandemic. This pandemic shut down nearly every industry, crippled international trade, and put many out of work, ultimately increasing the cost of goods due to decreased supply for equal demand. Organizations such as the Human Rights Watch have covered this specific tragedy and its effects, and that article will be linked below.</p>
+
+         <h2 class="article-inner-header">Rent Increases</h2>
+
+        <p>Additionally, rent increases are a large factor in this crisis. Landlords and owners know that everyone needs housing, but zoning laws make it so that new housing can’t be built. This leads to what is known as an inelastic market, where prices can be driven up to nearly any arbitrary value, as no price is too high for a roof over your head. This is essentially done to increase the profit margins of these owners even further, cementing their own wealth and allowing them to buy even more property, again increasing housing prices further.</p>
+
+         <h2 class="article-inner-header">Tariffs</h2>
+        
+        <p>As tariffs hit the market, they will mark a significant increase in foreign goods as their price increases drastically to ship here. These tariffs drive up the cost of shipping, and therefore drive up prices for consumers. Since we live in a global world, where we get tools from other countries, goods from other countries, and labor from other countries, everything will increase.</p>
+
+        <h2 class="article-inner-header">What can be done about this?</h2>
+        
+        <p>Well, there is no one solution, but there are some things we can do to fix it. First is implement mixed use zoning and rent caps. This would effectively stall the rent increases, allowing for increased residential supply and preventing predatory pricing. Next would be to remove the current tariffs, as those generally only drive prices up. Additionally, increasing the federal minimum wage would decrease the percentage of each paycheck that Americans use on these necessities. These are all are small ideas, yet they could help substantially in this cost of living crisis.</p>
+
+        <!-- Works Cited Section -->
+        <div class="works-cited">
+
+          <h3 id="extra-sources-header">Sources</h3>
+          <ul>
+            <li>https://www.hrw.org/news/2022/12/20/what-covid-teaches-us-about-cost-living-crisis</li>
+            <li>https://www.core-econ.org/the-economy/microeconomics/08-supply-demand-13-price-controls.html </li>
+            <li>https://www.nbcnews.com/business/consumer/tariffs-prices-which-products-are-more-expensive-now-rcna200419 </li>
+          </ol>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mark Task as Done Button -->
+    {{> components/buttons/mark-done-button taskID="12" taskType="article" button-text="Mark Article as Read"}}
+
+  </div>
+
+</div>
