@@ -1,8 +1,10 @@
--- Drop tables if they already exist
+-- Drop tables if they already exist to avoid conflicts
 DROP TABLE IF EXISTS tasks;
 DROP TABLE IF EXISTS articleTasks;
 DROP TABLE IF EXISTS topicTasks;
 DROP TABLE IF EXISTS gameTasks;
+
+--  *** All tasks are added to the database at user registration in the file: /src/routes/login-and-registration.js under '/register' route ***
 
 -- Create the articleTasks table
 CREATE TABLE articleTasks (

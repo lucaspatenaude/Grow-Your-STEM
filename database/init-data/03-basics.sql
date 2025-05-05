@@ -11,7 +11,7 @@ CREATE TABLE basics (
     ImageAlt VARCHAR(255) NOT NULL
 );
 
--- Insert basics
+-- Insert basics into the basics table
 INSERT INTO basics (Title, Summary, Link, ImagePath, ImageAlt)
 VALUES
     ('Understanding Net Worth', 'Learn how to calculate and understand your net worth.', '/basics/net-worth', '/img/basics/net-worth.jpg', 'Understanding Net Worth Image'),
@@ -22,3 +22,5 @@ VALUES
     ('Intro to Investing', 'Get started with investing and learn the basics.', '/basics/investing', '/img/basics/investing.jpg', 'Intro to Investing Image'),
     ('Paychecks: What Are All These Deductions?', 'Break down the deductions on your paycheck and understand where your money goes.', '/basics/paychecks', '/img/basics/paychecks.jpg', 'Understanding Paychecks Image'),
     ('Benefits Beyond Salary', 'Explore the benefits that go beyond your paycheck.', '/basics/benefits', '/img/basics/benefits.jpg', 'Benefits Beyond Salary Image');
+
+-- Go to '/src/routes/login-and-restrigation.js' under the POST '/register' route to ddd the basics attributes (title, points) for scoring. Due to tasks being assigned at user registration (since grouped by userID), an additional file is needed to link the basics to the users.
