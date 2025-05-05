@@ -26,13 +26,13 @@ const fetchArticlesByAuthor = async (req, res, next) => {
         // Fetch the author's name
         console.log(`Fetching author name for author ID: ${authorID}`);
         const author = await db.query(
-            `SELECT name FROM authors WHERE authorid = $1`,
+            `SELECT authorname FROM authors WHERE authorid = $1`,
             [authorID]
         );
 
         // Attach the fetched data to `res.locals`
         res.locals.articles = articles;
-        res.locals.authorName = author[0].name;
+        res.locals.authorName = author[0].authorname;
         res.locals.authorRoute = authorParam;
 
     } catch (error) {

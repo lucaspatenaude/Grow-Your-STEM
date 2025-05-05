@@ -1,6 +1,6 @@
 CREATE TABLE authors (
     AuthorID SERIAL PRIMARY KEY, -- Unique identifier for each author <-- linked to in articles table
-    Name VARCHAR(255) NOT NULL UNIQUE,
+    AuthorName VARCHAR(255) NOT NULL UNIQUE,
     Route VARCHAR(255) -- Used to add route to button in article cards for author pages
 );
 
@@ -17,7 +17,7 @@ CREATE TABLE articles (
 );
 
 -- Insert authors
-INSERT INTO authors (Name, Route)
+INSERT INTO authors (AuthorName, Route)
 VALUES
     ('Lucas Patenaude', 'Lucas'), -- AuthorID 1
     ('Nathaniel Beatty', 'Nathaniel'), -- AuthorID 2

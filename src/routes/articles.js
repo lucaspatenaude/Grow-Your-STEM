@@ -5,8 +5,7 @@ const fetchArticlesByAuthor = require('../middleware/database/fetch-articles-by-
 // ******** Dynamic Author Articles ********
 
 router.get("/articles/:author", fetchArticlesByAuthor, (req, res) => {
-    const { authorName, articles } = res.locals;
-    res.render("partials/pages/author", { author: authorName, articles });
+    res.render("partials/pages/author");
 });
 
 // ******** Nathaniel's Articles ********
