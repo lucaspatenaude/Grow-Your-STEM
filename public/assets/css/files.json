@@ -1,7 +1,7 @@
 [
 "reset.css", "main.css", 
 "pages/home.css", "pages/basics.css", "pages/games.css","pages/article.css", "pages/author.css", "pages/user-pane/account-pane.css", "pages/user-pane/login-and-registration-pane.css",
-"structure/navigation-bar.css", "structure/footer.css", "structure/checklist.css", 
-"components/cards/all.css", "components/cards/card-types.css",
+"structure/navigation-bar.css", "structure/footer.css", 
+"components/cards/all.css", "components/click-cards", "components/cards/image-cards.css",
 "components/buttons/button-types.css"
 ]
