@@ -12,28 +12,27 @@ router.get("/home", fetchArticles, (req, res) => {
     res.render("pages/home");
 });
 
-// Middleware to fetch articles, topics, and games and store them in sessions
 router.get("/", (req, res) => {
-    res.render("pages/home"); // No need to pass user, articles, topics, or games
+    res.render("pages/home");
 });
 
 router.get("/", (req, res) => {
     res.redirect("/home");
 });
 
-// ************** Blog Page Routes ************** 
+// ************** Articles Page Route ************** 
 
 router.get("/articles", (req, res) => {
     res.render("pages/articles");
 });
 
-// ************** Basics & Topics Page Routes ************** 
+// ************** Basics & Topics Page Route ************** 
 
 router.get("/basics", (req, res) => {
     res.render("pages/basics");
 });
 
-// ************** Games Page Routes **************
+// ************** Games Page Route **************
 
 router.get("/games", (req, res) => {
     res.render("pages/games");
