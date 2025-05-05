@@ -103,3 +103,32 @@ font-size: 28px;
          url('../../fonts/Montserrat/MontserratAlternates-Regular.woff') format('woff');
     font-display: swap;
 }
+
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+    padding: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--darkc);
+    width: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--cool);
+    border: 3px solid var(--darkc);
+    border-radius: 7px;
+    background-clip: content-box;
+    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--lightc);
+    transition-duration: 0.4s;
+  }
