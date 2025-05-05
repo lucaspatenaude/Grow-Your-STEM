@@ -34,7 +34,7 @@ You should see an output as follows:
 
 ```txt
 CONTAINER ID   IMAGE      COMMAND                  CREATED         STATUS         PORTS                                         NAMES
-8aacc138f334   node:lts   "docker-entrypoint.s…"   2 seconds ago   Up 2 seconds   0.0.0.0:3003->3000/tcp, [::]:3003->3000/tcp   web
+8aacc138f334   node:lts   "docker-entrypoint.s…"   2 seconds ago   Up 2 seconds   0.0.0.0:3000->3000/tcp, [::]:3003->3000/tcp   web
 ```
 
 ## 🌎 Navigating to the Web Application
