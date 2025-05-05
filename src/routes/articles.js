@@ -28,7 +28,7 @@ router.get("/articles/clay/whats-a-negative-price", (req, res) => {
     res.render("pages/articles/Clay/Negative-Price");
 });
 
-router.get("/articles/clay/meme-stocks-and-crypto", (req, res) => {
+router.get("/articles/clay/crypto", (req, res) => {
     res.render("pages/articles/Clay/Crypto");
 });
 
