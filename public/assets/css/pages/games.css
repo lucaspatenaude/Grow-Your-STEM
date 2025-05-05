@@ -22,6 +22,10 @@
   margin-bottom: 20px;
 }
 
+.games-column-header {
+  font-family: "MontBold";
+}
+
 .games-image {
   display: flex; /* Add this */
   align-items: center; /* Center vertically */
@@ -47,3 +51,13 @@
   justify-content: flex-end !important;
 }
 
+.game-sprite-gallery {
+  background-color: var(--lightw);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.game-sprite-gallery img{
+  display: block;
+  width: 300%;
+}
