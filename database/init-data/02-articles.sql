@@ -38,4 +38,4 @@ VALUES
     (1, 'Popularity of Options Trading', 'Options trading is booming, but fast profits often come with fast risks. What’s driving the surge and why caution matters.', '/articles/lucas/popularity-of-options-trading', '/img/articles/Lucas/Popularity-of-Options-Trading.jpg', 'Sample Event Image'  ),
     (1, 'Credit and Financing Options', 'Navigating funding and credit options for education can be daunting. This article explores popular options for STEM majors', '/articles/lucas/credit-and-financing-options', '/img/articles/Lucas/Credit-and-Finance-Options.jpg', 'Sample Event Image');
 
--- Go to '/src/routes/login-and-restrigation.js' under the POST '/register' route to ddd the article attributes (title, points). Due to their scoring system, they are not added to the database at this time.
+-- Go to '/src/routes/login-and-restrigation.js' under the POST '/register' route to ddd the article attributes (title, points) for scoring. Due to tasks being assigned at user registration (since grouped by userID), an additional file is needed to link the articles to the users.
