@@ -57,8 +57,8 @@ app.get("/welcome", (req, res) => {
 
 app.use(
     session({
-        secret: process.env.SESSION_SECRET,
-        saveUninitialized: false,
+        secret: "your-secret-key",
+        saveUninitialized: true,
         resave: false,
     })
 );
@@ -79,18 +79,17 @@ app.use((req, res, next) => {
 // <!-- 5. Append All Middleware -->
 // *****************************************************
 
-app.use(globalVariables); // Use the global variables middleware
-
 app.use(fetchArticles); // Middleware to fetch articles for the logged-in user
 app.use (fetchBasics); // Middleware to fetch basics for all pages
 app.use (fetchTopics); // Middleware to fetch basics for all pages
 app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
+app.use(globalVariables); // Use the global variables middleware
 
 // *****************************************************
 // <!-- 6. Output All Page Routes -->
 // *****************************************************
 
-app.use("/", require("./routes/main")); // Add all page routes
+app.use("/", require("./routes/main")); // Use the consolidated routes file
 
 // *****************************************************
 // <!-- 7. Export the App Object -->
@@ -98,5 +97,3 @@ app.use("/", require("./routes/main")); // Add all page routes
 
 // Export the app object to index.js
 module.exports = app;
-
-app.listen(3000, () => console.log("Server running on port 3000"));
