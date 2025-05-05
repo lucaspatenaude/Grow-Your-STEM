@@ -1,6 +1,6 @@
 services:
   db:
-    container_name: gys-db
+    container_name: GYS-DB
     image: postgres:14
     environment:
       POSTGRES_USER: "${DB_USER}" # Use DB_USER from .env
@@ -15,7 +15,7 @@ services:
       - .env # Load all environment variables from .env
 
   web:
-    container_name: gys-web-interface
+    container_name: GYS-Web-Interface
     image: node:lts
     user: "${NODE_USER}"
     working_dir: /home/node/app
