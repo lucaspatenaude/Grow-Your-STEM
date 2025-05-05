@@ -21,9 +21,9 @@ router.post('/complete-task', async (req, res) => {
             tableName = 'basicstasks';
             columnName = 'basictaskid';
         }
-        else if (taskType === 'lesson') {
-            tableName = 'lessontasks';
-            columnName = 'lessontaskid';
+        else if (taskType === 'topic') {
+            tableName = 'topictasks';
+            columnName = 'topictaskid';
         } 
         else if (taskType === 'game') {
             tableName = 'gametasks';
@@ -55,8 +55,9 @@ router.post('/complete-task', async (req, res) => {
 
         if (iscompleted) {
 
-            // Subtract the points from the user's score only if the task is not a lesson or game
-            if (taskType !== 'lesson' && taskType !== 'game') {
+            // Subtract the points from the user's score only if the task is not a topic or game
+            // Topics and games only need to completed once
+            if (taskType !== 'topic' && taskType !== 'game') {
                 await db.query(
                     'UPDATE users SET Score = Score - $1, iscompleted = FALSE WHERE UserID = $2',
                     [points, userId]

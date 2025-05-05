@@ -113,7 +113,7 @@ router.post("/register", async (req, res) => {
         ];
 
         const topicTasks = [
-            { id: 1, name: 'Click "US Economy Dashboard" button', points: 15, location: '/basics#lessons-container' },
+            { id: 1, name: 'Click "US Economy Dashboard" button', points: 15, location: '/basics#topics-container' },
         ];
 
         const gameTasks = [
@@ -137,7 +137,7 @@ router.post("/register", async (req, res) => {
             );
         });
 
-        // Insert lessons into the topicTasks table
+        // Insert topics into the topicTasks table
         const topicTaskQueries = topicTasks.map(topicTask => {
             return db.none(
                 "INSERT INTO topicTasks (userid, topictaskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",

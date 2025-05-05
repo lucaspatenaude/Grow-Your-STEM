@@ -14,6 +14,15 @@ router.get("/home", fetchArticles, (req, res) => {
 });
 
 router.get("/", (req, res) => {
+    res.render("pages/home", {
+        user: req.session.user, // Pass the user object
+        articles: res.locals.articles, // Pass the articles array
+        topics: res.locals.topics, // Pass the topics array
+        games: res.locals.games, // Pass the games array
+    });
+});
+
+router.get("/", (req, res) => {
     res.redirect("/home");
 });
 
@@ -23,7 +32,7 @@ router.get("/articles", (req, res) => {
     res.render("pages/articles");
 });
 
-// ************** Lessons Page Routes ************** 
+// ************** Basics & Topics Page Routes ************** 
 
 router.get("/basics", (req, res) => {
     res.render("pages/basics");

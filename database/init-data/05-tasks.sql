@@ -1,7 +1,7 @@
 -- Drop tables if they already exist
 DROP TABLE IF EXISTS tasks;
 DROP TABLE IF EXISTS articleTasks;
-DROP TABLE IF EXISTS lessonTasks;
+DROP TABLE IF EXISTS topicTasks;
 DROP TABLE IF EXISTS gameTasks;
 
 -- Create the articleTasks table
@@ -26,9 +26,9 @@ CREATE TABLE basicsTasks (
     PRIMARY KEY (UserID, BasicTaskID) -- Composite primary key
 );
 
--- Create the lessonTasks table
+-- Create the topicTasks table
 CREATE TABLE topicTasks (
-    TopicTaskID INT NOT NULL, -- Unique identifier for each lesson
+    TopicTaskID INT NOT NULL, -- Unique identifier for each topic
     UserID INT REFERENCES users(UserID) ON DELETE CASCADE,
     TaskName VARCHAR(255) NOT NULL,
     Points INT NOT NULL,

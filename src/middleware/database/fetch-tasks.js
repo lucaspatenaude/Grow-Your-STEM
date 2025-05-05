@@ -16,7 +16,7 @@ const fetchTasks = async (req, res, next) => {
                 [req.session.user.userid]
             );
 
-            // Fetch lesson tasks
+            // Fetch topic tasks
             const topicTasks = await db.query(
                 'SELECT TopicTaskID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM topicTasks WHERE UserID = $1 ORDER BY TopicTaskID',
                 [req.session.user.userid]
