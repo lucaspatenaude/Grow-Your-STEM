@@ -54,17 +54,21 @@ router.post('/complete-task', async (req, res) => {
         }
 
         if (iscompleted) {
+            // Mark the task as not completed
+            await db.query(
+                `UPDATE ${tableName} SET iscompleted = FALSE WHERE ${columnName} = $1 AND UserID = $2`,
+                [taskId, userId]
+            );
 
             // Subtract the points from the user's score only if the task is not a topic or game
             if (taskType !== 'topic' && taskType !== 'game') {
                 await db.query(
-                    'UPDATE users SET Score = Score - $1 WHERE UserID = $2', // Removed iscompleted column
+                    'UPDATE users SET Score = Score - $1 WHERE UserID = $2',
                     [points, userId]
                 );
-                console.log(`Task ${taskId} in ${tableName} marked as not completed. Points subtracted: ${points}`);
-            } else {
-                console.log(`Task ${taskId} in ${tableName} status not changed. No points subtracted for task type: ${taskType}`);
             }
+
+            console.log(`Task ${taskId} in ${tableName} marked as not completed. Points subtracted: ${points}`);
         } else {
             // Mark the task as completed
             await db.query(
