@@ -102,14 +102,14 @@ router.post("/register", async (req, res) => {
         ];
 
         const basicsTasks = [
-            { id: 1, name: 'Understanding Net Worth', points: 10, location: '/basics/net-worth' },
-            { id: 2, name: 'Student Loans and Debt Hierarchies', points: 20, location: '/basics/student-loans' },
-            { id: 3, name: 'Budgeting That Doesn’t Suck (Seriously)', points: 30, location: '/basics/budgeting' },
-            { id: 4, name: 'Emergency Funds: The First $1K and Beyond', points: 15, location: '/basics/emergency-funds' },
-            { id: 5, name: 'Credit Scores and Credit Building', points: 25, location: '/basics/credit-scores' },
-            { id: 6, name: 'Intro to Investing', points: 35, location: '/basics/investing' },
-            { id: 7, name: 'Paychecks: What Are All These Deductions?', points: 20, location: '/basics/paychecks' },
-            { id: 8, name: 'Benefits Beyond Salary', points: 30, location: '/basics/benefits' }
+            { id: 1, name: 'Read "Understanding Net Worth" Basic', points: 10, location: '/basics/net-worth' },
+            { id: 2, name: 'Read "Student Loans" Basic', points: 20, location: '/basics/student-loans' },
+            { id: 3, name: 'Read "Budgeting Like an Adult" Basic', points: 30, location: '/basics/budgeting' },
+            { id: 4, name: 'Read "Insurance 101" Basic', points: 15, location: '/basics/insurance' },
+            { id: 5, name: 'Read "Credit Scores and Credit Building" Basic', points: 25, location: '/basics/credit-scores' },
+            { id: 6, name: 'Read "Intro to Investing" Basic', points: 35, location: '/basics/investing' },
+            { id: 7, name: 'Read "Paychecks: What Are All These Deductions?" Basic', points: 20, location: '/basics/paychecks' },
+            { id: 8, name: 'Read "Employment Benefits Beyond Salary" Basic', points: 30, location: '/basics/benefits' }
         ];
 
         const topicTasks = [
