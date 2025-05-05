@@ -87,7 +87,7 @@ app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
 // <!-- 6. Output All Page Routes -->
 // *****************************************************
 
-app.use("/", require("./routes/routes")); // Use the consolidated routes file
+app.use("/", require("./routes/main")); // Use the consolidated routes file
 
 // *****************************************************
 // <!-- 7. Export the App Object -->

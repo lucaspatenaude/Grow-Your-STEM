@@ -1,0 +1,12 @@
+<div class="page-container">
+  <!---------------- Articles Container ------------------->
+  <div class="content-container" id="articles-container">
+    <h1 class="content-container-header">Articles</h1>
+    <p>Explore various articles to enhance your knowledge.</p>
+    <div class="cards-container" id="articles-cards-container">
+      {{#each articles}}
+        {{> components/cards/image-header type="article"}}
+      {{/each}}
+    </div>
+  </div>
+</div>

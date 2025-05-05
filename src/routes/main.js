@@ -19,8 +19,8 @@ router.get("/", (req, res) => {
 
 // ************** Blog Page Routes ************** 
 
-router.get("/blog", (req, res) => {
-    res.render("pages/blog");
+router.get("/articles", (req, res) => {
+    res.render("pages/articles");
 });
 
 // ************** Lessons Page Routes ************** 
