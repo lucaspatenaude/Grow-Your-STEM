@@ -49,15 +49,15 @@
 </nav>
 
 {{#if user.username}}
-  <div class="account-portal" id="account-screen-container">
-    {{> pages/user-menu/account-screen user=user tasks=tasks}}
+  <div class="account-portal" id="account-pane-container">
+    {{> pages/user-menu/account-pane user=user tasks=tasks}}
   </div>
 {{else}}
-<div class="account-portal" id="login-screen-container">
+<div class="account-portal" id="login-pane-container">
   {{> pages/user-menu/login}}
 </div>
 {{/if}}
 
-<div class="account-portal" id="register-screen-container">
+<div class="account-portal" id="register-pane-container">
   {{> pages/user-menu/register}}
 </div>

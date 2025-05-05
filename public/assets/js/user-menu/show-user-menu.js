@@ -1,16 +1,16 @@
 $(document).ready(function () {
 	// When #user is clicked
 	$("#user-profile-button").click(function () {
-		$("#register-screen-container").hide();
+		$("#register-pane-container").hide();
 		// Toggle the visibility of the login container
-		$("#login-screen-container").toggle();
+		$("#login-pane-container").toggle();
 	});
 
 	$("#register-page-login-button").click(function (event) {
 		event.preventDefault(); // Prevent the default action of following the link
 
-		$("#register-screen-container").hide();
-		$("#login-screen-container").show();
+		$("#register-pane-container").hide();
+		$("#login-pane-container").show();
 	});
 });
 
@@ -19,19 +19,19 @@ $(document).ready(function () {
 	$("#login-page-register-button").click(function (event) {
 		event.preventDefault(); // Prevent the default action of following the link
 
-		$("#login-screen-container").hide();
+		$("#login-pane-container").hide();
 		// Show the register container
-		$("#register-screen-container").show();
+		$("#register-pane-container").show();
 	});
 });
 
 // Show the login screen if there is an alert message
 $(document).ready(function () {
-	if ($("#login-screen-container").find(".alert").length > 0) {
-			$("#login-screen-container").show();
+	if ($("#login-pane-container").find(".alert").length > 0) {
+			$("#login-pane-container").show();
 	}
-	else if ($("#register-screen-container").find(".alert").length > 0) {
-		$("#register-screen-container").show();
+	else if ($("#register-pane-container").find(".alert").length > 0) {
+		$("#register-pane-container").show();
 	}
 });
 
@@ -39,6 +39,6 @@ $(document).ready(function () {
 	// When #user is clicked
 	$("#user-profile-button").click(function () {
 		// Toggle the visibility of the login container
-		$("#account-screen-container").toggle();
+		$("#account-pane-container").toggle();
 	});
 });
