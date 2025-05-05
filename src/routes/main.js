@@ -4,7 +4,6 @@ const fetchArticles = require('../middleware/database/fetch-articles'); // Impor
 const articleRoutes = require("./articles"); // Import article routes
 const basicsRoutes = require("./basics"); // Import basics routes
 const loginRoutes = require("./login-and-registration"); // Import login and registration routes
-const accountRoutes = require("./account"); // Import account routes
 const taskRoutes = require("./tasks"); // Import task routes
 
 // ************** Home Page Routes ************** 
@@ -13,6 +12,7 @@ router.get("/home", fetchArticles, (req, res) => {
     res.render("pages/home");
 });
 
+// Middleware to fetch articles, topics, and games and store them in sessions
 router.get("/", (req, res) => {
     res.render("pages/home", {
         user: req.session.user, // Pass the user object
@@ -48,7 +48,6 @@ router.get("/games", (req, res) => {
 router.use("/", articleRoutes);
 router.use("/", basicsRoutes);
 router.use("/", loginRoutes);
-router.use("/", accountRoutes);
 router.use("/", taskRoutes);
 
 module.exports = router;
