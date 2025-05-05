@@ -107,8 +107,8 @@ font-size: 28px;
 
 /*scrollbar*/
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     padding: 2px;
   }
   
@@ -120,12 +120,15 @@ font-size: 28px;
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--warm);
+    background: var(--cool);
+    border: 3px solid var(--darkc);
+    border-radius: 7px;
+    background-clip: content-box;
     
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--lightw);
+    background: var(--lightc);
     transition-duration: 0.4s;
   }
