@@ -13,6 +13,8 @@ services:
       - users-database:/var/lib/postgresql/data
     env_file:
       - .env # Load all environment variables from .env
+    networks:
+      - nginx-network
 
   web:
     container_name: GYS-Web-Interface
@@ -27,6 +29,12 @@ services:
     command: "npm run start"
     env_file:
       - .env # Load all environment variables from .env
+    networks:
+      - nginx-network
 
 volumes:
   users-database:
+
+networks:
+  nginx-network:
+    external: true
