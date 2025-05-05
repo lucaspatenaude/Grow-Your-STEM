@@ -137,11 +137,11 @@ router.post("/register", async (req, res) => {
             );
         });
 
-        // Insert lessons into the lessonTasks table
-        const lessonTaskQueries = lessonTasks.map(lessonTask => {
+        // Insert lessons into the topicTasks table
+        const topicTaskQueries = topicTasks.map(topicTask => {
             return db.none(
-                "INSERT INTO lessonTasks (userid, lessontaskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
-                [newUser.userid, lessonTask.id, lessonTask.name, lessonTask.points, lessonTask.location]
+                "INSERT INTO topicTasks (userid, topictaskid, taskname, points, location) VALUES ($1, $2, $3, $4, $5)",
+                [newUser.userid, topicTask.id, topicTask.name, topicTask.points, topicTask.location]
             );
         });
 
@@ -154,7 +154,7 @@ router.post("/register", async (req, res) => {
         });
 
         // Execute all queries
-        await Promise.all([...articleTaskQueries, ...basicsTaskQueries, ...lessonTaskQueries, ...gameTaskQueries]);
+        await Promise.all([...articleTaskQueries, ...basicsTaskQueries, ...topicTaskQueries, ...gameTaskQueries]);
 
         // Redirect to the home page after successful registration and login
         res.redirect("/home");
