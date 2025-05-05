@@ -59,7 +59,6 @@
 
 .completed-task {
     text-decoration: line-through;
-    color: gray; /* Optional: Change the color to indicate completion */
 }
 
 /* Center the checkbox, points, and link vertically */
