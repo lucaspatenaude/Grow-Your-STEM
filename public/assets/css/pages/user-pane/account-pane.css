@@ -58,17 +58,22 @@
 }
 
 .completed-task {
-    text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.completed-task #points {
+  text-decoration: none !important; /* Force removal of strikethrough */
 }
 
 /* Center the checkbox, points, and link vertically */
 .task-content {
-    display: flex;
-    align-items: center; /* Vertically center items */
-    gap: 5px; /* Add spacing between elements */
+  display: flex;
+  align-items: center; /* Vertically center items */
+  gap: 5px; /* Add spacing between elements */
 }
 
 #points {
+  text-decoration: none !important;
   display: flex; /* Ensures content is centered */
   justify-content: center; /* Horizontally center the text */
   align-items: center; /* Vertically center the text */
