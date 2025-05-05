@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const points = parseInt(element.textContent.trim(), 10);
 
         // Check the points value and apply the appropriate background color
-        if (points <= 20) {
+        if (points < 10) {
             element.style.backgroundColor = 'rgb(211, 128, 38)'; // Red for points <= 20
-        } else if (points >= 21 && points <= 30) {
+        } else if (points >= 10 && points <= 25) {
             element.style.backgroundColor = 'rgb(187, 187, 187)'; // Orange for points between 21 and 30
             element.style.border = '1px solid rgb(126, 126, 126)';
-        } else if (points > 30) {
+        } else if (points > 26) {
             element.style.backgroundColor = 'rgb(226, 202, 66)'; // Gold for points > 30
             element.style.border = '1px solid rgb(173, 152, 33)';
         }
