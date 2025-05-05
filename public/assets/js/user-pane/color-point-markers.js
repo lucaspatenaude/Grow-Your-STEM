@@ -1,5 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Select all elements with the ID 'points'
+document.addEventListener('DOMContentLoaded', function () {
+    // Your JavaScript logic here
+    console.log("DOM fully loaded and parsed");
+
+    // Example: Logic for color-point-markers.js
     const pointsElements = document.querySelectorAll('#points');
 
     pointsElements.forEach((element) => {
@@ -11,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
             element.style.backgroundColor = 'rgb(211, 128, 38)'; // Red for points <= 20
         } else if (points >= 21 && points <= 30) {
             element.style.backgroundColor = 'rgb(187, 187, 187)'; // Orange for points between 21 and 30
-            element.style.border = '1px solid rgb(126, 126, 126)'; // Orange for points between 21 and 30
+            element.style.border = '1px solid rgb(126, 126, 126)';
         } else if (points > 30) {
-            element.style.backgroundColor = 'rgb(226, 202, 66)'; // Green for points > 30
-            element.style.border = '1px solid rgb(173, 152, 33)'; // Orange for points between 21 and 30
+            element.style.backgroundColor = 'rgb(226, 202, 66)'; // Gold for points > 30
+            element.style.border = '1px solid rgb(173, 152, 33)';
         }
     });
 });

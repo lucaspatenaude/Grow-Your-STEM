@@ -1,5 +1,4 @@
 [
-
 "reset.css", "main.css", 
 "pages/home.css", "pages/basics.css", "pages/games.css","pages/article.css", "pages/author.css", "pages/user-pane/account-pane.css", "pages/user-pane/login-and-registration-pane.css",
 "structure/navigation-bar.css", "structure/footer.css", "structure/checklist.css", 
