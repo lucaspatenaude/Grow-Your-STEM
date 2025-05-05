@@ -11,4 +11,4 @@ CREATE TABLE topics (
 -- Insert topics
 INSERT INTO basics (Title, Summary, Link)
 VALUES
-    ('US Economy Dashboard', 'View a dashboard view of the US economy', 'https://finviz.com'),
+    ('US Economy Dashboard', 'View a dashboard view of the US economy', 'https://finviz.com');
