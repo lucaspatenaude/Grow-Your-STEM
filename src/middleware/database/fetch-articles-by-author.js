@@ -1,5 +1,4 @@
 const db = require('../../../database/setup'); // Import the database connection
-const { locals } = require('../../app');
 
 const fetchArticlesByAuthor = async (req, res, next) => {
     try {
@@ -32,7 +31,7 @@ const fetchArticlesByAuthor = async (req, res, next) => {
 
         // Attach the fetched data to `res.locals`
         res.locals.articles = articles;
-        res.locals.authorName = author[0].authorname;
+        res.locals.authorname = author[0].authorname;
         res.locals.authorRoute = authorParam;
 
     } catch (error) {

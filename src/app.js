@@ -79,11 +79,13 @@ app.use((req, res, next) => {
 // <!-- 5. Append All Middleware -->
 // *****************************************************
 
+app.use(globalVariables); // Use the global variables middleware
+
 app.use(fetchArticles); // Middleware to fetch articles for the logged-in user
 app.use (fetchBasics); // Middleware to fetch basics for all pages
 app.use (fetchTopics); // Middleware to fetch basics for all pages
 app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
-app.use(globalVariables); // Use the global variables middleware
+
 
 // *****************************************************
 // <!-- 6. Output All Page Routes -->
