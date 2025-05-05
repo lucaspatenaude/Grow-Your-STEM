@@ -89,37 +89,37 @@ router.post("/register", async (req, res) => {
 
         // Separate tasks into categories
         const articleTasks = [
-            { id: 1, name: 'Read Article "How Do Tariffs Work"', points: 10, location: '/articles/nathaniel/how-do-tariffs-work' },
-            { id: 2, name: 'Read Article "Credit and Financing Options"', points: 25, location: '/articles/lucas/credit-and-financing-options' },
-            { id: 3, name: 'Read Article "Retirement Accounts"', points: 30, location: '/articles/Clay/retirement-accounts' },
-            { id: 4, name: 'Read Article "Global Reserve"', points: 30, location: '/articles/Clay/global-reserve'},
+            { id: 1, name: 'Read Article "How Do Tariffs Work"', points: 30, location: '/articles/nathaniel/how-do-tariffs-work' },
+            { id: 2, name: 'Read Article "Credit and Financing Options"', points: 20, location: '/articles/lucas/credit-and-financing-options' },
+            { id: 3, name: 'Read Article "Retirement Accounts"', points: 20, location: '/articles/Clay/retirement-accounts' },
+            { id: 4, name: 'Read Article "Global Reserve"', points: 25, location: '/articles/Clay/global-reserve'},
             { id: 5, name: 'Read Article "What\'s a Negative Price?"', points: 20, location: '/articles/Clay/whats-a-negative-price' },
-            { id: 6, name: 'Read Article "Why You Should Care About Crypto Currency!"', points: 20, location: '/articles/Clay/crypto' },
-            { id: 7, name: 'Read Article "Future of AI in the Workplace"', points: 20, location: '/articles/lucas/future-of-ai-in-the-workplace' },
-            { id: 8, name: 'Read Article "Investment Trends of 2025"', points: 50, location: '/articles/lucas/investment-trends-2025' },
-            { id: 9, name: 'Read Article "Dangers of Modern Investment Platforms"', points: 20, location: '/articles/Lucas/dangers-of-modern-investment-platforms' },
-            { id: 10, name: 'Read Article "Popularity of Options Trading"', points: 20, location: '/articles/lucas/popularity-of-options-trading' }
+            { id: 6, name: 'Read Article "Why You Should Care About Crypto Currency!"', points: 40, location: '/articles/Clay/crypto' },
+            { id: 7, name: 'Read Article "Future of AI in the Workplace"', points: 40, location: '/articles/lucas/future-of-ai-in-the-workplace' },
+            { id: 8, name: 'Read Article "Investment Trends of 2025"', points: 25, location: '/articles/lucas/investment-trends-2025' },
+            { id: 9, name: 'Read Article "Dangers of Modern Investment Platforms"', points: 30, location: '/articles/Lucas/dangers-of-modern-investment-platforms' },
+            { id: 10, name: 'Read Article "Popularity of Options Trading"', points: 25, location: '/articles/lucas/popularity-of-options-trading' }
         ];
 
         const basicsTasks = [
             { id: 1, name: 'Read "Understanding Net Worth" Basic', points: 10, location: '/basics/net-worth' },
-            { id: 2, name: 'Read "Student Loans" Basic', points: 20, location: '/basics/student-loans' },
-            { id: 3, name: 'Read "Budgeting Like an Adult" Basic', points: 30, location: '/basics/budgeting' },
-            { id: 4, name: 'Read "Insurance 101" Basic', points: 15, location: '/basics/insurance' },
-            { id: 5, name: 'Read "Credit Scores and Credit Building" Basic', points: 25, location: '/basics/credit-scores' },
-            { id: 6, name: 'Read "Intro to Investing" Basic', points: 35, location: '/basics/investing' },
+            { id: 2, name: 'Read "Student Loans" Basic', points: 25, location: '/basics/student-loans' },
+            { id: 3, name: 'Read "Budgeting Like an Adult" Basic', points: 10, location: '/basics/budgeting' },
+            { id: 4, name: 'Read "Insurance 101" Basic', points: 20, location: '/basics/insurance' },
+            { id: 5, name: 'Read "Credit Scores and Credit Building" Basic', points: 10, location: '/basics/credit-scores' },
+            { id: 6, name: 'Read "Intro to Investing" Basic', points: 5, location: '/basics/investing' },
             { id: 7, name: 'Read "Paychecks: What Are All These Deductions?" Basic', points: 20, location: '/basics/paychecks' },
-            { id: 8, name: 'Read "Employment Benefits Beyond Salary" Basic', points: 30, location: '/basics/benefits' }
+            { id: 8, name: 'Read "Employment Benefits Beyond Salary" Basic', points: 10, location: '/basics/benefits' }
         ];
 
         const topicTasks = [
-            { id: 1, name: 'Click "US Economy Dashboard" button', points: 15, location: '/basics#topics-container' },
+            { id: 1, name: 'Click "US Economy Dashboard" button', points: 10, location: '/basics#topics-container' },
             { id: 2, name: 'Click "US Debt Clock button', points: 15, location: '/basics#topics-container' }
         ];
 
         const gameTasks = [
-            { id: 1, name: 'Play "Universal Paperclips"', points: 20, location: '/games#universal-paperclips-container' },
-            { id: 2, name: 'Play "Investopedia Simulator"', points: 50, location: '/games#investopedia-simulator-container' },
+            { id: 1, name: 'Play "Universal Paperclips"', points: 25, location: '/games#universal-paperclips-container' },
+            { id: 2, name: 'Play "Investopedia Simulator"', points: 25, location: '/games#investopedia-simulator-container' },
         ];
 
         // Insert articles into the articleTasks table
