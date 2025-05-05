@@ -19,8 +19,8 @@ router.get("/basics/budgeting", (req, res) => {
 });
 
 // Route for "Emergency Funds: The First $1K and Beyond"
-router.get("/basics/emergency-funds", (req, res) => {
-    res.render("pages/basics/Emergency-Funds");
+router.get("/basics/insurance", (req, res) => {
+    res.render("pages/basics/Insurance");
 });
 
 // Route for "Credit Scores and Credit Building"
