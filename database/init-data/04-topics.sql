@@ -6,7 +6,7 @@ CREATE TABLE topics (
     Title VARCHAR(255) NOT NULL,
     Summary TEXT NOT NULL,
     Link VARCHAR(255) NOT NULL,
-    Link VARCHAR(255) NOT NULL
+    ButtonText VARCHAR(255) NOT NULL
 );
 
 -- Insert topics
