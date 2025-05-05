@@ -113,7 +113,7 @@ router.post("/register", async (req, res) => {
         ];
 
         const topicTasks = [
-            { id: 1, name: 'Click "US Economy Dashboard" button', points: 15, location: '/basics#topics-container' },
+            { id: 1, name: 'Click "US Economy Dashboard" button', points: 15, location: '/basics#topics-container' }
         ];
 
         const gameTasks = [

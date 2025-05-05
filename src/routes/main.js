@@ -14,12 +14,7 @@ router.get("/home", fetchArticles, (req, res) => {
 
 // Middleware to fetch articles, topics, and games and store them in sessions
 router.get("/", (req, res) => {
-    res.render("pages/home", {
-        user: req.session.user, // Pass the user object
-        articles: res.locals.articles, // Pass the articles array
-        topics: res.locals.topics, // Pass the topics array
-        games: res.locals.games, // Pass the games array
-    });
+    res.render("pages/home"); // No need to pass user, articles, topics, or games
 });
 
 router.get("/", (req, res) => {
@@ -35,7 +30,7 @@ router.get("/articles", (req, res) => {
 // ************** Basics & Topics Page Routes ************** 
 
 router.get("/basics", (req, res) => {
-    res.render("pages/basics");
+    res.render("pages/basics"); // No need to pass user or topics
 });
 
 // ************** Games Page Routes **************

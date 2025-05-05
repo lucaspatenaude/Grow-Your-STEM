@@ -16,6 +16,7 @@ const fetchTasks = require('./middleware/database/fetch-tasks'); // Import the f
 const fetchArticles = require('./middleware/database/fetch-articles'); // Import the fetchArticles middleware
 const fetchBasics = require('./middleware/database/fetch-basics'); // Import the fetchBasics middleware
 const fetchTopics = require('./middleware/database/fetch-topics'); // Import the fetchBasics middleware
+const globalVariables = require("./middleware/global-variables"); // Import the middleware
 
 // *****************************************************
 // <!-- 2. Start the Database -->
@@ -78,6 +79,8 @@ app.use((req, res, next) => {
 // <!-- 5. Append All Middleware -->
 // *****************************************************
 
+app.use(globalVariables); // Use the global variables middleware
+
 app.use(fetchArticles); // Middleware to fetch articles for the logged-in user
 app.use (fetchBasics); // Middleware to fetch basics for all pages
 app.use (fetchTopics); // Middleware to fetch basics for all pages
@@ -87,7 +90,7 @@ app.use(fetchTasks); // Middleware to fetch tasks for the logged-in user
 // <!-- 6. Output All Page Routes -->
 // *****************************************************
 
-app.use("/", require("./routes/main")); // Use the consolidated routes file
+app.use("/", require("./routes/main")); // Add all page routes
 
 // *****************************************************
 // <!-- 7. Export the App Object -->
@@ -95,3 +98,5 @@ app.use("/", require("./routes/main")); // Use the consolidated routes file
 
 // Export the app object to index.js
 module.exports = app;
+
+app.listen(3000, () => console.log("Server running on port 3000"));
