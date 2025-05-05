@@ -18,29 +18,24 @@
 					<!--  If adding an article be sure to do the following:
 
 				1. Add the article to the articles folder in the public/views/pages directory
-				2. Add the article's routes to the routes.js file in the src/routes directory
-				3. Add the article attributes (title, points) to database in '/src/routes/login-and-restrigation.js' under the POST '/register' route
-        4. Refresh your database
+				2. Add the article's routes to the articles.js file in the src/routes directory
+        3. Add the article to the articles table in the database in /database/init-data/02-articles.sql
+				4. Add the article attributes (title, points) to database in '/src/routes/login-and-restrigation.js' under the POST '/register' route
+
+        !!! Important To Do the Following for Any Changes to Take Effect Every Single Time a Database Change is Made !!!
+        *** Certain items in the database are created at start and are not updated when the database is changed. ***
+
+        5. Delete database in 'Volumes' tab in Docker Desktop. It should be titled something like 'grow-your-stem_users-database'
+        6. Run 'docker-compose up' in the terminal.
 			-->
 
+    <!-- Insert each article from the database -->
 		<div class="cards-container">			
-			{{#if articles}}
-        {{#each articles}}
-					{{> components/cards/image-header
-						type="article"
-						title=this.title
-						author=this.author
-            route=this.route
-						summary=this.summary
-						link=this.link
-						image-path=this.imagepath
-						image-alt=this.imagealt
-					}}
-				{{/each}}
-			{{else}}
-				<p>No articles available at the moment.</p>
-			{{/if}}
+      {{#each articles}}
+        {{> components/cards/image-header type="article"}}
+      {{/each}}
 		</div>
+
 	</div>
 
 	  <!---------------- Calculator Container ------------------->
@@ -57,7 +52,7 @@
 		</div>
 
     <!--------- Calculator Form --------->
-    <form id="finance-form">
+    <id="finance-form">
 
       <h2 class="page-header-2">Education Expenses (per semester)</h2>
 
@@ -118,7 +113,17 @@
         />
 
       <!-- Calculate Button -->
-      <button type="button" id="calculate-button" onclick="calculate()">Calculate</button>
+      <div class="article-button-container">
+        <div class="article-read-button">
+          <form action="/complete-task" method="POST">
+            <input type="hidden" name="userId" value="{{user.userid}}">
+            <input type="hidden" name="taskId" value="1">
+            <input type="hidden" name="taskType" value="calculator">
+            <button type="submit" class="mark-done-button" onclick="calculate()">Calculate</button>
+          </form>
+        </div>
+      </div>
+
     </form>
 
     <!-- Results Pop-Up Panel -->

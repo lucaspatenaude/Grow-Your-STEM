@@ -6,6 +6,7 @@ function makeNavbarSticky() {
     var navbar = document.getElementById("navigation-bar-container");
     var loginPane = document.getElementById("login-pane");
     var registerPane = document.getElementById("register-pane");
+    var accountPane = document.getElementById("account-pane"); // Added account pane
 
     // Function to add sticky behavior when scrolling
     function stickyNavbar() {
@@ -32,6 +33,13 @@ function makeNavbarSticky() {
                 registerPane.style.top = navbar.offsetHeight + 35 + "px"; // 35px below the navbar
                 registerPane.style.right = "20px"; // Adjust as needed
             }
+
+            // Make the account pane follow the navbar
+            if (accountPane) {
+                accountPane.style.position = "fixed";
+                accountPane.style.top = navbar.offsetHeight + 35 + "px"; // 35px below the navbar
+                accountPane.style.right = "20px"; // Adjust as needed
+            }
         } else {
             // Remove the 'fixed-top' class to make the navbar non-sticky
             navbar.classList.remove("fixed-top");
@@ -50,6 +58,13 @@ function makeNavbarSticky() {
                 registerPane.style.position = "absolute";
                 registerPane.style.top = "95px"; // Original top position
                 registerPane.style.right = "20px"; // Adjust as needed
+            }
+
+            // Reset the account pane position
+            if (accountPane) {
+                accountPane.style.position = "absolute";
+                accountPane.style.top = "95px"; // Original top position
+                accountPane.style.right = "20px"; // Adjust as needed
             }
         }
     }

@@ -1,0 +1,14 @@
+<div class="completion-button-container">
+    <form action="/complete-task" method="POST">
+        <input type="hidden" name="userId" value="{{user.userid}}"> <!-- ID of Current User in the Session -->
+        <input type="hidden" name="taskId" value="{{taskID}}"> <!-- ID of the Task (Passed in specifically from the task) -->
+        <input type="hidden" name="taskType" value="{{taskType}}"> <!-- Type of task (Used to filter task in the database to correct table) -->
+        
+        <!-- Button to mark the task as done -->
+        <button
+            class="mark-done-button"
+            {{#if link}}onclick="window.open('{{link}}', '_blank')"{{/if}}> <!-- If there is a link open it in a new tab -->
+            {{button-text}} <!-- Text for the button -->
+        </button>
+    </form>
+</div>

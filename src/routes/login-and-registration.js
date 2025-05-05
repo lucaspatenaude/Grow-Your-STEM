@@ -113,16 +113,14 @@ router.post("/register", async (req, res) => {
         ];
 
         const lessonTasks = [
-            { id: 1, name: 'Click Fundamentals Button', points: 15, location: '/' },
-            { id: 2, name: 'Complete STEM Quiz', points: 35, location: '/' },
-            { id: 3, name: 'Watch STEM Webinar', points: 40, location: '/' }
+            { id: 1, name: 'Click Fundamentals Button', points: 15, location: '/basics#lessons-container' },
+            { id: 2, name: 'Complete STEM Quiz', points: 35, location: '/basics#lessons-container' },
+            { id: 3, name: 'Watch STEM Webinar', points: 40, location: '/basics#lessons-container' }
         ];
 
         const gameTasks = [
-            { id: 1, name: 'Play "Universal Paperclips"', points: 20, location: '/' },
-            { id: 2, name: 'Submit a STEM Project', points: 50, location: '/' },
-            { id: 3, name: 'Join STEM Community Forum', points: 20, location: '/' },
-            { id: 4, name: 'Share STEM Article on Social Media', points: 10, location: '/' }
+            { id: 1, name: 'Play "Universal Paperclips"', points: 20, location: '/games#universal-paperclips-container' },
+            { id: 2, name: 'Play "Investopedia Simulator"', points: 50, location: '/games#investopedia-simulator-container' },
         ];
 
         // Insert articles into the articleTasks table

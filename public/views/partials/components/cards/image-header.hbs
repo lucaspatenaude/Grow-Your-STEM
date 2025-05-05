@@ -1,6 +1,6 @@
 <div class="card" id="{{type}}-card">
     
-    <img src="{{image-path}}" class="card-img-top" alt="{{image-alt}}">
+    <img src="{{imagepath}}" class="card-img-top" alt="{{imagealt}}">
     
     <div class="card-body">
         
@@ -11,13 +11,13 @@
         <p class="card-article-summary">{{summary}}</p>
 
         <div class="card-button-container" id="{{type}}-card-button-container">
-            <a href="{{link}}" class="card-button" id="{{type}}-card-button" {{#if target}}target="{{target}}"{{/if}}>
+            <button onclick="window.location.href='{{link}}'" class="card-button" id="{{type}}-card-button" {{#if target}}target="{{target}}"{{/if}}>
                 {{#if button-text}}
                     {{button-text}}
                 {{else}}
                     Read More
                 {{/if}}
-            </a>
+            </button>
         </div>
     
     </div>

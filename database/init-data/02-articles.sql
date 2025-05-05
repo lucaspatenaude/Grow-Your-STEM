@@ -1,15 +1,17 @@
 CREATE TABLE authors (
-    AuthorID SERIAL PRIMARY KEY,
+    AuthorID SERIAL PRIMARY KEY, -- Unique identifier for each author <-- linked to in articles table
     Name VARCHAR(255) NOT NULL UNIQUE,
-    Route VARCHAR(255)
+    Route VARCHAR(255) -- Used to add route to button in article cards for author pages
 );
 
 CREATE TABLE articles (
-    ArticleID SERIAL PRIMARY KEY,
-    AuthorID INT NOT NULL REFERENCES authors(AuthorID) ON DELETE CASCADE,
+    ArticleID SERIAL PRIMARY KEY, -- Unique identifier for each article
+    AuthorID INT NOT NULL REFERENCES authors(AuthorID) ON DELETE CASCADE, -- Foreign key to link to author in authors table
+    
+    -- Article Attributes
     Title VARCHAR(255) NOT NULL,
     Summary TEXT NOT NULL,
-    Link VARCHAR(255) NOT NULL,
+    Link VARCHAR(255) NOT NULL, -- Used to add route to button in article cards for article pages
     ImagePath VARCHAR(255) NOT NULL,
     ImageAlt VARCHAR(255) NOT NULL
 );
@@ -17,11 +19,12 @@ CREATE TABLE articles (
 -- Insert authors
 INSERT INTO authors (Name, Route)
 VALUES
-    ('Lucas Patenaude', 'Lucas'),
-    ('Nathaniel Beatty', 'Nathaniel'),
-    ('Clay Kress', 'Clay');
+    ('Lucas Patenaude', 'Lucas'), -- AuthorID 1
+    ('Nathaniel Beatty', 'Nathaniel'), -- AuthorID 2
+    ('Clay Kress', 'Clay'); -- AuthorID 3
 
--- Insert articles
+-- Insert articles into the articles table
+-- Note: These are the order the cards will be displayed on the articles page
 INSERT INTO articles (AuthorID, Title, Summary, Link, ImagePath, ImageAlt)
 VALUES
     
@@ -35,3 +38,5 @@ VALUES
     (3, 'The US Dollar as the Global Reserve Currency.', 'The United States holds a lot of power as the nation behind the global reserve currency, but what does it mean for us? What happens if we lose it?', '/articles/clay/global-reserve', '/img/articles/Clay/Retirement-Accounts.jpg', 'Sample Event Image'),
     (3, 'What on Earth Does a Negative Price Mean?', 'Summary', '/articles/clay/whats-a-negative-price', '/img/articles/Clay/What-on-Earth-Does-a-Negative-Price-Mean.jpg', 'Sample Event Image'),
     (3, 'Meme Stocks and Cryptocurrency', 'Summary', '/articles/clay/meme-stocks-and-crypto', '/img/articles/Clay/Meme-Stocks-and-Cryptocurrency.jpg', 'Sample Event Image');
+
+-- Go to '/src/routes/login-and-restrigation.js' under the POST '/register' route to ddd the article attributes (title, points). Due to their scoring system, they are not added to the database at this time.
