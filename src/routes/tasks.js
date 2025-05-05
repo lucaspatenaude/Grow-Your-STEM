@@ -64,7 +64,7 @@ router.post('/complete-task', async (req, res) => {
                 );
                 console.log(`Task ${taskId} in ${tableName} marked as not completed. Points subtracted: ${points}`);
             } else {
-                console.log(`Task ${taskId} in ${tableName} marked as not completed. No points subtracted for task type: ${taskType}`);
+                console.log(`Task ${taskId} in ${tableName} status not changed. No points subtracted for task type: ${taskType}`);
             }
         } else {
             // Mark the task as completed

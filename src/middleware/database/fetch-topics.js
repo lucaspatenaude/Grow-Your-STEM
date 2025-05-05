@@ -5,7 +5,7 @@ const fetchTopics = async (req, res, next) => {
     try {
         // Fetch basics from the database
         const topics = await db.query(
-            `SELECT TopicID, Title, Summary, Link
+            `SELECT TopicID, Title, Summary, Link, ButtonText
             FROM topics
             ORDER BY TopicID`
         );
