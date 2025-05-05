@@ -37,6 +37,6 @@ VALUES
     (3, 'Retirement Accounts: How Do They Work?', 'Saving money at a young age can seem daunting but the benefits are far reaching', '/articles/clay/retirement-accounts', '/img/articles/Clay/Retirement-Accounts.jpg', 'Sample Event Image'),
     (3, 'The US Dollar as the Global Reserve Currency.', 'The United States holds a lot of power as the nation behind the global reserve currency, but what does it mean for us? What happens if we lose it?', '/articles/clay/global-reserve', '/img/articles/Clay/Retirement-Accounts.jpg', 'Sample Event Image'),
     (3, 'What on Earth Does a Negative Price Mean?', 'Summary', '/articles/clay/whats-a-negative-price', '/img/articles/Clay/What-on-Earth-Does-a-Negative-Price-Mean.jpg', 'Sample Event Image'),
-    (3, 'Meme Stocks and Cryptocurrency', 'Summary', '/articles/clay/meme-stocks-and-crypto', '/img/articles/Clay/Meme-Stocks-and-Cryptocurrency.jpg', 'Sample Event Image');
+    (3, 'Why YOU care about Crypto Currency', 'The emergence of Crypto is changing how the world views currency. What makes it different?', '/articles/clay/crypto', '/img/articles/Clay/Cryptocurrency.jpg', 'Sample Event Image');
 
 -- Go to '/src/routes/login-and-restrigation.js' under the POST '/register' route to ddd the article attributes (title, points). Due to their scoring system, they are not added to the database at this time.

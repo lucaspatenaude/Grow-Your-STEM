@@ -30,7 +30,7 @@ router.get("/articles/clay/whats-a-negative-price", (req, res) => {
 });
 
 router.get("/articles/clay/meme-stocks-and-crypto", (req, res) => {
-    res.render("pages/articles/Clay/Meme-Stocks-and-Crypto");
+    res.render("pages/articles/Clay/Crypto");
 });
 
 // ******** Lucas' Articles ********
