@@ -1,51 +1,48 @@
-<div style="background-color: var(--lightc);">
 <div class="page-container">
 
-<div class="article-page-container">
-  
-  <!-- Container for the article -->
-  <div class="article-container">
-
-    <!-- Header and Title -->
-    <div class="article-header-container">
-      <div class="article-title-container">
-        <h1>Why are Tech Stocks doing so poorly?</h1>
-      </div>
+  <div class="article-page-container">
     
-      <div class="article-meta">
-        <p>Author: Nathaniel Beatty</p>
-        <p>Published on: 4/30/2025<p>
+    <!-- Container for the article -->
+    <div class="article-container">
+
+      <!-- Header and Title -->
+      <div class="article-header-container">
+        <div class="article-title-container">
+          <h1>Why are Tech Stocks Falling</h1>
+        </div>
+      
+        <div class="article-meta">
+          <p>Author: <a class="author-link" href="/articles/nathaniel">Nathaniel Beatty</a></p>
+          <p>Published on: 5/5/2025<p>
+        </div>
+      </div>
+
+      <!-- Article Content -->
+      <div class="article-content-container">
+
+        <!-- Article Body -->
+        <p>Tech stocks have been on a severe decline over the last few months, with the drop off beginning even in the middle of January, long before any of the recent tariffs went into effect. The decline includes companies such as Nvidia, Apple, Microsoft, and a variety of other tech companies, so the question is, what is causing this?</p>
+
+        <h2 class="article-inner-header">The Cause</h2>
+
+        <p>As Issac Newton once said in reference to stocks, “I can calculate the motion of heavenly bodies, but not the madness of people.” Trying to determine why the stock market behaves the way it does is near impossible, tantamount to trying to predict the outcome of the election every day, and getting it right more than a coin flip. Despite this, there are certain trends that have come up recently which may explain some of the decline.</p>
+        <p>First is Artificial Intelligence. Most of the companies that I have listed have placed more and more interest and faith in the development of AI, and in doing so, have shifted their focus and their message to shareholders. This originally demonstrated a large spike in their stock prices, but as AI stagnates, requires more and more energy to function, and the public perception of AI sours, it is slowly becoming less and less of a selling point for public investors.</p>
+
+        <p>Then, of course, is the inauguration of the current administration and their promise of tariffs. Although I mentioned that the decline happened long before the tariffs, there is no getting around the fact that tariffs have been threatened for months beforehand. That, in combination with the actual implementation, helped drive tech stocks lower and lower in recent months.</p>
+        <p>Finally, many of these companies are starting to resemble monopolies, and threats of corporate breakups are making investors weary. For example, Google may be forced to sell Chrome, and in doing so, would lose a large sector of their business.</p>
+        <p>These reasons are all speculative, yet demonstrate how real news and public opinion may be affecting these tech stocks. Paying attention to news about the economy can help you predict this “madness of people,” helping you understand your finances and the world around you.</p>
+
+        <!-- Works Cited Section -->
+        <div class="works-cited">
+          <h2 id="works-cited-header">Works Cited</h2>
+          <p><b>[1]</b> https://www.whitehouse.gov/fact-sheets/2025/04/fact-sheet-president-donald-j-trump-declares-national-emergency-to-increase-our-competitive-edge-protect-our-sovereignty-and-strengthen-our-national-and-economic-security/</p> 
+        </div>
+
       </div>
     </div>
 
-    <!-- Article Content -->
-    <div class="article-content-container">
+    <!-- Mark Task as Done Button -->
+    {{> components/buttons/mark-done-button taskID="11" taskType="article" button-text="Mark Article as Read"}}
 
-      <!-- Article Image -->
-      <div class="article-image">
-        
-      </div>
-
-      <!-- Article Body -->
-
-      <p>Tech stocks have been on a severe decline over the last few months, with the drop off beginning even in the middle of January, long before any of the recent tariffs went into effect. The decline includes companies such as Nvidia, Apple, Microsoft, and a variety of other tech companies, so the question is, what is causing this?</p>
-
-       <h2 class="article-inner-header">The Cause</h2>
-
-      <p>As Issac Newton once said in reference to stocks, “I can calculate the motion of heavenly bodies, but not the madness of people.” Trying to determine why the stock market behaves the way it does is near impossible, tantamount to trying to predict the outcome of the election every day, and getting it right more than a coin flip. Despite this, there are certain trends that have come up recently which may explain some of the decline.</p>
-      <p>First is Artificial Intelligence. Most of the companies that I have listed have placed more and more interest and faith in the development of AI, and in doing so, have shifted their focus and their message to shareholders. This originally demonstrated a large spike in their stock prices, but as AI stagnates, requires more and more energy to function, and the public perception of AI sours, it is slowly becoming less and less of a selling point for public investors.</p>
-       
-      <p>Then, of course, is the inauguration of the current administration and their promise of tariffs. Although I mentioned that the decline happened long before the tariffs, there is no getting around the fact that tariffs have been threatened for months beforehand. That, in combination with the actual implementation, helped drive tech stocks lower and lower in recent months.</p>
-      <p>Finally, many of these companies are starting to resemble monopolies, and threats of corporate breakups are making investors weary. For example, Google may be forced to sell Chrome, and in doing so, would lose a large sector of their business.</p>
-      <p>These reasons are all speculative, yet demonstrate how real news and public opinion may be affecting these tech stocks. Paying attention to news about the economy can help you predict this “madness of people,” helping you understand your finances and the world around you.</p>
-
-    </div>
   </div>
-
-  <!-- Read Button -->
-  {{> components/checkbox-button checkbox-number="1"}} <!-- Controlled by JavaScript @ /assets/js/checklist/check-list-buttons.js -->
-
-</div>
-
-</div>
 </div>
