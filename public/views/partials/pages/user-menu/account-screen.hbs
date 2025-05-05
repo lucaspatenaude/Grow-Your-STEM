@@ -38,7 +38,7 @@
 
         <!-- Basics To-Do Section -->
         <div class="objectives-container">
-            <h2 class="objective-header">🧪 Basics</h2>
+            <h2 class="objective-header">🏆 Basics</h2>
             <ul> <!-- Import tasks for basicsTasks DB table in DB -->
                 {{#each basicsTasks}}
                     {{> components/account-screen/task this}}
@@ -46,11 +46,11 @@
             </ul>
         </div>
 
-        <!-- Lessons To-Do Section -->
+        <!-- Topics To-Do Section -->
         <div class="objectives-container">
-            <h2 class="objective-header">🏆 Lessons</h2>
-            <ul> <!-- Import tasks for lessonTasks DB table in DB -->
-                {{#each lessonTasks}}
+            <h2 class="objective-header">🔎 Topics</h2>
+            <ul> <!-- Import tasks for topicTasks DB table in DB -->
+                {{#each topicTasks}}
                     {{> components/account-screen/task this}}
                 {{/each}}
             </ul>

@@ -28,13 +28,13 @@ CREATE TABLE basicsTasks (
 
 -- Create the lessonTasks table
 CREATE TABLE topicTasks (
-    LessonTaskID INT NOT NULL, -- Unique identifier for each lesson
+    TopicTaskID INT NOT NULL, -- Unique identifier for each lesson
     UserID INT REFERENCES users(UserID) ON DELETE CASCADE,
     TaskName VARCHAR(255) NOT NULL,
     Points INT NOT NULL,
     Location VARCHAR(255),
     IsCompleted BOOLEAN DEFAULT FALSE,
-    PRIMARY KEY (UserID, LessonTaskID) -- Composite primary key
+    PRIMARY KEY (UserID, TopicTaskID) -- Composite primary key
 );
 
 -- Create the gameTasks table
