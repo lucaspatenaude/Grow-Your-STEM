@@ -29,24 +29,13 @@
         6. Run 'docker-compose up' in the terminal.
 			-->
 
+    <!-- Insert each article from the database -->
 		<div class="cards-container">			
-			{{#if articles}}
-        {{#each articles}}
-					{{> components/cards/image-header
-						type="article"
-						title=this.title
-						author=this.author
-            route=this.route
-						summary=this.summary
-						link=this.link
-						image-path=this.imagepath
-						image-alt=this.imagealt
-					}}
-				{{/each}}
-			{{else}}
-				<p>No articles available at the moment.</p>
-			{{/if}}
+      {{#each articles}}
+        {{> components/cards/image-header type="article"}}
+      {{/each}}
 		</div>
+
 	</div>
 
 	  <!---------------- Calculator Container ------------------->
