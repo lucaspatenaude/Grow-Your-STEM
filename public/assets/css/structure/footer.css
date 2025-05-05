@@ -66,10 +66,11 @@ footer h2 {
 .footer-contact-us-container form input,
 .footer-contact-us-container form textarea {
     background-color: var(--warm);
-    color: black;
+    color: var(--darkc);
     border-radius: 4px;
     width: 80%; /* Ensure fields span the full width of the container */
     height: 35px;
+    padding: 5px;
 }
 
 /*** Send Button ***/
