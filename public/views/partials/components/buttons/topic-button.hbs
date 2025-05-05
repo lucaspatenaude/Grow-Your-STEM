@@ -2,7 +2,7 @@
 
     <!-- This is the button that marks the task as done -->
     <form action="/complete-task" method="POST">
-        <input type="hidden" name="userId" value="{{userID}}"> <!-- ID of Current User in the Session -->
+        <input type="hidden" name="userId" value="{{user.userid}}"> <!-- ID of Current User in the Session -->
         <input type="hidden" name="taskId" value="{{taskID}}"> <!-- ID of the Task (Passed in specifically from the task) -->
         <input type="hidden" name="taskType" value="topic"> <!-- Type of task (Used to filter task in the database to correct table) -->
         <!-- Button to mark the task as done -->

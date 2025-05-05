@@ -30,7 +30,7 @@ router.get("/articles", (req, res) => {
 // ************** Basics & Topics Page Routes ************** 
 
 router.get("/basics", (req, res) => {
-    res.render("pages/basics"); // No need to pass user or topics
+    res.render("pages/basics");
 });
 
 // ************** Games Page Routes **************

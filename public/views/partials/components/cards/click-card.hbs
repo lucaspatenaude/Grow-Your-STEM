@@ -1,9 +1,21 @@
 <div class="card" id="{{type}}-card">
     <div class="card-body">
         <h1 class="card-article-title">{{title}}</h1>
-        <p class="card-article-summary">{{summary}}</p>
+        <p class="card-article-summary">{{summary}}</p>    
+    </div>
 
-       {{> components/buttons/topic-button userID=userID taskID=taskID button-text=buttontext}} 
-    
+    <div class="topic-button-container">
+
+        <!-- This is the button that marks the task as done -->
+        <form action="/complete-task" method="POST">
+            <input type="hidden" name="userId" value="{{user.userid}}"> <!-- ID of Current User in the Session -->
+            <input type="hidden" name="taskId" value="{{taskID}}"> <!-- ID of the Task (Passed in specifically from the task) -->
+            <input type="hidden" name="taskType" value="topic"> <!-- Type of task (Used to filter task in the database to correct table) -->
+            <!-- Button to mark the task as done -->
+            <button
+                class="mark-done-button" onclick="window.open('{{link}}', '_blank')"> <!-- If there is a link open it in a new tab -->
+                {{button-text}} <!-- Text for the button -->
+            </button>
+        </form>
     </div>
 </div>
