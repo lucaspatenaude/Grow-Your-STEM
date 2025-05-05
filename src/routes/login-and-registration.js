@@ -112,10 +112,8 @@ router.post("/register", async (req, res) => {
             { id: 8, name: 'Benefits Beyond Salary', points: 30, location: '/basics/benefits' }
         ];
 
-        const lessonTasks = [
-            { id: 1, name: 'Click Fundamentals Button', points: 15, location: '/basics#lessons-container' },
-            { id: 2, name: 'Complete STEM Quiz', points: 35, location: '/basics#lessons-container' },
-            { id: 3, name: 'Watch STEM Webinar', points: 40, location: '/basics#lessons-container' }
+        const topicTasks = [
+            { id: 1, name: 'Click "US Economy Dashboard" button', points: 15, location: '/basics#lessons-container' },
         ];
 
         const gameTasks = [

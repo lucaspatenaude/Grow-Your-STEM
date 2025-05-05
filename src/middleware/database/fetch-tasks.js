@@ -17,8 +17,8 @@ const fetchTasks = async (req, res, next) => {
             );
 
             // Fetch lesson tasks
-            const lessonTasks = await db.query(
-                'SELECT LessonTaskID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM lessonTasks WHERE UserID = $1 ORDER BY LessonTaskID',
+            const topicTasks = await db.query(
+                'SELECT TopicTaskID AS taskid, TaskName AS taskname, Points, IsCompleted, Location FROM topicTasks WHERE UserID = $1 ORDER BY TopicTaskID',
                 [req.session.user.userid]
             );
 
@@ -31,20 +31,20 @@ const fetchTasks = async (req, res, next) => {
             // Attach the fetched tasks to `res.locals`
             res.locals.articleTasks = articleTasks;
             res.locals.basicsTasks = basicsTasks; // Add basics tasks to res.locals
-            res.locals.lessonTasks = lessonTasks;
+            res.locals.topicTasks = topicTasks;
             res.locals.gameTasks = gameTasks;
 
         } catch (error) {
             console.error('Error fetching tasks:', error.message || error);
             res.locals.articleTasks = [];
             res.locals.basicsTasks = []; // Default to an empty array if an error occurs
-            res.locals.lessonTasks = [];
+            res.locals.topicTasks = [];
             res.locals.gameTasks = [];
         }
     } else {
         res.locals.articleTasks = [];
         res.locals.basicsTasks = []; // Default to an empty array if the user is not logged in
-        res.locals.lessonTasks = [];
+        res.locals.topicTasks = [];
         res.locals.gameTasks = [];
     }
     next();

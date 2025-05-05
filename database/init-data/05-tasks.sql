@@ -27,7 +27,7 @@ CREATE TABLE basicsTasks (
 );
 
 -- Create the lessonTasks table
-CREATE TABLE lessonTasks (
+CREATE TABLE topicTasks (
     LessonTaskID INT NOT NULL, -- Unique identifier for each lesson
     UserID INT REFERENCES users(UserID) ON DELETE CASCADE,
     TaskName VARCHAR(255) NOT NULL,
