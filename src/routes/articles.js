@@ -13,6 +13,9 @@ router.get("/articles/:author", fetchArticlesByAuthor, (req, res) => {
 router.get("/articles/nathaniel/how-do-tariffs-work", (req, res) => {
     res.render("pages/articles/Nathaniel/How-Do-Tariffs-Work");
 });
+router.get("/articles/nathaniel/tech-stocks", (req, res) => {
+    res.render("pages/articles/Nathaniel/Tech-Stocks");
+});
 
 // ******** Clay's Articles ********
 

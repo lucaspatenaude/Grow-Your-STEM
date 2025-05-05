@@ -98,7 +98,8 @@ router.post("/register", async (req, res) => {
             { id: 7, name: 'Read Article "Future of AI in the Workplace"', points: 40, location: '/articles/lucas/future-of-ai-in-the-workplace' },
             { id: 8, name: 'Read Article "Investment Trends of 2025"', points: 25, location: '/articles/lucas/investment-trends-2025' },
             { id: 9, name: 'Read Article "Dangers of Modern Investment Platforms"', points: 30, location: '/articles/Lucas/dangers-of-modern-investment-platforms' },
-            { id: 10, name: 'Read Article "Popularity of Options Trading"', points: 25, location: '/articles/lucas/popularity-of-options-trading' }
+            { id: 10, name: 'Read Article "Popularity of Options Trading"', points: 25, location: '/articles/lucas/popularity-of-options-trading' },
+            { id: 11, name: 'Read Article "Why are Tech Stocks Falling"', points: 20, location: '/articles/nathaniel/tech-stocks' }
         ];
 
         const basicsTasks = [
