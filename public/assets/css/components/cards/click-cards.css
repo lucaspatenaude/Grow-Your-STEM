@@ -1,0 +1,9 @@
+.click-card-button-container {
+  display: flex;
+  justify-content: flex-start; /* Horizontally center */
+  align-items: center;    /* Vertically center */
+  margin-left: 20px;
+  height: 100%;           /* Ensure the container takes up the full height */
+  width: 100%;            /* Ensure the container takes up the full width */
+  position: relative;     /* Ensure proper positioning */
+}
